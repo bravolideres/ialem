@@ -255,13 +255,13 @@ nav.top ul a:hover { color: var(--text); }
 .section-cta {
   display: flex; justify-content: center; margin-top: 56px; padding-top: 8px;
 }
-.section-cta .btn {
+.section-cta .btn-ghost {
   font-size: 14px; letter-spacing: .01em;
   border-color: var(--line-soft);
   color: var(--text-dim);
   transition: all .25s;
 }
-.section-cta .btn:hover {
+.section-cta .btn-ghost:hover {
   border-color: var(--gold); color: var(--gold);
   box-shadow: 0 0 24px -8px var(--gold-glow);
 }

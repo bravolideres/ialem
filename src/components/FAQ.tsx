@@ -52,7 +52,7 @@ export default function FAQ() {
         <div className="faq-list">
           {faqs.map((f, i) => (
             <div
-              className={`faq-item${openIdx === i ? " open" : ""}`}
+              className={`faq-item reveal-child${openIdx === i ? " open" : ""}`}
               key={i}
             >
               <button

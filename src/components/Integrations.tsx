@@ -39,7 +39,7 @@ export default function Integrations() {
           <div className="int-grid">
             {integrations.map((t) =>
               t.icon ? (
-                <div className="int" key={t.name}>
+                <div className="int reveal-child" key={t.name}>
                   <span className="int-logo">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={t.icon} alt={t.name} width={28} height={28} />
@@ -49,7 +49,7 @@ export default function Integrations() {
               ) : (
                 <a
                   key={t.name}
-                  className="int int-cta"
+                  className="int int-cta reveal-child"
                   href="https://wa.me/5500000000000?text=Oi!%20Estou%20interessado%20na%20IAlem%20e%20gostaria%20de%20saber%20se%20integra%20com%20meus%20sistemas"
                   target="_blank"
                 >

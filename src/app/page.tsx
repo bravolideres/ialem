@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <LogoStrip />
+      <RevealWrapper><LogoStrip /></RevealWrapper>
       
       <RevealWrapper stagger><Solution /></RevealWrapper>
       <RevealWrapper stagger><UseCases /></RevealWrapper>
@@ -26,8 +26,8 @@ export default function Home() {
       <RevealWrapper stagger><Numbers /></RevealWrapper>
       <RevealWrapper stagger><Testimonials /></RevealWrapper>
       <RevealWrapper stagger><HowItWorks /></RevealWrapper>
-      <RevealWrapper><Integrations /></RevealWrapper>
-      <RevealWrapper><FAQ /></RevealWrapper>
+      <RevealWrapper stagger><Integrations /></RevealWrapper>
+      <RevealWrapper stagger><FAQ /></RevealWrapper>
       <RevealWrapper><CTA /></RevealWrapper>
       
       <Footer />
