@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | IAlem",
   },
   description:
-    "Agentes de IA sob medida que atendem, qualificam e vendem pelo WhatsApp — 24/7, na voz da sua marca, integrados ao seu CRM.",
+    "Agentes de IA sob medida para sua operação — atendem, qualificam e vendem 24/7, na voz da sua marca, integrados ao seu CRM.",
   keywords: [
     "inteligência artificial",
     "agentes de IA",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "IAlem",
     title: "IAlem — Atenda mais, sem perder o jeito humano",
     description:
-      "Criamos agentes de IA sob medida que atendem seus clientes no WhatsApp como um funcionário dedicado — qualificando leads, agendando e vendendo 24/7.",
+      "Criamos agentes de IA sob medida que atendem seus clientes como um funcionário dedicado — qualificando leads, agendando e vendendo 24/7.",
     images: [
       {
         url: "/images/hero-atendimento.png",
