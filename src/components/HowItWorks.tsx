@@ -36,6 +36,11 @@ export default function HowItWorks() {
             </div>
           ))}
         </div>
+        <div className="section-cta">
+          <a href="https://wa.me/5500000000000?text=Oi!%20Quero%20agendar%20um%20diagnóstico%20gratuito%20para%20minha%20empresa" target="_blank" className="btn btn-ghost btn-sm">
+            Agendar meu diagnóstico gratuito →
+          </a>
+        </div>
       </div>
     </section>
   );

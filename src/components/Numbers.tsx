@@ -12,10 +12,10 @@ export default function Numbers() {
         <div className="sec-head">
           <span className="eyebrow">Resultado</span>
           <h2>
-            Atendimento de qualidade.<br />Processos eficientes.<br />Muitos <em>resultados</em>.
+            Números que <em>falam</em>.
           </h2>
           <p>
-            Os números abaixo são médias de operações ativas. Variam por setor e por ponto de partida
+            Médias de operações ativas. Variam por setor e ponto de partida
             — falamos disso no diagnóstico.
           </p>
         </div>

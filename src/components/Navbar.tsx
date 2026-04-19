@@ -40,7 +40,7 @@ export default function Navbar() {
       >
         {mobileOpen ? "✕" : "☰"}
       </button>
-      <a href="https://wa.me/5500000000000?text=Quero%20testar%20a%20IAlem" target="_blank" className="btn btn-primary btn-sm">
+      <a href="https://wa.me/5500000000000?text=Oi!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20teste%20da%20IAlem%20na%20prática" target="_blank" className="btn btn-primary btn-sm">
         Teste na prática
       </a>
 

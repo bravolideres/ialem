@@ -1,23 +1,23 @@
 const pairs = [
   {
-    hoje: "Lead chega fora do horário comercial e esfria até alguém responder no dia seguinte.",
-    ialem: "Agente responde na hora, em qualquer horário, qualifica e já agenda com o vendedor certo.",
+    hoje: "Clientes esperam horas — ou dias — por respostas que poderiam ser instantâneas. No WhatsApp, no e-mail, no site.",
+    ialem: "Atendimento imediato, 24/7, na voz da sua marca. O agente resolve o que pode e escala para o humano certo quando precisa.",
   },
   {
-    hoje: "Time comercial gasta horas triando contato ruim e perde foco em quem está pronto para fechar.",
-    ialem: "Triagem automática na porta. Seu vendedor só recebe quem já tem interesse real e contexto.",
+    hoje: "Seu time repete as mesmas tarefas todo dia: confirmar agenda, enviar boleto, responder dúvidas básicas, copiar dados entre sistemas.",
+    ialem: "Automação inteligente dos fluxos repetitivos. Seu time foca no que exige criatividade e decisão — o resto roda sozinho.",
   },
   {
-    hoje: "No-show em agendamento consome agenda, receita e moral do time.",
-    ialem: "Lembrete e confirmação ativa na voz da marca, com reagendamento em dois cliques se precisar.",
+    hoje: "Leads chegam fora do horário, esfriam esperando resposta, e o time comercial perde tempo com contatos que não convertem.",
+    ialem: "Qualificação automática na porta. O agente responde na hora, filtra quem tem interesse real e entrega o lead pronto para fechar.",
   },
   {
-    hoje: "Depois da assinatura ou da compra, o cliente some. Ninguém tem tempo de acompanhar pós-venda.",
-    ialem: "Relacionamento contínuo e natural — NPS, recompra, renovação — sem parecer automação.",
+    hoje: "Depois da venda, o cliente some. Ninguém tem tempo de acompanhar satisfação, recompra ou renovação.",
+    ialem: "Relacionamento contínuo e natural — NPS, follow-up de recompra, renovação — sem parecer robô.",
   },
   {
-    hoje: "Informação espalhada em CRM, planilha, WhatsApp e e-mail. O atendente perde contexto a cada troca.",
-    ialem: "Agente integrado aos seus sistemas, com memória do histórico do cliente desde a primeira conversa.",
+    hoje: "Informação espalhada entre CRM, planilha, WhatsApp e e-mail. Cada atendente recomeça do zero.",
+    ialem: "Agente integrado aos seus sistemas, com memória do histórico completo do cliente desde o primeiro contato.",
   },
 ];
 
@@ -26,13 +26,15 @@ export default function Solution() {
     <section id="solucao">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">Realidade operacional</span>
+          <span className="eyebrow">Antes e depois</span>
           <h2>
-            O que muda com a <em>IAlem</em>.
+            Atendimento de qualidade.<br />
+            Processos eficientes.<br />
+            <em>Muito mais resultados</em>.
           </h2>
           <p>
-            Cada minuto sem resposta é um cliente que vai para o concorrente. Cada follow-up esquecido
-            é receita perdida. Não é falta de vontade do seu time — é falta de escala. A IAlem resolve isso.
+            Atendimento lento, tarefas repetitivas, leads perdidos — não é falta de vontade do time,
+            é falta de escala. A IAlem resolve isso.
           </p>
         </div>
 
@@ -40,7 +42,7 @@ export default function Solution() {
           {pairs.map((p, i) => (
             <div className="pair" key={i}>
               <div className="pair-cell pair-l hoje">
-                <span className="tag">Problema</span>
+                <span className="tag">Hoje</span>
                 <div className="pair-txt">{p.hoje}</div>
               </div>
               <div className="pair-arrow">→</div>
@@ -50,6 +52,12 @@ export default function Solution() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="section-cta">
+          <a href="https://wa.me/5500000000000?text=Oi!%20Quero%20agendar%20um%20diagnóstico%20gratuito%20para%20minha%20empresa" target="_blank" className="btn btn-ghost btn-sm">
+            Quero isso na minha empresa →
+          </a>
         </div>
       </div>
     </section>

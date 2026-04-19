@@ -14,10 +14,10 @@ export default function Hero() {
           cliente ou na comunicação da sua equipe interna.
         </p>
         <div className="hero-cta">
-          <a href="https://wa.me/5500000000000?text=Quero%20testar%20a%20IAlem" target="_blank" className="btn btn-primary">
+          <a href="https://wa.me/5500000000000?text=Oi!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20teste%20da%20IAlem%20na%20prática" target="_blank" className="btn btn-primary">
             Teste na prática
           </a>
-          <a href="#cta" className="btn btn-ghost">
+          <a href="https://wa.me/5500000000000?text=Oi!%20Quero%20agendar%20um%20diagnóstico%20gratuito%20para%20minha%20empresa" target="_blank" className="btn btn-ghost">
             Agendar diagnóstico
           </a>
         </div>

@@ -248,6 +248,21 @@ nav.top ul a:hover { color: var(--text); }
   color: var(--gold); font-family: 'Fraunces', serif; font-size: 24px; font-style: italic;
 }
 
+/* ====== MID-PAGE CTA ====== */
+.section-cta {
+  display: flex; justify-content: center; margin-top: 56px; padding-top: 8px;
+}
+.section-cta .btn {
+  font-size: 14px; letter-spacing: .01em;
+  border-color: var(--line-soft);
+  color: var(--text-dim);
+  transition: all .25s;
+}
+.section-cta .btn:hover {
+  border-color: var(--gold); color: var(--gold);
+  box-shadow: 0 0 24px -8px var(--gold-glow);
+}
+
 /* ====== DEMO ====== */
 .demo {
   display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px;
@@ -439,9 +454,14 @@ nav.top ul a:hover { color: var(--text); }
 }
 .case:hover { border-color: var(--gold); transform: translateY(-2px); }
 .case-ic {
-  width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 6px;
-  background: var(--surface-2);
+  width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 6px;
+  background: var(--surface-2); color: var(--text-dim);
+  transition: color .2s, border-color .2s, background .2s;
+}
+.case:hover .case-ic {
+  color: var(--gold); border-color: rgba(201,164,107,.35);
+  background: linear-gradient(135deg, rgba(201,164,107,.1), rgba(201,164,107,.04));
 }
 .case h4 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 19px; letter-spacing: -.01em; }
 .case p { color: var(--text-dim); font-size: 13.5px; line-height: 1.55; }

@@ -214,12 +214,10 @@ export default function LiveDemo() {
         <div className="sec-head">
           <span className="eyebrow">Demo ao vivo</span>
           <h2>
-            Não dá pra descrever.
-            <br />
-            Melhor <em>assistir</em>.
+            Melhor do que descrever<br />é <em>ver na prática</em>.
           </h2>
           <p>
-            Escolha um cenário do lado esquerdo e assista à conversa acontecer, exatamente como
+            Escolha um cenário ao lado e assista à conversa acontecer, exatamente como
             chegaria ao seu cliente.
           </p>
         </div>
@@ -292,6 +290,12 @@ export default function LiveDemo() {
               Funciona no WhatsApp, Instagram e Web Chat da sua empresa.
             </div>
           </div>
+        </div>
+
+        <div className="section-cta">
+          <a href="https://wa.me/5500000000000?text=Oi!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20teste%20da%20IAlem%20na%20prática" target="_blank" className="btn btn-ghost btn-sm">
+            Faça você mesmo o teste na prática →
+          </a>
         </div>
       </div>
     </section>
