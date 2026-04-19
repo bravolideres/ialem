@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useRef, Children, cloneElement, isValidElement } from "react";
+import { useEffect, useRef } from "react";
 
 interface RevealProps {
   children: React.ReactNode;
-  /** Stagger child elements with cascading delay (useful for grids/lists) */
+  /** Observe each .reveal-child individually instead of the whole section */
   stagger?: boolean;
-  /** Base delay in ms before this element starts revealing (default: 0) */
-  delay?: number;
 }
 
-export default function RevealWrapper({ children, stagger = false, delay = 0 }: RevealProps) {
+export default function RevealWrapper({ children, stagger = false }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,42 +19,49 @@ export default function RevealWrapper({ children, stagger = false, delay = 0 }: 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) {
       el.classList.add("reveal-visible");
-      return;
-    }
-
-    // Apply base delay as CSS custom property
-    if (delay > 0) {
-      el.style.transitionDelay = `${delay}ms`;
-    }
-
-    // If stagger mode, set incremental delays on direct stagger children
-    if (stagger) {
-      const staggerChildren = el.querySelectorAll(":scope > * > .reveal-child, :scope > .reveal-child");
-      staggerChildren.forEach((child, i) => {
-        (child as HTMLElement).style.transitionDelay = `${delay + i * 100}ms`;
+      el.querySelectorAll(".reveal-child").forEach((child) => {
+        child.classList.add("reveal-child-visible");
       });
+      return;
     }
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-visible");
-            observer.unobserve(entry.target);
+          if (!entry.isIntersecting) return;
 
-            // Remove will-change after animation completes for performance
-            setTimeout(() => {
-              (entry.target as HTMLElement).style.willChange = "auto";
-            }, 1200 + delay);
+          const target = entry.target as HTMLElement;
+
+          if (target.classList.contains("reveal-child")) {
+            // Individual child entered the viewport
+            target.classList.add("reveal-child-visible");
+          } else {
+            // Section wrapper entered the viewport (heading etc.)
+            target.classList.add("reveal-visible");
           }
+
+          observer.unobserve(target);
+
+          // Clean up will-change after animation
+          setTimeout(() => {
+            target.style.willChange = "auto";
+          }, 900);
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
     );
 
+    // Always observe the section wrapper (for heading fade-in)
     observer.observe(el);
+
+    // If stagger mode, observe each child individually
+    if (stagger) {
+      const children = el.querySelectorAll(".reveal-child");
+      children.forEach((child) => observer.observe(child));
+    }
+
     return () => observer.disconnect();
-  }, [delay, stagger]);
+  }, [stagger]);
 
   return (
     <div ref={ref} className="reveal-section">

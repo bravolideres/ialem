@@ -622,10 +622,10 @@ footer { padding: 80px 0 40px; border-top: 1px solid var(--line); background: va
 
 /* ====== SCROLL REVEAL ====== */
 
-/* Section-level reveal */
+/* Section-level reveal (for headings, section backgrounds) */
 .reveal-section {
   opacity: 0;
-  transform: translateY(32px);
+  transform: translateY(28px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
@@ -635,15 +635,15 @@ footer { padding: 80px 0 40px; border-top: 1px solid var(--line); background: va
   transform: translateY(0);
 }
 
-/* Stagger children — cards, grid items, pairs */
+/* Individual child reveal — each observed independently */
 .reveal-child {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-.reveal-visible .reveal-child {
+.reveal-child.reveal-child-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -671,7 +671,7 @@ footer { padding: 80px 0 40px; border-top: 1px solid var(--line); background: va
   }
 }
 
-/* Reduce motion for accessibility */
+/* Accessibility: instant reveal for reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal-section,
   .reveal-child,
