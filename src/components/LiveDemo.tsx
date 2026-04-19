@@ -48,14 +48,14 @@ const SCENARIOS: Scenario[] = [
     name: "Sua Empresa · E-commerce",
     icon: "🛍️",
     title: "Loja Virtual",
-    subtitle: "Status de pedido e pós-venda",
+    subtitle: "Campanha e consulta de estoque",
     turns: [
-      { who: "user", text: "Oi, fiz o pedido 10443 no sábado mas não recebi o código de rastreio e preciso pra minha viagem." },
-      { who: "ai", text: "Oi Rafael! Tudo bem? Deixa eu verificar isso pra você agora mesmo. Só um instante." },
-      { who: "ai", text: "Achei! Seu pedido já está com a transportadora e sai para entrega amanhã de manhã." },
-      { who: "ai", text: "O rastreio é BR9988223. Como você é de SP Capital, chega já na quinta-feira, a tempo da viagem! 🏖️" },
-      { who: "user", text: "Ufa! Maravilha, me manda o link onde acompanho?" },
-      { who: "ai", text: "Pronto, é só clicar: intelipost.com.br/10443. Assim que sair para a rua, eu te dou um toque por aqui também!" },
+      { who: "user", text: "Oi! Vocês têm aquele Tênis Air Max tamanho 40 no estoque? Queria comprar pra presente." },
+      { who: "ai", text: "Oi Rafael! Tudo bem? Deixa eu verificar aqui rapidinho no nosso sistema." },
+      { who: "ai", text: "Boa notícia! Temos 2 unidades do Air Max tamanho 40 na loja. E o melhor: hoje estamos com frete grátis + 10% de desconto no PIX." },
+      { who: "ai", text: "Posso reservar pra você agora mesmo com essa condição exclusiva da campanha?" },
+      { who: "user", text: "Opa, perfeito! Vou querer sim. Como faço o pagamento?" },
+      { who: "ai", text: "Gerei seu link de checkout com desconto aplicado: bit.ly/comprar-airmax. É só finalizar por lá que já separo seu pedido! 👟" },
     ],
   },
   {
@@ -199,7 +199,7 @@ export default function LiveDemo() {
     // On mobile, scroll the phone/chat into view so the user sees the conversation
     if (phoneWrapRef.current && window.innerWidth <= 980) {
       setTimeout(() => {
-        phoneWrapRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        phoneWrapRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
       }, 50);
     }
   };
@@ -297,7 +297,7 @@ export default function LiveDemo() {
 
         <div className="section-cta">
           <a href="https://wa.me/5500000000000?text=Oi!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20teste%20da%20IAlem%20na%20prática" target="_blank" className="btn btn-ghost btn-sm">
-            Faça você mesmo o teste na prática →
+            Testar na Prática →
           </a>
         </div>
       </div>

@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import RevealWrapper from "@/components/RevealWrapper";
 
 export default function Home() {
   return (
@@ -18,15 +19,17 @@ export default function Home() {
       <Navbar />
       <Hero />
       <LogoStrip />
-      <Solution />
-      <UseCases />
-      <LiveDemo />
-      <Numbers />
-      <Testimonials />
-      <HowItWorks />
-      <Integrations />
-      <FAQ />
-      <CTA />
+      
+      <RevealWrapper><Solution /></RevealWrapper>
+      <RevealWrapper><UseCases /></RevealWrapper>
+      <RevealWrapper><LiveDemo /></RevealWrapper>
+      <RevealWrapper><Numbers /></RevealWrapper>
+      <RevealWrapper><Testimonials /></RevealWrapper>
+      <RevealWrapper><HowItWorks /></RevealWrapper>
+      <RevealWrapper><Integrations /></RevealWrapper>
+      <RevealWrapper><FAQ /></RevealWrapper>
+      <RevealWrapper><CTA /></RevealWrapper>
+      
       <Footer />
     </>
   );
