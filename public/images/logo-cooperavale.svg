@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" fill="none">
+  <circle cx="28" cy="30" r="18" stroke="#1f3a2e" stroke-width="3"></circle>
+  <path d="M18 30 L26 38 L40 22" stroke="#1f3a2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  <text x="60" y="37" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1f3a2e" letter-spacing="0.5">CooperaVale</text>
+</svg>
