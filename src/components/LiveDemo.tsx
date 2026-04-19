@@ -109,6 +109,7 @@ export default function LiveDemo() {
   const [currentText, setCurrentText] = useState("");
   const [currentWho, setCurrentWho] = useState<string | null>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
+  const phoneWrapRef = useRef<HTMLDivElement>(null);
   const runIdRef = useRef(0);
   const hasAutoStarted = useRef(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -191,6 +192,13 @@ export default function LiveDemo() {
     setActiveIdx(idx);
     hasAutoStarted.current = true;
     runScenario(idx);
+
+    // On mobile, scroll the phone/chat into view so the user sees the conversation
+    if (phoneWrapRef.current && window.innerWidth <= 980) {
+      setTimeout(() => {
+        phoneWrapRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    }
   };
 
   return (
@@ -234,7 +242,7 @@ export default function LiveDemo() {
             <span className="scenarios-more">e muito mais…</span>
           </div>
 
-          <div className="phone-wrap">
+          <div className="phone-wrap" ref={phoneWrapRef}>
             <div className="phone">
               <div className="phone-head">
                 <div className="phone-head-l">
