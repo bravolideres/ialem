@@ -52,21 +52,12 @@ export const metadata: Metadata = {
     title: "IAlem — Atenda mais, sem perder o jeito humano",
     description:
       "Criamos agentes de IA sob medida que atendem seus clientes como um funcionário dedicado — qualificando leads, agendando e vendendo 24/7.",
-    images: [
-      {
-        url: "/images/hero-atendimento.png",
-        width: 1200,
-        height: 630,
-        alt: "IAlem — Agentes de IA para atendimento e vendas",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "IAlem — Atenda mais, sem perder o jeito humano",
     description:
       "Seu próximo cliente não vai esperar. Agentes de IA que atendem 24/7, na voz da sua marca.",
-    images: ["/images/hero-atendimento.png"],
   },
   alternates: {
     canonical: "/",
