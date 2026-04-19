@@ -10,7 +10,7 @@ export default function CTA() {
               src="/images/cta-partnership.png"
               alt="Parceria de negócios"
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
             />
           </div>
           <div className="cta-content">
@@ -18,18 +18,18 @@ export default function CTA() {
               Próximo passo
             </span>
             <h2>
-              Vamos mapear onde sua operação pode <em>crescer</em>?
+              Pronto pra ver na <em>prática</em>?
             </h2>
             <p>
-              Diagnóstico gratuito. 30 minutos. Sem compromisso. Você sai com um plano claro do
-              que automatizar primeiro.
+              Teste agora mesmo no WhatsApp ou agende um diagnóstico gratuito de 30 minutos para
+              mapear as oportunidades da sua operação.
             </p>
             <div className="cta-buttons" style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
-              <a href="#" className="btn btn-primary">
-                Solicitar diagnóstico gratuito
+              <a href="https://wa.me/5500000000000?text=Quero%20testar%20a%20IAlem" target="_blank" className="btn btn-primary">
+                Teste na prática
               </a>
               <a href="#" className="btn btn-ghost">
-                Falar no WhatsApp
+                Agendar diagnóstico
               </a>
             </div>
           </div>

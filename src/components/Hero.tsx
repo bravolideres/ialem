@@ -12,11 +12,11 @@ export default function Hero() {
           Agentes de IA que conversam com a voz da sua marca, integrados ao seu CRM, WhatsApp e processos. Resultado real — sem parecer robô.
         </p>
         <div className="hero-cta">
-          <a href="#cta" className="btn btn-primary">
-            Solicitar diagnóstico gratuito
+          <a href="https://wa.me/5500000000000?text=Quero%20testar%20a%20IAlem" target="_blank" className="btn btn-primary">
+            Teste na prática
           </a>
-          <a href="#demo" className="btn btn-ghost">
-            Ver demo ao vivo ↓
+          <a href="#cta" className="btn btn-ghost">
+            Agendar diagnóstico
           </a>
         </div>
 
@@ -30,9 +30,9 @@ export default function Hero() {
             style={{ width: "100%", height: "auto", objectFit: "cover" }}
           />
           <div className="hero-visual-overlay">
-            <p className="hero-visual-headline">
+            <h2 className="hero-visual-headline">
               Seu próximo cliente<br /><em>não vai esperar.</em>
-            </p>
+            </h2>
           </div>
           <div className="hero-visual-badge">
             <span className="dot"></span>online agora · atendendo seus clientes

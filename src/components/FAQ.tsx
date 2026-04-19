@@ -5,35 +5,35 @@ import { useState } from "react";
 const faqs = [
   {
     q: "O agente vai saber responder sobre a minha empresa?",
-    a: "Sim. Antes de entrar em operação, treinamos o agente com todas as informações da sua empresa — produtos, serviços, preços, políticas, tom de voz. Ele atua como um funcionário bem treinado e capacitado, que conhece o negócio de ponta a ponta e funciona dia e noite.",
+    a: "Sim. Treinamos o agente com todas as informações da sua empresa — produtos, serviços, preços, políticas e tom de voz. Ele atua como um funcionário capacitado que conhece o negócio de ponta a ponta, fala como a sua marca e funciona dia e noite.",
+  },
+  {
+    q: "Funciona com os sistemas que eu já uso?",
+    a: "Sim. A IAlem se integra via API com CRMs (HubSpot, Pipedrive, RD Station, Salesforce), ERPs, planilhas e ferramentas de automação como Zapier e Make. Não precisa trocar nada — a gente encaixa no que você já tem.",
   },
   {
     q: "A IAlem substitui meu time de atendimento?",
-    a: "Não. A IAlem amplifica seu time. Ela cuida do primeiro contato, triagem, qualificação e follow-up — seu time foca em fechar negócio e cuidar de casos que exigem atenção humana. Ninguém é substituído, todos rendem mais.",
+    a: "Depende da sua operação. Se você tem um time, a IAlem cuida do primeiro contato, triagem e follow-up — liberando seu time para fechar negócio. Se você não tem equipe dedicada, a IAlem pode conduzir o atendimento completo de ponta a ponta, do primeiro contato ao agendamento. Ela se adapta ao tamanho e à realidade da sua empresa.",
   },
   {
     q: "Funciona só para vendas?",
-    a: "Não. A IAlem atua em qualquer ponto de contato: pré-atendimento, agendamento, confirmação, pós-venda, NPS, mensagens transacionais, cobranças, onboarding de clientes e comunicação interna entre equipes. Onde houver conversa, a IAlem pode operar.",
-  },
-  {
-    q: "Tem custo de implantação?",
-    a: "Sim, existe um investimento inicial de implantação que varia de acordo com a complexidade do fluxo da sua empresa — número de integrações, canais e regras de negócio. No diagnóstico gratuito já apresentamos o escopo completo com valores transparentes.",
+    a: "Não. A IAlem atua em qualquer ponto de contato: agendamento, confirmação, pós-venda, NPS, mensagens transacionais, cobranças, onboarding de clientes e comunicação interna entre equipes. Onde houver conversa, a IAlem pode operar.",
   },
   {
     q: "E se o agente não souber responder algo?",
     a: "Ele escala para o time humano. Toda conversa que sai do escopo vai direto pro seu atendente, com o contexto completo do que já foi tratado. Seu cliente nunca fica sem resposta — e seu time recebe a bola com todo o histórico.",
   },
   {
-    q: "Preciso de equipe técnica para implementar?",
-    a: "Não. Nossa equipe cuida de toda a integração. Você só precisa compartilhar acessos ao CRM e aos canais — nós fazemos o resto. Sem código, sem dor de cabeça técnica do seu lado.",
+    q: "Quanto tempo leva para começar a operar?",
+    a: "Depende da complexidade, mas a maioria das operações entra em produção entre 1 e 3 semanas. Isso inclui treinamento da IA, integração com seus sistemas e ajuste fino do tom de voz. No diagnóstico já apresentamos o cronograma.",
   },
   {
-    q: "O agente realmente parece a minha marca?",
-    a: "Sim. Treinamos o tom de voz, vocabulário e limites do agente com base no seu material real — site, scripts, manuais, identidade da marca. Não é um chatbot genérico: é a extensão natural do seu atendimento.",
+    q: "Tem custo de implantação?",
+    a: "Sim, existe um investimento inicial que varia conforme a complexidade do fluxo — número de integrações, canais e regras de negócio. No diagnóstico gratuito já apresentamos o escopo completo com valores transparentes.",
   },
   {
     q: "Funciona no meu segmento?",
-    a: "Se sua operação tem atendimento, qualificação ou agendamento, a IAlem funciona. Já operamos em concessionárias, clínicas, cooperativas, imobiliárias, e-commerce e serviços B2B. No diagnóstico, avaliamos as oportunidades específicas do seu setor.",
+    a: "Se sua operação tem atendimento, qualificação ou agendamento, a IAlem funciona. Já operamos em concessionárias, clínicas, cooperativas, imobiliárias, e-commerce e serviços B2B. No diagnóstico, avaliamos as oportunidades do seu setor.",
   },
 ];
 

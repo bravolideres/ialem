@@ -17,7 +17,7 @@ interface Scenario {
 
 const SCENARIOS: Scenario[] = [
   {
-    name: "IAlem · Concessionária",
+    name: "Sua Empresa · Concessionária",
     icon: "🚗",
     title: "Concessionária",
     subtitle: "Test drive + pré-aprovação",
@@ -31,7 +31,7 @@ const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    name: "IAlem · Clínica Odontológica",
+    name: "Sua Empresa · Clínica Odontológica",
     icon: "🦷",
     title: "Clínica odontológica",
     subtitle: "Agendamento e redução de no-show",
@@ -44,12 +44,12 @@ const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    name: "IAlem · Cooperativa de Crédito",
+    name: "Sua Empresa · Cooperativa de Crédito",
     icon: "🤝",
     title: "Cooperativa",
     subtitle: "Oferta proativa de consórcio",
     turns: [
-      { who: "ai", text: "Oi, Sr. Antônio! Tudo bem? Aqui é a IAlem da CooperaVale. Temos uma condição exclusiva de consórcio imobiliário esse mês — taxa administrativa a partir de 12%. Posso te contar mais?" },
+      { who: "ai", text: "Oi, Sr. Antônio! Tudo bem? Aqui é da CooperaVale. Temos uma condição exclusiva de consórcio imobiliário esse mês — taxa administrativa a partir de 12%. Posso te contar mais?" },
       { who: "user", text: "Opa, me interessa sim. É pra imóvel residencial?" },
       { who: "ai", text: "Isso! Residencial e comercial, com cartas de R$ 200 mil a R$ 800 mil. Parcelas a partir de R$ 1.290. Quer que eu simule um valor pra você?" },
       { who: "user", text: "Simula pra R$ 350 mil, por favor." },
@@ -57,7 +57,7 @@ const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    name: "IAlem · Imobiliária",
+    name: "Sua Empresa · Imobiliária",
     icon: "🏢",
     title: "Imobiliária",
     subtitle: "Captação de interesse por localização",
@@ -71,7 +71,7 @@ const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    name: "IAlem · Clínica Estética",
+    name: "Sua Empresa · Clínica Estética",
     icon: "✨",
     title: "Clínica estética",
     subtitle: "Confirmação e fidelização",
@@ -81,6 +81,19 @@ const SCENARIOS: Scenario[] = [
       { who: "ai", text: "Pode chegar normal, a Dra. faz toda a higienização. Evite só maquiagem pesada. :)" },
       { who: "user", text: "Perfeito, obrigada!" },
       { who: "ai", text: "Te vejo amanhã. Qualquer imprevisto, me chama por aqui. ✨" },
+    ],
+  },
+  {
+    name: "Sua Empresa · Equipe Interna",
+    icon: "📋",
+    title: "Equipe interna",
+    subtitle: "Notificação e contexto pro time",
+    turns: [
+      { who: "ai", text: "🔔 Novo lead qualificado: Marcos Oliveira, empresário, 42 anos. Interesse em consórcio imobiliário de R$ 350 mil. Já recebeu simulação e pediu contato com consultor." },
+      { who: "user", text: "Boa! Já temos o contato dele?" },
+      { who: "ai", text: "Sim. WhatsApp: (11) 98765-4321. Ele prefere ligação entre 14h e 17h. Já informei que um consultor entrará em contato hoje." },
+      { who: "user", text: "Perfeito. Alguma objeção durante a conversa?" },
+      { who: "ai", text: "Nenhuma objeção. Ele comparou com financiamento e entendeu a vantagem do consórcio. Segue o resumo completo no CRM. ✅" },
     ],
   },
 ];
@@ -218,6 +231,7 @@ export default function LiveDemo() {
                 </div>
               </button>
             ))}
+            <span className="scenarios-more">e muito mais…</span>
           </div>
 
           <div className="phone-wrap">
