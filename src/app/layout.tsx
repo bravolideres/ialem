@@ -46,14 +46,13 @@ export const metadata: Metadata = {
     siteName: "IAlem",
     title: "IAlem — Agentes de IA para Atendimento e Vendas",
     description:
-      "Agentes inteligentes sob medida que atendem, qualificam e agendam — com a voz da sua marca, 24/7. Mais conversões, menos trabalho repetitivo.",
+      "Desenhamos, treinamos e operamos agentes que conversam no WhatsApp como um funcionário dedicado — qualificando leads, agendando reuniões e fechando vendas enquanto você foca no que importa.",
     images: [
       {
-        url: "/images/hero-atendimento.jpg",
+        url: `${siteUrl}/images/hero-atendimento.png`,
         width: 1200,
         height: 630,
-        alt: "IAlem — Agentes de IA para atendimento e vendas",
-        type: "image/jpeg",
+        alt: "IAlem — Agentes de IA para Atendimento e Vendas",
       },
     ],
   },
@@ -61,8 +60,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IAlem — Agentes de IA para Atendimento e Vendas",
     description:
-      "Agentes inteligentes sob medida que atendem, qualificam e agendam — com a voz da sua marca, 24/7.",
-    images: ["/images/hero-atendimento.jpg"],
+      "Seu próximo cliente não vai esperar. Agentes de IA que atendem 24/7 no WhatsApp, integrados ao seu CRM, na voz da sua marca.",
+    images: [`${siteUrl}/images/hero-atendimento.png`],
   },
   alternates: {
     canonical: siteUrl,
