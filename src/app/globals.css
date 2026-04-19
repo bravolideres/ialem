@@ -546,6 +546,10 @@ nav.top ul a:hover { color: var(--text); }
   font-size: 15px; line-height: 1.65; color: var(--text-dim);
   font-style: italic;
 }
+.testimonial-metric {
+  font-family: 'Fraunces', serif; font-size: 22px; font-weight: 300;
+  color: var(--gold); margin-bottom: 14px; letter-spacing: -.02em;
+}
 .testimonial-author {
   display: flex; align-items: center; gap: 14px;
 }

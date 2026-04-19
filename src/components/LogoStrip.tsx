@@ -23,7 +23,7 @@ export default function LogoStrip() {
               width={140}
               height={logo.height}
               style={{
-                height: logo.height,
+                height: `${logo.height}px`,
                 width: "auto",
                 filter: "brightness(0) invert(1)",
                 opacity: 0.6,

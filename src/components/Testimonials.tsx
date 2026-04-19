@@ -7,6 +7,7 @@ const testimonials = [
     name: "Rafael Monteiro",
     role: "Gerente Comercial",
     company: "Concessionária Fiat",
+    metric: "+40% leads atendidos",
   },
   {
     quote:
@@ -14,6 +15,7 @@ const testimonials = [
     name: "Dra. Camila Esteves",
     role: "Diretora Clínica",
     company: "Dermaê",
+    metric: "−60% no-show",
   },
   {
     quote:
@@ -21,6 +23,7 @@ const testimonials = [
     name: "Lucas Braga",
     role: "Head de Operações",
     company: "Vitrale Imóveis",
+    metric: "3× mais conversas",
   },
 ];
 
@@ -37,9 +40,12 @@ export default function Testimonials() {
         <div className="testimonials-grid">
           {testimonials.map((t, i) => (
             <div className="testimonial-card" key={i}>
-              <blockquote>
-                <p>&ldquo;{t.quote}&rdquo;</p>
-              </blockquote>
+              <div>
+                <div className="testimonial-metric">{t.metric}</div>
+                <blockquote>
+                  <p>&ldquo;{t.quote}&rdquo;</p>
+                </blockquote>
+              </div>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">
                   {t.name.split(" ").map((n) => n[0]).join("")}

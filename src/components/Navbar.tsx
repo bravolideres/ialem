@@ -15,10 +15,10 @@ export default function Navbar() {
 
   const links = [
     { href: "#solucao", label: "Solução" },
-    { href: "#demo", label: "Demo ao vivo" },
-    { href: "#funciona", label: "Como funciona" },
+    { href: "#casos", label: "Cenários" },
+    { href: "#demo", label: "Demo" },
     { href: "#integracoes", label: "Integrações" },
-    { href: "#casos", label: "Casos" },
+    { href: "#faq", label: "FAQ" },
   ];
 
   return (
@@ -40,8 +40,8 @@ export default function Navbar() {
       >
         {mobileOpen ? "✕" : "☰"}
       </button>
-      <a href="#cta" className="btn btn-primary btn-sm">
-        Diagnóstico gratuito →
+      <a href="https://wa.me/5500000000000?text=Quero%20testar%20a%20IAlem" target="_blank" className="btn btn-primary btn-sm">
+        Teste na prática
       </a>
 
       <div className={`nav-links-mobile${mobileOpen ? " open" : ""}`}>

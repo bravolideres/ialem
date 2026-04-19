@@ -44,10 +44,10 @@ const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    name: "Sua Empresa · Cooperativa de Crédito",
-    icon: "🤝",
-    title: "Cooperativa",
-    subtitle: "Oferta proativa de consórcio",
+    name: "Sua Empresa · Serviços Financeiros",
+    icon: "🏦",
+    title: "Financeiro",
+    subtitle: "Oferta proativa de produtos",
     turns: [
       { who: "ai", text: "Oi, Sr. Antônio! Tudo bem? Aqui é da CooperaVale. Temos uma condição exclusiva de consórcio imobiliário esse mês — taxa administrativa a partir de 12%. Posso te contar mais?" },
       { who: "user", text: "Opa, me interessa sim. É pra imóvel residencial?" },

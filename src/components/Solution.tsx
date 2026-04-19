@@ -31,7 +31,8 @@ export default function Solution() {
             O que muda com a <em>IAlem</em>.
           </h2>
           <p>
-            Sem promessa milagrosa. Só o que a gente vê todo dia entrando em operação com clientes como você.
+            Cada minuto sem resposta é um cliente que vai para o concorrente. Cada follow-up esquecido
+            é receita perdida. Não é falta de vontade do seu time — é falta de escala. A IAlem resolve isso.
           </p>
         </div>
 

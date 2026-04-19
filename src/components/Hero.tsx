@@ -9,7 +9,9 @@ export default function Hero() {
           Atenda <em>mais</em>.<br />Sem perder o <em>jeito humano</em>.
         </h1>
         <p>
-          Agentes de IA que conversam com a voz da sua marca, integrados ao seu CRM, WhatsApp e processos. Resultado real — sem parecer robô.
+          A IAlem cria agentes de IA sob medida para sua operação. Desenhamos, treinamos e
+          operamos a inteligência que atende, qualifica e converte — seja no atendimento ao
+          cliente ou na comunicação da sua equipe interna.
         </p>
         <div className="hero-cta">
           <a href="https://wa.me/5500000000000?text=Quero%20testar%20a%20IAlem" target="_blank" className="btn btn-primary">
