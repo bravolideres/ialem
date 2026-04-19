@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 IAlem — IALEM AUTOMACAO INTELIGENTE LTDA</span>
+        <span>© 2026 IAlem Automação Inteligente LTDA</span>
         <span>CNPJ 66.012.830/0001-4 · Brasil</span>
       </div>
     </footer>

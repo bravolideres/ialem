@@ -37,19 +37,29 @@ export default function Integrations() {
             </p>
           </div>
           <div className="int-grid">
-            {integrations.map((t) => (
-              <div className="int" key={t.name}>
-                <span className="int-logo">
-                  {t.icon ? (
-                    // eslint-disable-next-line @next/next/no-img-element
+            {integrations.map((t) =>
+              t.icon ? (
+                <div className="int" key={t.name}>
+                  <span className="int-logo">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={t.icon} alt={t.name} width={28} height={28} />
-                  ) : (
+                  </span>
+                  <span className="int-name">{t.name}</span>
+                </div>
+              ) : (
+                <a
+                  key={t.name}
+                  className="int int-cta"
+                  href="https://wa.me/5500000000000?text=Oi!%20Estou%20interessado%20na%20IAlem%20e%20gostaria%20de%20saber%20se%20integra%20com%20meus%20sistemas"
+                  target="_blank"
+                >
+                  <span className="int-logo">
                     <span style={{ fontSize: 22, color: "var(--gold)" }}>+</span>
-                  )}
-                </span>
-                <span className="int-name">{t.name}</span>
-              </div>
-            ))}
+                  </span>
+                  <span className="int-name">{t.name}</span>
+                </a>
+              )
+            )}
           </div>
         </div>
       </div>
