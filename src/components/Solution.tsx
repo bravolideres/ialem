@@ -1,3 +1,5 @@
+import { RevealItem } from "@/components/Reveal";
+
 const pairs = [
   {
     hoje: "Clientes esperam horas — ou dias — por respostas que poderiam ser instantâneas. No WhatsApp, no e-mail, no site.",
@@ -40,7 +42,7 @@ export default function Solution() {
 
         <div className="pairs">
           {pairs.map((p, i) => (
-            <div className="pair reveal-child" key={i}>
+            <RevealItem key={i} delay={0} className="pair">
               <div className="pair-cell pair-l hoje">
                 <span className="tag">Hoje</span>
                 <div className="pair-txt">{p.hoje}</div>
@@ -50,7 +52,7 @@ export default function Solution() {
                 <span className="tag">Com a IAlem</span>
                 <div className="pair-txt">{p.ialem}</div>
               </div>
-            </div>
+            </RevealItem>
           ))}
         </div>
 

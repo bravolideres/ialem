@@ -1,3 +1,5 @@
+import { RevealItem } from "@/components/Reveal";
+
 const HeadsetIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
     <path d="M3 18v-6a9 9 0 1 1 18 0v6" />
@@ -37,54 +39,31 @@ const WorkflowIcon = () => (
 
 export default function UseCases() {
   const cases = [
-    {
-      icon: <HeadsetIcon />,
-      title: "Pré-atendimento",
-      desc: "Qualifica o lead antes de chegar no time comercial.",
-    },
-    {
-      icon: <CalendarIcon />,
-      title: "Agendamento",
-      desc: "Marca reuniões, visitas e consultas sem fricção.",
-    },
-    {
-      icon: <HeartHandshakeIcon />,
-      title: "Pós-venda",
-      desc: "NPS, recompra e renovação com naturalidade.",
-    },
-    {
-      icon: <WorkflowIcon />,
-      title: "Operação interna",
-      desc: "Fluxos entre times, sistemas e documentos.",
-    },
+    { icon: <HeadsetIcon />, title: "Pré-atendimento", desc: "Qualifica o lead antes de chegar no time comercial." },
+    { icon: <CalendarIcon />, title: "Agendamento", desc: "Marca reuniões, visitas e consultas sem fricção." },
+    { icon: <HeartHandshakeIcon />, title: "Pós-venda", desc: "NPS, recompra e renovação com naturalidade." },
+    { icon: <WorkflowIcon />, title: "Operação interna", desc: "Fluxos entre times, sistemas e documentos." },
   ];
 
   return (
     <section
       id="casos"
       className="cases-section"
-      style={{
-        background: "var(--surface)",
-        paddingBottom: 0,
-      }}
+      style={{ background: "var(--surface)", paddingBottom: 0 }}
     >
       <div className="wrap">
         <div className="sec-head">
           <span className="eyebrow">Casos de uso</span>
-          <h2>
-            Onde a IAlem <em>entra</em>.
-          </h2>
-          <p>
-            Escolha um cenário abaixo e veja como funciona na prática.
-          </p>
+          <h2>Onde a IAlem <em>entra</em>.</h2>
+          <p>Escolha um cenário abaixo e veja como funciona na prática.</p>
         </div>
         <div className="cases">
           {cases.map((c, i) => (
-            <div className="case reveal-child" key={i}>
+            <RevealItem key={i} delay={i * 0.1} className="case">
               <div className="case-ic">{c.icon}</div>
               <h4>{c.title}</h4>
               <p>{c.desc}</p>
-            </div>
+            </RevealItem>
           ))}
         </div>
       </div>

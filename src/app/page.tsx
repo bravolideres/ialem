@@ -11,24 +11,24 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import RevealWrapper from "@/components/RevealWrapper";
+import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-      <RevealWrapper><LogoStrip /></RevealWrapper>
+      <Reveal><LogoStrip /></Reveal>
       
-      <RevealWrapper stagger><Solution /></RevealWrapper>
-      <RevealWrapper stagger><UseCases /></RevealWrapper>
-      <RevealWrapper><LiveDemo /></RevealWrapper>
-      <RevealWrapper stagger><Numbers /></RevealWrapper>
-      <RevealWrapper stagger><Testimonials /></RevealWrapper>
-      <RevealWrapper stagger><HowItWorks /></RevealWrapper>
-      <RevealWrapper stagger><Integrations /></RevealWrapper>
-      <RevealWrapper stagger><FAQ /></RevealWrapper>
-      <RevealWrapper><CTA /></RevealWrapper>
+      <Reveal><Solution /></Reveal>
+      <Reveal><UseCases /></Reveal>
+      <LiveDemo />
+      <Reveal><Numbers /></Reveal>
+      <Reveal><Testimonials /></Reveal>
+      <Reveal><HowItWorks /></Reveal>
+      <Reveal><Integrations /></Reveal>
+      <Reveal><FAQ /></Reveal>
+      <Reveal><CTA /></Reveal>
       
       <Footer />
     </>

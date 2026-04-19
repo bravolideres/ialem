@@ -1,5 +1,7 @@
 "use client";
 
+import { RevealItem } from "@/components/Reveal";
+
 const testimonials = [
   {
     quote:
@@ -42,7 +44,7 @@ export default function Testimonials() {
         </div>
         <div className="testimonials-grid">
           {testimonials.map((t, i) => (
-            <div className="testimonial-card reveal-child" key={i}>
+            <RevealItem key={i} delay={i * 0.12} className="testimonial-card">
               <div>
                 <div className="testimonial-metric">{t.metric}</div>
                 <blockquote>
@@ -63,7 +65,7 @@ export default function Testimonials() {
                   </div>
                 </div>
               </div>
-            </div>
+            </RevealItem>
           ))}
         </div>
       </div>

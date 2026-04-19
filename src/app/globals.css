@@ -620,70 +620,11 @@ footer { padding: 80px 0 40px; border-top: 1px solid var(--line); background: va
   font-family: 'JetBrains Mono', monospace; letter-spacing: .05em;
 }
 
-/* ====== SCROLL REVEAL ====== */
-
-/* Section-level reveal (for headings, section backgrounds) */
-.reveal-section {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-.reveal-section.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Individual child reveal — each observed independently */
-.reveal-child {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-.reveal-child.reveal-child-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hero entrance sequence */
-.hero .hero-eyebrow,
-.hero h1,
-.hero > .wrap > p,
-.hero-cta,
-.hero-visual {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-.hero .hero-eyebrow { animation-delay: 0.1s; }
-.hero h1            { animation-delay: 0.25s; }
-.hero > .wrap > p   { animation-delay: 0.4s; }
-.hero-cta           { animation-delay: 0.55s; }
-.hero-visual        { animation-delay: 0.75s; }
-
-@keyframes heroEntrance {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Accessibility: instant reveal for reduced motion */
+/* ====== REDUCED MOTION ====== */
 @media (prefers-reduced-motion: reduce) {
-  .reveal-section,
-  .reveal-child,
-  .hero .hero-eyebrow,
-  .hero h1,
-  .hero > .wrap > p,
-  .hero-cta,
-  .hero-visual {
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-    transition: none !important;
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

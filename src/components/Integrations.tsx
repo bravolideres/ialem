@@ -1,3 +1,5 @@
+import { RevealItem } from "@/components/Reveal";
+
 const integrations = [
   { name: "WhatsApp", icon: "/images/ic-whatsapp.svg" },
   { name: "HubSpot", icon: "https://cdn.brandfetch.io/idRt0LuzRf/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1761193635069" },
@@ -37,27 +39,28 @@ export default function Integrations() {
             </p>
           </div>
           <div className="int-grid">
-            {integrations.map((t) =>
+            {integrations.map((t, i) =>
               t.icon ? (
-                <div className="int reveal-child" key={t.name}>
+                <RevealItem key={t.name} delay={i * 0.08} className="int">
                   <span className="int-logo">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={t.icon} alt={t.name} width={28} height={28} />
                   </span>
                   <span className="int-name">{t.name}</span>
-                </div>
+                </RevealItem>
               ) : (
-                <a
-                  key={t.name}
-                  className="int int-cta reveal-child"
-                  href="https://wa.me/5500000000000?text=Oi!%20Estou%20interessado%20na%20IAlem%20e%20gostaria%20de%20saber%20se%20integra%20com%20meus%20sistemas"
-                  target="_blank"
-                >
-                  <span className="int-logo">
-                    <span style={{ fontSize: 22, color: "var(--gold)" }}>+</span>
-                  </span>
-                  <span className="int-name">{t.name}</span>
-                </a>
+                <RevealItem key={t.name} delay={i * 0.08}>
+                  <a
+                    className="int int-cta"
+                    href="https://wa.me/5500000000000?text=Oi!%20Estou%20interessado%20na%20IAlem%20e%20gostaria%20de%20saber%20se%20integra%20com%20meus%20sistemas"
+                    target="_blank"
+                  >
+                    <span className="int-logo">
+                      <span style={{ fontSize: 22, color: "var(--gold)" }}>+</span>
+                    </span>
+                    <span className="int-name">{t.name}</span>
+                  </a>
+                </RevealItem>
               )
             )}
           </div>

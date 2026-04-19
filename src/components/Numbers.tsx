@@ -1,3 +1,5 @@
+import { RevealItem } from "@/components/Reveal";
+
 export default function Numbers() {
   const stats = [
     { value: "3", unit: "×", label: "mais conversas tratadas" },
@@ -11,9 +13,7 @@ export default function Numbers() {
       <div className="wrap">
         <div className="sec-head">
           <span className="eyebrow">Resultado</span>
-          <h2>
-            Números que <em>falam</em>.
-          </h2>
+          <h2>Números que <em>falam</em>.</h2>
           <p>
             Médias de operações ativas. Variam por setor e ponto de partida
             — falamos disso no diagnóstico.
@@ -21,13 +21,13 @@ export default function Numbers() {
         </div>
         <div className="numbers">
           {stats.map((s, i) => (
-            <div className="num-cell reveal-child" key={i}>
+            <RevealItem key={i} delay={i * 0.12} className="num-cell">
               <div className="num-big">
                 {s.value}
                 <em>{s.unit}</em>
               </div>
               <div className="num-label">{s.label}</div>
-            </div>
+            </RevealItem>
           ))}
         </div>
       </div>

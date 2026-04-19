@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { RevealItem } from "@/components/Reveal";
 
 const faqs = [
   {
@@ -51,10 +52,7 @@ export default function FAQ() {
         </div>
         <div className="faq-list">
           {faqs.map((f, i) => (
-            <div
-              className={`faq-item reveal-child${openIdx === i ? " open" : ""}`}
-              key={i}
-            >
+            <RevealItem key={i} delay={i * 0.06} className={`faq-item${openIdx === i ? " open" : ""}`}>
               <button
                 className="faq-q"
                 onClick={() => setOpenIdx(openIdx === i ? null : i)}
@@ -66,7 +64,7 @@ export default function FAQ() {
               <div className="faq-a">
                 <p>{f.a}</p>
               </div>
-            </div>
+            </RevealItem>
           ))}
         </div>
       </div>

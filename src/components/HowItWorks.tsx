@@ -1,3 +1,5 @@
+import { RevealItem } from "@/components/Reveal";
+
 export default function HowItWorks() {
   const steps = [
     {
@@ -28,12 +30,12 @@ export default function HowItWorks() {
           <p>Três passos, um time dedicado, acompanhamento contínuo.</p>
         </div>
         <div className="steps">
-          {steps.map((s) => (
-            <div className="step reveal-child" key={s.num}>
+          {steps.map((s, i) => (
+            <RevealItem key={s.num} delay={i * 0.15} className="step">
               <div className="step-num">{s.num}</div>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>
-            </div>
+            </RevealItem>
           ))}
         </div>
         <div className="section-cta">
