@@ -42,7 +42,7 @@ export default function Testimonials() {
         </div>
         <div className="testimonials-grid">
           {testimonials.map((t, i) => (
-            <div className="testimonial-card" key={i}>
+            <div className="testimonial-card reveal-child" key={i}>
               <div>
                 <div className="testimonial-metric">{t.metric}</div>
                 <blockquote>

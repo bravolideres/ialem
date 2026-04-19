@@ -40,7 +40,7 @@ export default function Solution() {
 
         <div className="pairs">
           {pairs.map((p, i) => (
-            <div className="pair" key={i}>
+            <div className="pair reveal-child" key={i}>
               <div className="pair-cell pair-l hoje">
                 <span className="tag">Hoje</span>
                 <div className="pair-txt">{p.hoje}</div>

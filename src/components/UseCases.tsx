@@ -80,7 +80,7 @@ export default function UseCases() {
         </div>
         <div className="cases">
           {cases.map((c, i) => (
-            <div className="case" key={i}>
+            <div className="case reveal-child" key={i}>
               <div className="case-ic">{c.icon}</div>
               <h4>{c.title}</h4>
               <p>{c.desc}</p>

@@ -621,15 +621,70 @@ footer { padding: 80px 0 40px; border-top: 1px solid var(--line); background: va
 }
 
 /* ====== SCROLL REVEAL ====== */
-.reveal-hidden {
+
+/* Section-level reveal */
+.reveal-section {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-.reveal-visible {
+.reveal-section.reveal-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Stagger children — cards, grid items, pairs */
+.reveal-child {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-visible .reveal-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero entrance sequence */
+.hero .hero-eyebrow,
+.hero h1,
+.hero > .wrap > p,
+.hero-cta,
+.hero-visual {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero .hero-eyebrow { animation-delay: 0.1s; }
+.hero h1            { animation-delay: 0.25s; }
+.hero > .wrap > p   { animation-delay: 0.4s; }
+.hero-cta           { animation-delay: 0.55s; }
+.hero-visual        { animation-delay: 0.75s; }
+
+@keyframes heroEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-section,
+  .reveal-child,
+  .hero .hero-eyebrow,
+  .hero h1,
+  .hero > .wrap > p,
+  .hero-cta,
+  .hero-visual {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* ====== MOBILE NAV ====== */

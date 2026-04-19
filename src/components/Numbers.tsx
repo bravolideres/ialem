@@ -21,7 +21,7 @@ export default function Numbers() {
         </div>
         <div className="numbers">
           {stats.map((s, i) => (
-            <div className="num-cell" key={i}>
+            <div className="num-cell reveal-child" key={i}>
               <div className="num-big">
                 {s.value}
                 <em>{s.unit}</em>

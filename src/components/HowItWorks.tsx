@@ -29,7 +29,7 @@ export default function HowItWorks() {
         </div>
         <div className="steps">
           {steps.map((s) => (
-            <div className="step" key={s.num}>
+            <div className="step reveal-child" key={s.num}>
               <div className="step-num">{s.num}</div>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>

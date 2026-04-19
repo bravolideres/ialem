@@ -20,12 +20,12 @@ export default function Home() {
       <Hero />
       <LogoStrip />
       
-      <RevealWrapper><Solution /></RevealWrapper>
-      <RevealWrapper><UseCases /></RevealWrapper>
+      <RevealWrapper stagger><Solution /></RevealWrapper>
+      <RevealWrapper stagger><UseCases /></RevealWrapper>
       <RevealWrapper><LiveDemo /></RevealWrapper>
-      <RevealWrapper><Numbers /></RevealWrapper>
-      <RevealWrapper><Testimonials /></RevealWrapper>
-      <RevealWrapper><HowItWorks /></RevealWrapper>
+      <RevealWrapper stagger><Numbers /></RevealWrapper>
+      <RevealWrapper stagger><Testimonials /></RevealWrapper>
+      <RevealWrapper stagger><HowItWorks /></RevealWrapper>
       <RevealWrapper><Integrations /></RevealWrapper>
       <RevealWrapper><FAQ /></RevealWrapper>
       <RevealWrapper><CTA /></RevealWrapper>
