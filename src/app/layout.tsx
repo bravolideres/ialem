@@ -54,7 +54,7 @@ export const metadata: Metadata = {
       "Criamos agentes de IA sob medida que atendem seus clientes como um funcionário dedicado — qualificando leads, agendando e vendendo 24/7.",
     images: [
       {
-        url: "/images/ialem-og.webp",
+        url: "/images/ialem-og3.webp",
         width: 1200,
         height: 630,
         alt: "IAlem — Atenda mais, sem perder o jeito humano",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "IAlem — Atenda mais, sem perder o jeito humano",
     description:
       "Seu próximo cliente não vai esperar. Agentes de IA que atendem 24/7, na voz da sua marca.",
-    images: ["/images/ialem-og.webp"],
+    images: ["/images/ialem-og3.webp"],
   },
   alternates: {
     canonical: "/",
