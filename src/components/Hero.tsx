@@ -29,7 +29,7 @@ export default function Hero() {
             width={780}
             height={440}
             priority
-            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+            style={{ width: "100%", height: "100%" }}
           />
           <div className="hero-visual-overlay">
             <h2 className="hero-visual-headline">
