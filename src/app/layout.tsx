@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://ialem.com.br";
+/* Resolve metadataBase automatically from Vercel env or fallback */
+const getBaseUrl = () => {
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL)
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "http://localhost:3000";
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(getBaseUrl()),
   title: {
-    default: "IAlem — Agentes de IA para Atendimento e Vendas",
+    default: "IAlem — Atenda mais, sem perder o jeito humano",
     template: "%s | IAlem",
   },
   description:
-    "A IAlem cria agentes inteligentes sob medida que atendem, qualificam e agendam no WhatsApp — com a voz da sua marca, 24/7, integrado ao seu CRM. Mais conversões, menos trabalho repetitivo.",
+    "Agentes de IA sob medida que atendem, qualificam e vendem pelo WhatsApp — 24/7, na voz da sua marca, integrados ao seu CRM.",
   keywords: [
     "inteligência artificial",
     "agentes de IA",
@@ -25,7 +31,7 @@ export const metadata: Metadata = {
     "IA para empresas",
     "automação de vendas",
   ],
-  authors: [{ name: "IAlem", url: siteUrl }],
+  authors: [{ name: "IAlem" }],
   creator: "IAlem",
   publisher: "IAlem",
   robots: {
@@ -42,29 +48,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: siteUrl,
     siteName: "IAlem",
-    title: "IAlem — Agentes de IA para Atendimento e Vendas",
+    title: "IAlem — Atenda mais, sem perder o jeito humano",
     description:
-      "Desenhamos, treinamos e operamos agentes que conversam no WhatsApp como um funcionário dedicado — qualificando leads, agendando reuniões e fechando vendas enquanto você foca no que importa.",
+      "Criamos agentes de IA sob medida que atendem seus clientes no WhatsApp como um funcionário dedicado — qualificando leads, agendando e vendendo 24/7.",
     images: [
       {
-        url: `${siteUrl}/images/hero-atendimento.png`,
+        url: "/images/hero-atendimento.png",
         width: 1200,
         height: 630,
-        alt: "IAlem — Agentes de IA para Atendimento e Vendas",
+        alt: "IAlem — Agentes de IA para atendimento e vendas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IAlem — Agentes de IA para Atendimento e Vendas",
+    title: "IAlem — Atenda mais, sem perder o jeito humano",
     description:
-      "Seu próximo cliente não vai esperar. Agentes de IA que atendem 24/7 no WhatsApp, integrados ao seu CRM, na voz da sua marca.",
-    images: [`${siteUrl}/images/hero-atendimento.png`],
+      "Seu próximo cliente não vai esperar. Agentes de IA que atendem 24/7, na voz da sua marca.",
+    images: ["/images/hero-atendimento.png"],
   },
   alternates: {
-    canonical: siteUrl,
+    canonical: "/",
   },
   category: "technology",
 };
