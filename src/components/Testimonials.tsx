@@ -8,6 +8,7 @@ const testimonials = [
     role: "Gerente Comercial",
     company: "Concessionária Fiat",
     metric: "+40% leads atendidos",
+    photo: "/images/avatar-rafael.png",
   },
   {
     quote:
@@ -16,6 +17,7 @@ const testimonials = [
     role: "Diretora Clínica",
     company: "Dermaê",
     metric: "−60% no-show",
+    photo: "/images/avatar-camila.png",
   },
   {
     quote:
@@ -24,6 +26,7 @@ const testimonials = [
     role: "Head de Operações",
     company: "Vitrale Imóveis",
     metric: "3× mais conversas",
+    photo: "/images/avatar-lucas.png",
   },
 ];
 
@@ -47,9 +50,12 @@ export default function Testimonials() {
                 </blockquote>
               </div>
               <div className="testimonial-author">
-                <div className="testimonial-avatar">
-                  {t.name.split(" ").map((n) => n[0]).join("")}
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={t.photo}
+                  alt={t.name}
+                  className="testimonial-photo"
+                />
                 <div>
                   <div className="testimonial-name">{t.name}</div>
                   <div className="testimonial-role">

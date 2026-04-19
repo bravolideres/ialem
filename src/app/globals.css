@@ -560,6 +560,10 @@ nav.top ul a:hover { color: var(--text); }
   font-family: 'Inter Tight', sans-serif; font-size: 13px; font-weight: 600;
   color: var(--bg); letter-spacing: -.02em; flex-shrink: 0;
 }
+.testimonial-photo {
+  width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+  border: 2px solid var(--line); flex-shrink: 0;
+}
 .testimonial-name {
   font-weight: 500; font-size: 14px; color: var(--text);
 }
