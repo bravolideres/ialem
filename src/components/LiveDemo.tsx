@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
+import IAlemIcon from "./IAlemIcon";
 
 interface Turn {
   who: "ai" | "user";
@@ -247,7 +248,7 @@ export default function LiveDemo() {
             <div className="phone">
               <div className="phone-head">
                 <div className="phone-head-l">
-                  <span className="av">IA</span>
+                  <span className="av"><IAlemIcon size={20} fill="#0E0E0F" /></span>
                   <div>
                     <div className="ph-name">{SCENARIOS[activeIdx].name}</div>
                     <div className="ph-sub">
