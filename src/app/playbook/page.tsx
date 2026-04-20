@@ -757,9 +757,9 @@ export default function PlaybookPage() {
               },
               {
                 sem: "Semana 4", num: "10", pilar: "Resultado Real", formato: "Post de Case",
-                titulo: "400 mensagens por dia respondidas sem contratar ninguém.",
-                arte: "Fundo dark. '400/dia' em Fraunces 96px dourado. Subtítulo: 'mensagens respondidas — sem contratar'. Logo IAlem.",
-                legenda: "Uma cooperativa de crédito com 14 mil cooperados e 6 postos de atendimento tinha um gargalo: o WhatsApp acumulava 400+ mensagens por dia.\n\nDúvidas sobre crédito, cobrança, produtos — e a maioria esperava horas.\n\nCom o agente IAlem:\n→ 100% das mensagens respondidas em até 1 minuto\n→ Tom humanizado, sem parecer bot de banco\n→ Time de relacionamento focou no que exige humano\n\nEscala sem perder o jeito cooperativa.\n\n→ Diagnóstico gratuito no link da bio.",
+                titulo: "+40% de leads atendidos em uma rede de concessionárias.",
+                arte: "Fundo dark. '+40%' em Fraunces 96px dourado. Subtítulo: 'de leads atendidos — rede com 3 lojas'. Logo IAlem.",
+                legenda: "Uma rede de concessionárias com 3 lojas e 42 vendedores recebia 300+ leads por mês entre Instagram, portais e tráfego pago.\n\nO problema: só 60% eram respondidos no mesmo dia. O restante esperava — e ia pra concorrência.\n\nCom o agente IAlem:\n→ 100% dos leads respondidos em até 1 minuto\n→ Qualificação automática antes de chegar no vendedor\n→ +40% de atendimentos sem nenhum custo de contratação\n\nO vendedor parou de gastar tempo com curioso. E começou a fechar mais.\n\n→ Diagnóstico gratuito no link da bio.",
               },
               {
                 sem: "Semana 4", num: "11", pilar: "Objeções & Contrapontos", formato: "Reels (30s)",
