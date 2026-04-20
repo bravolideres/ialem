@@ -2263,205 +2263,124 @@ export default function MarcaPage() {
           </p>
 
           <div className="apps-grid">
-            {/* ── Cartão de Visita ── */}
+            {/* ── Cartão de Visita — Junior ── */}
             <div className="app-mockup reveal d1">
-              <div className="app-stage">
-                <div className="biz-card">
-                  <img
-                    src="/brand/ialem-logo-gold.svg"
-                    alt=""
-                    className="biz-logo"
-                  />
-                  <InlineIcon
-                    opacity={0.04}
-                    style={{
-                      position: "absolute",
-                      bottom: "-20%",
-                      right: "-15%",
-                      width: "55%",
-                    }}
-                  />
-                  <div className="biz-info">
-                    <div className="biz-name">Junior Silva</div>
-                    <div className="biz-role">Sócio-fundador</div>
-                    <div className="biz-contact">
-                      junior@ialem.com.br · (92) 9 9999-0000
-                    </div>
-                  </div>
-                </div>
+              <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/brand/images/cartao-junior.jpeg"
+                  alt="Cartão de visita IAlem — D'ávila Júnior"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
               <div className="app-meta">
-                <div className="app-label">Cartão de visita</div>
+                <div className="app-label">Cartão de visita · Frente e verso</div>
                 <div className="app-desc">
-                  Fundo dark, logo gold no topo, símbolo como grafismo no
-                  canto. Informação mínima — o cartão é convite, não
-                  currículo.
+                  Fundo dark com hot stamping dourado. Logo gold no topo, símbolo
+                  como grafismo sutil no canto. Informação mínima — o cartão é
+                  convite, não currículo.
                 </div>
               </div>
             </div>
 
-            {/* ── Assinatura de E-mail ── */}
+            {/* ── Cartão de Visita — Ana ── */}
             <div className="app-mockup reveal d2">
-              <div className="app-stage">
-                <div className="email-sig">
-                  <div className="sig-body">
-                    <div className="sig-avatar">
-                      <img
-                        src="/brand/ialem-icon-gold.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="sig-text">
-                      <div className="sig-name">Ana Santos</div>
-                      <div className="sig-title">
-                        Co-fundadora · IAlem
-                      </div>
-                      <div className="sig-links">
-                        <span>ialem.com.br</span>
-                        <span className="sig-divider">|</span>
-                        <span>(92) 9 8888-0000</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/brand/images/cartao-ana.jpeg"
+                  alt="Cartão de visita IAlem — Ana Flávia"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
               <div className="app-meta">
-                <div className="app-label">Assinatura de e-mail</div>
+                <div className="app-label">Cartão de visita · Variação</div>
                 <div className="app-desc">
-                  Fundo claro (contexto de e-mail). Barra dourada no
-                  topo, avatar circular com ícone, dados em mono. A marca
-                  aparece sem gritar.
+                  Mesmo sistema visual aplicado a diferentes sócios. A
+                  consistência do layout reforça a marca — o nome muda, a
+                  identidade permanece.
                 </div>
               </div>
             </div>
 
-            {/* ── Post LinkedIn ── */}
+            {/* ── Papelaria — Desk ── */}
             <div className="app-mockup reveal d3">
-              <div className="app-stage">
-                <div className="linkedin-post">
-                  <div className="lp-cover">
-                    <div className="lp-headline">
-                      Atenda <em>mais</em>.<br />
-                      Sem perder o jeito humano.
-                    </div>
-                    <InlineIcon
-                      opacity={0.08}
-                      style={{
-                        position: "absolute",
-                        right: "-10%",
-                        top: "-20%",
-                        width: "60%",
-                      }}
-                    />
-                  </div>
-                  <div className="lp-body">
-                    <div className="lp-av">
-                      <img
-                        src="/brand/ialem-icon-gold.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="lp-text">
-                      <strong>IAlem</strong> · Automação Inteligente
-                      <br />
-                      Agentes que conversam como gente.
-                    </div>
-                  </div>
-                </div>
+              <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/brand/images/desk-stationery.jpeg"
+                  alt="Papelaria IAlem — caderno, celular, caneta e cartões"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
               <div className="app-meta">
-                <div className="app-label">Post de LinkedIn</div>
+                <div className="app-label">Papelaria · Desk set</div>
                 <div className="app-desc">
-                  Dark com headline editorial, símbolo como grafismo de
-                  fundo. Rodapé com avatar + nome. Funciona para
-                  Instagram, LinkedIn e Stories.
+                  Caderno com símbolo em relevo, caneta com detalhe dourado,
+                  porta-cartões e celular com ícone. Cada peça é dark premium —
+                  nenhuma destoa.
                 </div>
               </div>
             </div>
 
-            {/* ── Capa de Proposta ── */}
+            {/* ── Fachada do Escritório ── */}
             <div className="app-mockup reveal d4">
-              <div className="app-stage">
-                <div className="proposal-cover">
-                  <InlineIcon
-                    opacity={0.05}
-                    style={{
-                      position: "absolute",
-                      top: "-25%",
-                      right: "-30%",
-                      width: "80%",
-                    }}
-                  />
-                  <div className="pc-top">
-                    <div className="pc-eyebrow">
-                      Proposta comercial
-                    </div>
-                    <img
-                      src="/brand/ialem-logo-gold.svg"
-                      alt=""
-                      className="pc-logo"
-                    />
-                  </div>
-                  <div className="pc-title">
-                    Automação de atendimento para{" "}
-                    <em>Clínica Exemplo</em>.
-                  </div>
-                  <div className="pc-footer">
-                    <div className="pc-footer-text">
-                      Confidencial
-                      <br />
-                      Abril 2026
-                    </div>
-                    <div className="pc-footer-text">V1.0</div>
-                  </div>
-                </div>
+              <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/brand/images/fachada-escritorio.jpeg"
+                  alt="Fachada IAlem — letreiro retroiluminado em escritório"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
               <div className="app-meta">
-                <div className="app-label">Capa de proposta</div>
+                <div className="app-label">Fachada · Sinalização</div>
                 <div className="app-desc">
-                  Formato A4/PDF. Logo no topo, headline com nome do
-                  cliente em italic dourado, símbolo como marca d&apos;água.
-                  Sóbrio e premium.
+                  Letreiro em metal dourado com retroiluminação âmbar sobre
+                  painel ripado escuro. A presença física traduz o mesmo tom
+                  de sofisticação do digital.
                 </div>
               </div>
             </div>
           </div>
 
-          {/* ── LinkedIn Banner (full width) ── */}
+          {/* ── Full width: Camiseta ── */}
           <div className="app-mockup reveal d4" style={{ marginTop: 24 }}>
-            <div className="app-stage" style={{ padding: "32px 40px" }}>
-              <div className="linkedin-banner">
-                <div className="lb-text">
-                  <div className="lb-tagline">
-                    Leve seu atendimento <em>além</em>.
-                  </div>
-                  <div className="lb-sub">
-                    Automação inteligente · ialem.com.br
-                  </div>
-                </div>
-                <img
-                  src="/brand/ialem-logo-gold.svg"
-                  alt=""
-                  className="lb-logo"
-                />
-                <InlineIcon
-                  opacity={0.06}
-                  style={{
-                    position: "absolute",
-                    right: "-5%",
-                    top: "-40%",
-                    height: "180%",
-                    width: "auto",
-                  }}
-                />
-              </div>
+            <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/brand/images/camiseta-marca.jpeg"
+                alt="Camiseta IAlem — logo gold em camiseta preta"
+                style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}
+              />
             </div>
             <div className="app-meta">
-              <div className="app-label">Banner LinkedIn · Cover</div>
+              <div className="app-label">Vestuário · Camiseta</div>
               <div className="app-desc">
-                Formato 4:1 para capa de LinkedIn. Tagline editorial à
-                esquerda, logo à direita, símbolo como grafismo de fundo
-                em escala dramática.
+                Preta com logo gold no peito e ícone bordado na manga.
+                Uniforme de time que funciona como peça de marca — casual,
+                premium e reconhecível.
+              </div>
+            </div>
+          </div>
+
+          {/* ── Full width: Painel Aeroporto ── */}
+          <div className="app-mockup reveal d4" style={{ marginTop: 24 }}>
+            <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/brand/images/painel-aeroporto.jpeg"
+                alt="Painel IAlem em sala de embarque de aeroporto"
+                style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}
+              />
+            </div>
+            <div className="app-meta">
+              <div className="app-label">Mídia externa · Painel de aeroporto</div>
+              <div className="app-desc">
+                A marca em grande formato — dark premium em escala. Headline
+                editorial com depoimento e números reais. O painel prova que
+                o sistema visual funciona do digital ao físico sem perder
+                identidade.
               </div>
             </div>
           </div>
