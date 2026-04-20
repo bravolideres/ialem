@@ -44,6 +44,14 @@ export default function PlaybookPage() {
             <a href="#trafego">Tráfego</a>
             <a href="#metricas">Métricas</a>
           </div>
+          <select
+            className="doc-switcher"
+            defaultValue="/playbook"
+            onChange={(e) => { window.location.href = e.target.value; }}
+          >
+            <option value="/playbook">Playbook</option>
+            <option value="/marca">Marca</option>
+          </select>
         </div>
       </nav>
 
@@ -137,7 +145,7 @@ export default function PlaybookPage() {
               </div>
               <div>
                 <p style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.65, maxWidth: "48ch" }}>
-                  Três arquétipos — volume, experiência e pipeline. Cada um tem um nome, uma rotina e uma frustração específica que a IAlem resolve.
+                  Três arquétipos — volume, experiência e escala. Cada um tem um nome, uma rotina e uma frustração específica que a IAlem resolve.
                 </p>
                 <p style={{ color: "var(--text-dim)", fontSize: 14.5, lineHeight: 1.6, marginTop: 16, maxWidth: "48ch", fontStyle: "italic" }}>
                   E dentro de cada um mora um cético. Ele aparece na hora da decisão — por isso existe a seção de <em style={{ color: "var(--gold)", fontStyle: "italic" }}>Objeções recorrentes</em> abaixo.
@@ -152,7 +160,7 @@ export default function PlaybookPage() {
                   <img
                     src="/images/persona-carlos.png"
                     alt="Carlos — dono de concessionária"
-                    style={{ objectPosition: "70% center" }}
+                    style={{ objectPosition: "80% center" }}
                   />
                 </div>
                 <div className="persona-content">
@@ -184,6 +192,7 @@ export default function PlaybookPage() {
                   <img
                     src="/images/persona-patricia.png"
                     alt="Dra. Patrícia — sócia de clínica"
+                    style={{ objectPosition: "60% center" }}
                   />
                 </div>
                 <div className="persona-content">
@@ -209,32 +218,32 @@ export default function PlaybookPage() {
                 </div>
               </div>
 
-              {/* Persona 3: Rafael */}
+              {/* Persona 3: Roberto */}
               <div className="persona-card reveal d3">
                 <div className="persona-photo">
                   <img
                     src="/images/persona-rafael.png"
-                    alt="Rafael — diretor comercial"
+                    alt="Roberto — diretor executivo de cooperativa"
                   />
                 </div>
                 <div className="persona-content">
                   <div className="persona-header">
-                    <div className="persona-name">Rafael</div>
-                    <div className="persona-role">Diretor comercial de incorporadora</div>
+                    <div className="persona-name">Roberto</div>
+                    <div className="persona-role">Diretor executivo de cooperativa de crédito</div>
                   </div>
                   <div className="persona-body">
                     <p className="persona-bio">
-                      Rafael comanda um time de 12 corretores e recebe 300+ leads por mês de portais imobiliários e tráfego pago. O problema: só 25% são qualificados, e os corretores gastam tempo demais com curiosos. Ele quer um filtro inteligente que qualifique antes do humano entrar — mas sem parecer um formulário chato.
+                      Roberto dirige uma cooperativa com 14 mil cooperados e 6 postos de atendimento. O time de relacionamento não dá conta de responder dúvidas sobre crédito, cobrança e produtos — o WhatsApp acumula 400+ mensagens por dia e a maioria espera horas. Ele sabe que precisa de escala sem perder o tom humano que diferencia cooperativa de banco.
                     </p>
                     <div className="persona-section-label">O que faz ele parar o scroll</div>
                     <ul className="persona-list">
-                      <li>Conteúdo sobre qualificação automática de leads</li>
-                      <li>Comparação: custo de SDR vs. agente de IA</li>
-                      <li>Resultado em pipeline: &ldquo;3× mais leads qualificados no CRM&rdquo;</li>
+                      <li>Case de instituição financeira ou cooperativa com volume alto</li>
+                      <li>Comparação: custo de atendente vs. agente de IA por cooperado</li>
+                      <li>Resultado em NPS: &ldquo;satisfação subiu 22 pontos em 2 meses&rdquo;</li>
                     </ul>
                     <div className="persona-section-label">O que faz ele agir</div>
                     <p className="persona-trigger">
-                      Planilha de ROI. Rafael convence a diretoria com número. Se o conteúdo der o cálculo pronto, ele compartilha no grupo do board.
+                      Apresentação executiva com ROI projetado. Roberto convence o conselho com número e compliance — se o material trouxer segurança regulatória e economia mensal, ele agenda reunião na semana.
                     </p>
                   </div>
                 </div>
@@ -248,7 +257,7 @@ export default function PlaybookPage() {
               <div className="info-eyebrow">Objeções recorrentes</div>
               <h3>O cético mora dentro <em>de todos</em>.</h3>
               <p>
-                Carlos, Patrícia e Rafael são pragmáticos — cada um trava na decisão por um medo diferente. Os quatro bloqueios que mais aparecem em DM, e o contraponto direto.
+                Carlos, Patrícia e Roberto são pragmáticos — cada um trava na decisão por um medo diferente. Os quatro bloqueios que mais aparecem em DM, e o contraponto direto.
               </p>
             </div>
             <div className="objecoes-grid">
@@ -328,7 +337,7 @@ export default function PlaybookPage() {
               ✕ Frases que a IAlem nunca usa
             </div>
             <div className="forbidden-grid">
-              {["Solução disruptiva", "IA de ponta", "Revolucione seu negócio", "Tecnologia de última geração", "O futuro é agora", "Robô inteligente", "Chatbot avançado", "Transformação digital"].map((phrase) => (
+              {["Solução disruptiva", "IA de ponta", "Revolucione seu negócio", "Tecnologia de última geração", "O futuro é agora", "Robô inteligente", "Chatbot avançado", "Transformação digital", "Automatize tudo", "Substitua seu time"].map((phrase) => (
                 <div key={phrase} className="forbidden-item">
                   <div className="forbidden-icon">✕</div>
                   <div className="forbidden-text">{phrase}</div>
@@ -399,7 +408,7 @@ export default function PlaybookPage() {
             {[
               { label: "Topo", name: "Atração", desc: "Educação + provocação. Conteúdo que faz parar o scroll.", content: "Pilares: Educação sobre IA, Visão de Mercado.", objective: "Seguidores · Alcance · Salvamentos", width: 100 },
               { label: "Meio", name: "Consideração", desc: "Cases + bastidores. Conteúdo que cria confiança.", content: "Pilares: Resultado Real, Bastidores.", objective: "Engajamento · DMs · Compartilhamentos", width: 82 },
-              { label: "Meio-fundo", name: "Decisão", desc: "Comparações honestas, objeções desarmadas, diferenciação.", content: "Pilares: Objeções & Contrapontos, Resultado Real.", objective: "DMs qualificadas · Cliques no link · Pedidos de demo", width: 64 },
+              { label: "Meio-fundo", name: "Decisão", desc: "Remove o último medo. Objeções desarmadas com dados e comparações reais.", content: "Pilares: Objeções & Contrapontos, Resultado Real.", objective: "DMs qualificadas · Cliques no link · Pedidos de demo", width: 64 },
               { label: "Fundo", name: "Conversão", desc: "CTA direto. Teste grátis, diagnóstico, agendamento.", content: "CTA: teste no WhatsApp, diagnóstico gratuito.", objective: "Mensagens · Agendamentos · Contratos", width: 48 },
               { label: "Pós-venda", name: "Advocacy", desc: "Cliente virou fã. Ativa indicação e mantém vínculo.", content: "Depoimentos em vídeo, spotlight de clientes.", objective: "Indicações · Renovações · Novos cases", width: 34 },
             ].map((s, i) => (
@@ -714,7 +723,7 @@ export default function PlaybookPage() {
                 sem: "Semana 2", num: "04", pilar: "Resultado Real", formato: "Post de Case",
                 titulo: "Uma clínica reduziu 60% de no-show em 3 semanas.",
                 arte: "Fundo dark. '−60%' em Fraunces 96px dourado. Subtítulo: 'de no-show em 3 semanas'. Detalhe visual: gráfico minimalista descendo. Logo IAlem.",
-                legenda: "A Dra. Patrícia tinha um problema: 28% de no-show.\n\nCada paciente que faltava era vaga perdida, receita desperdiçada e furo na agenda de 8 profissionais.\n\nA recepção gastava 3 horas por dia mandando confirmação no WhatsApp. Manualmente. Uma por uma.\n\nEm 3 semanas com o agente IAlem:\n→ Confirmação automática com tom humanizado\n→ Reagendamento instantâneo\n→ No-show caiu de 28% para 11%\n\nSem contratar. Sem mudar sistema.\n\nQuer saber quanto no-show custa pra sua operação?\n→ Diagnóstico gratuito no link da bio.",
+                legenda: "Uma clínica multidisciplinar com 8 profissionais e 200 agendamentos por semana tinha um problema: 28% de no-show.\n\nCada paciente que faltava era vaga perdida, receita desperdiçada e furo na agenda.\n\nA recepção gastava 3 horas por dia mandando confirmação no WhatsApp. Manualmente. Uma por uma.\n\nEm 3 semanas com o agente IAlem:\n→ Confirmação automática com tom humanizado\n→ Reagendamento instantâneo\n→ No-show caiu de 28% para 11%\n\nSem contratar. Sem mudar sistema.\n\nQuer saber quanto no-show custa pra sua operação?\n→ Diagnóstico gratuito no link da bio.",
               },
               {
                 sem: "Semana 2", num: "05", pilar: "Educação sobre IA", formato: "Reels (30s)",
@@ -744,16 +753,16 @@ export default function PlaybookPage() {
                 sem: "Semana 3", num: "09", pilar: "Visão de Mercado", formato: "Quote Card",
                 titulo: "Quem responde primeiro, vende mais.",
                 arte: "Fundo dark com grafismo sutil do ícone IAlem. Frase 'Quem responde primeiro, vende mais.' em Fraunces 300 italic dourado. Abaixo: 'Harvard Business Review' em mono. Logo IAlem 10% no canto.",
-                legenda: "Estudo de Harvard mostrou que empresas que respondem em até 5 minutos têm 21× mais chance de qualificar um lead.\n\n21 vezes.\n\nE a maioria das empresas brasileiras demora mais de 1 hora.\n\nVelocidade virou vantagem competitiva. E um agente de IA não precisa de café pra responder às 23h.\n\n→ Teste a velocidade na prática. Link na bio.",
+                legenda: "Empresas que respondem em até 5 minutos têm 21× mais chance de qualificar um lead. — Harvard Business Review\n\n21 vezes.\n\nA maioria das empresas brasileiras? Mais de 1 hora.\n\nUm agente de IA não precisa de café pra responder às 23h.\n\n→ Teste a velocidade na prática. Link na bio.",
               },
               {
                 sem: "Semana 4", num: "10", pilar: "Resultado Real", formato: "Post de Case",
-                titulo: "+40% de leads atendidos sem contratar ninguém.",
-                arte: "Fundo dark. '+40%' em Fraunces 96px dourado. Subtítulo: 'de leads atendidos — sem contratar'. Logo IAlem.",
-                legenda: "Uma concessionária recebia 300+ leads por mês.\n\nSó 180 eram respondidos no mesmo dia. O resto esperava — e ia embora.\n\nCom o agente IAlem:\n→ 100% dos leads respondidos em até 1 minuto\n→ Qualificação automática antes de chegar no vendedor\n→ +40% de atendimentos sem nenhum custo de contratação\n\nO vendedor parou de gastar tempo com curioso. E começou a vender mais.\n\n→ Diagnóstico gratuito no link da bio.",
+                titulo: "400 mensagens por dia respondidas sem contratar ninguém.",
+                arte: "Fundo dark. '400/dia' em Fraunces 96px dourado. Subtítulo: 'mensagens respondidas — sem contratar'. Logo IAlem.",
+                legenda: "Uma cooperativa de crédito com 14 mil cooperados e 6 postos de atendimento tinha um gargalo: o WhatsApp acumulava 400+ mensagens por dia.\n\nDúvidas sobre crédito, cobrança, produtos — e a maioria esperava horas.\n\nCom o agente IAlem:\n→ 100% das mensagens respondidas em até 1 minuto\n→ Tom humanizado, sem parecer bot de banco\n→ Time de relacionamento focou no que exige humano\n\nEscala sem perder o jeito cooperativa.\n\n→ Diagnóstico gratuito no link da bio.",
               },
               {
-                sem: "Semana 4", num: "11", pilar: "Educação sobre IA", formato: "Reels (30s)",
+                sem: "Semana 4", num: "11", pilar: "Objeções & Contrapontos", formato: "Reels (30s)",
                 titulo: "O que um agente de IA NÃO faz.",
                 arte: "Vídeo com texto na tela em estilo lista. 'Um agente de IA não substitui seu time. Não inventa respostas. Não funciona sem treinamento. Não é chatbot de farmácia.' Pausa. 'O que ele faz? Responde rápido, qualifica com contexto e nunca tira férias.' CTA final.",
                 legenda: "Plot twist: IA não resolve tudo.\n\nUm agente de IA não substitui seu time.\nNão inventa informação.\nNão funciona sem treinamento.\n\nMas ele responde em menos de 1 minuto.\nQualifica com contexto.\nE nunca tira férias.\n\nÉ ferramenta, não milagre. E a ferramenta certa faz diferença.\n\n→ Quer ver como? Link na bio.",

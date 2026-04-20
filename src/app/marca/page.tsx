@@ -85,6 +85,14 @@ export default function MarcaPage() {
             <a href="#aplicacoes">Aplicações</a>
             <a href="#kit">Kit</a>
           </div>
+          <select
+            className="doc-switcher"
+            defaultValue="/marca"
+            onChange={(e) => { window.location.href = e.target.value; }}
+          >
+            <option value="/marca">Marca</option>
+            <option value="/playbook">Playbook</option>
+          </select>
         </div>
       </nav>
 
