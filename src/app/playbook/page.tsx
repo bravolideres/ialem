@@ -37,6 +37,7 @@ export default function PlaybookPage() {
           <div className="links">
             <a href="#personas">Personas</a>
             <a href="#pilares">Pilares</a>
+            <a href="#funil">Funil</a>
             <a href="#voz">Voz</a>
             <a href="#perfil">Perfil</a>
             <a href="#12posts">12 Posts</a>
@@ -129,119 +130,139 @@ export default function PlaybookPage() {
           </div>
 
           <div className="persona-grid">
-            <div className="reveal d1">
-              <h2 style={{ maxWidth: "16ch" }}>
-                Pra quem a IAlem <em>conversa</em>.
-              </h2>
-              <p style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.65, marginTop: 28, maxWidth: "44ch" }}>
-                Não são faixas demográficas. São pessoas reais, com nome, rotina e uma frustração específica que a IAlem resolve.
-              </p>
+            <div className="persona-intro reveal d1">
+              <div>
+                <h2 style={{ maxWidth: "16ch" }}>
+                  Pra quem a IAlem <em>conversa</em>.
+                </h2>
+              </div>
+              <div>
+                <p style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.65, maxWidth: "48ch" }}>
+                  Três arquétipos — volume, experiência e pipeline. Cada um tem um nome, uma rotina e uma frustração específica que a IAlem resolve.
+                </p>
+                <p style={{ color: "var(--text-dim)", fontSize: 14.5, lineHeight: 1.6, marginTop: 16, maxWidth: "48ch", fontStyle: "italic" }}>
+                  E dentro de cada um mora um cético. Ele aparece na hora da decisão — por isso existe a seção de <em style={{ color: "var(--gold)", fontStyle: "italic" }}>Objeções recorrentes</em> abaixo.
+                </p>
+              </div>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            <div className="persona-cards-list">
               {/* Persona 1: Carlos */}
               <div className="persona-card reveal d1">
-                <div className="persona-header">
-                  <div className="persona-avatar">👔</div>
-                  <div>
+                <div className="persona-photo">
+                  <img
+                    src="/images/persona-carlos.png"
+                    alt="Carlos — dono de concessionária"
+                  />
+                </div>
+                <div className="persona-content">
+                  <div className="persona-header">
                     <div className="persona-name">Carlos</div>
                     <div className="persona-role">Dono de concessionária em Goiânia</div>
                   </div>
-                </div>
-                <div className="persona-body">
-                  <p className="persona-bio">
-                    Carlos tem 3 lojas, 42 vendedores e um problema: 60% dos leads que chegam pelo Instagram são respondidos depois de 2 horas. Ele sabe que o WhatsApp é o canal mais forte da operação, mas depende de gente pra responder — e gente almoça, falta e esquece. Já tentou chatbot em 2023, mas era tão robótico que os clientes chamavam o vendedor pelo nome pra fugir do bot.
-                  </p>
-                  <div className="persona-section-label">O que faz ele parar o scroll</div>
-                  <ul className="persona-list">
-                    <li>Case real de concessionária ou empresa do porte dele</li>
-                    <li>Número concreto: &ldquo;40% mais leads atendidos em 3 semanas&rdquo;</li>
-                    <li>Comparação antes/depois que ele se enxerga</li>
-                  </ul>
-                  <div className="persona-section-label">O que faz ele agir</div>
-                  <p className="persona-trigger">
-                    Teste grátis. Carlos não compra proposta — compra demonstração. Se ele puder testar no WhatsApp dele em 15 minutos, ele decide na hora.
-                  </p>
+                  <div className="persona-body">
+                    <p className="persona-bio">
+                      Carlos tem 3 lojas, 42 vendedores e um problema: 60% dos leads que chegam pelo Instagram são respondidos depois de 2 horas. Ele sabe que o WhatsApp é o canal mais forte da operação, mas depende de gente pra responder — e gente almoça, falta e esquece. Já tentou chatbot em 2023, mas era tão robótico que os clientes chamavam o vendedor pelo nome pra fugir do bot.
+                    </p>
+                    <div className="persona-section-label">O que faz ele parar o scroll</div>
+                    <ul className="persona-list">
+                      <li>Case real de concessionária ou empresa do porte dele</li>
+                      <li>Número concreto: &ldquo;40% mais leads atendidos em 3 semanas&rdquo;</li>
+                      <li>Comparação antes/depois que ele se enxerga</li>
+                    </ul>
+                    <div className="persona-section-label">O que faz ele agir</div>
+                    <p className="persona-trigger">
+                      Teste grátis. Carlos não compra proposta — compra demonstração. Se ele puder testar no WhatsApp dele em 15 minutos, ele decide na hora.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Persona 2: Dra. Patrícia */}
               <div className="persona-card reveal d2">
-                <div className="persona-header">
-                  <div className="persona-avatar">🩺</div>
-                  <div>
+                <div className="persona-photo">
+                  <img
+                    src="/images/persona-patricia.png"
+                    alt="Dra. Patrícia — sócia de clínica"
+                  />
+                </div>
+                <div className="persona-content">
+                  <div className="persona-header">
                     <div className="persona-name">Dra. Patrícia</div>
                     <div className="persona-role">Sócia de clínica multidisciplinar</div>
                   </div>
-                </div>
-                <div className="persona-body">
-                  <p className="persona-bio">
-                    Patrícia dirige uma clínica com 8 profissionais de saúde. Tem 2 recepcionistas e 200 agendamentos por semana. O no-show está em 28% e a recepção gasta 3 horas por dia mandando mensagens de confirmação. Patrícia é exigente com experiência do paciente — ela não vai colocar um bot frio pra falar com quem acabou de agendar uma consulta.
-                  </p>
-                  <div className="persona-section-label">O que faz ela parar o scroll</div>
-                  <ul className="persona-list">
-                    <li>Case de clínica com redução de no-show</li>
-                    <li>Conteúdo sobre personalização: &ldquo;fala como se fosse da equipe&rdquo;</li>
-                    <li>Dados sobre tempo de resposta e impacto na satisfação</li>
-                  </ul>
-                  <div className="persona-section-label">O que faz ela agir</div>
-                  <p className="persona-trigger">
-                    Diagnóstico gratuito mostrando quanto ela perde por mês com no-show e demora. Patrícia responde a dados, não a promessa.
-                  </p>
+                  <div className="persona-body">
+                    <p className="persona-bio">
+                      Patrícia dirige uma clínica com 8 profissionais de saúde. Tem 2 recepcionistas e 200 agendamentos por semana. O no-show está em 28% e a recepção gasta 3 horas por dia mandando mensagens de confirmação. Patrícia é exigente com experiência do paciente — ela não vai colocar um bot frio pra falar com quem acabou de agendar uma consulta.
+                    </p>
+                    <div className="persona-section-label">O que faz ela parar o scroll</div>
+                    <ul className="persona-list">
+                      <li>Case de clínica com redução de no-show</li>
+                      <li>Conteúdo sobre personalização: &ldquo;fala como se fosse da equipe&rdquo;</li>
+                      <li>Dados sobre tempo de resposta e impacto na satisfação</li>
+                    </ul>
+                    <div className="persona-section-label">O que faz ela agir</div>
+                    <p className="persona-trigger">
+                      Diagnóstico gratuito mostrando quanto ela perde por mês com no-show e demora. Patrícia responde a dados, não a promessa.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Persona 3: Rafael */}
               <div className="persona-card reveal d3">
-                <div className="persona-header">
-                  <div className="persona-avatar">🏗️</div>
-                  <div>
+                <div className="persona-photo">
+                  <img
+                    src="/images/persona-rafael.png"
+                    alt="Rafael — diretor comercial"
+                  />
+                </div>
+                <div className="persona-content">
+                  <div className="persona-header">
                     <div className="persona-name">Rafael</div>
                     <div className="persona-role">Diretor comercial de incorporadora</div>
                   </div>
-                </div>
-                <div className="persona-body">
-                  <p className="persona-bio">
-                    Rafael comanda um time de 12 corretores e recebe 300+ leads por mês de portais imobiliários e tráfego pago. O problema: só 25% são qualificados, e os corretores gastam tempo demais com curiosos. Ele quer um filtro inteligente que qualifique antes do humano entrar — mas sem parecer um formulário chato.
-                  </p>
-                  <div className="persona-section-label">O que faz ele parar o scroll</div>
-                  <ul className="persona-list">
-                    <li>Conteúdo sobre qualificação automática de leads</li>
-                    <li>Comparação: custo de SDR vs. agente de IA</li>
-                    <li>Resultado em pipeline: &ldquo;3× mais leads qualificados no CRM&rdquo;</li>
-                  </ul>
-                  <div className="persona-section-label">O que faz ele agir</div>
-                  <p className="persona-trigger">
-                    Planilha de ROI. Rafael convence a diretoria com número. Se o conteúdo der o cálculo pronto, ele compartilha no grupo do board.
-                  </p>
-                </div>
-              </div>
-
-              {/* Persona 4: Marcos */}
-              <div className="persona-card reveal d4">
-                <div className="persona-header">
-                  <div className="persona-avatar">🤔</div>
-                  <div>
-                    <div className="persona-name">Marcos</div>
-                    <div className="persona-role">Empresário cético, dono de rede de lojas</div>
+                  <div className="persona-body">
+                    <p className="persona-bio">
+                      Rafael comanda um time de 12 corretores e recebe 300+ leads por mês de portais imobiliários e tráfego pago. O problema: só 25% são qualificados, e os corretores gastam tempo demais com curiosos. Ele quer um filtro inteligente que qualifique antes do humano entrar — mas sem parecer um formulário chato.
+                    </p>
+                    <div className="persona-section-label">O que faz ele parar o scroll</div>
+                    <ul className="persona-list">
+                      <li>Conteúdo sobre qualificação automática de leads</li>
+                      <li>Comparação: custo de SDR vs. agente de IA</li>
+                      <li>Resultado em pipeline: &ldquo;3× mais leads qualificados no CRM&rdquo;</li>
+                    </ul>
+                    <div className="persona-section-label">O que faz ele agir</div>
+                    <p className="persona-trigger">
+                      Planilha de ROI. Rafael convence a diretoria com número. Se o conteúdo der o cálculo pronto, ele compartilha no grupo do board.
+                    </p>
                   </div>
                 </div>
-                <div className="persona-body">
-                  <p className="persona-bio">
-                    Marcos tem 54 anos, 3 lojas de varejo e zero paciência pra modinha tech. Já gastou R$ 15 mil com &ldquo;transformação digital&rdquo; em 2022 e não viu resultado. Quando ouve &ldquo;inteligência artificial&rdquo; revira os olhos. Mas nos últimos 3 meses, perdeu 2 vendedores e não conseguiu repor. A equipe encolheu e o atendimento caiu.
-                  </p>
-                  <div className="persona-section-label">O que faz ele parar o scroll</div>
-                  <ul className="persona-list">
-                    <li>Depoimento de alguém parecido com ele: empresário &ldquo;pé no chão&rdquo;</li>
-                    <li>Conteúdo sem jargão: &ldquo;não é robô, é processo&rdquo;</li>
-                    <li>A palavra &ldquo;teste grátis&rdquo; — remove o risco</li>
-                  </ul>
-                  <div className="persona-section-label">O que faz ele agir</div>
-                  <p className="persona-trigger">
-                    Indicação de alguém que ele confia, combinada com a possibilidade de testar sem compromisso. Marcos precisa ver antes de acreditar.
-                  </p>
-                </div>
               </div>
+            </div>
+          </div>
+
+          {/* Objeções recorrentes */}
+          <div className="objecoes-box reveal d4">
+            <div className="objecoes-header">
+              <div className="info-eyebrow">Objeções recorrentes</div>
+              <h3>O cético mora dentro <em>de todos</em>.</h3>
+              <p>
+                Carlos, Patrícia e Rafael são pragmáticos — cada um trava na decisão por um medo diferente. Os quatro bloqueios que mais aparecem em DM, e o contraponto direto.
+              </p>
+            </div>
+            <div className="objecoes-grid">
+              {[
+                { q: "Vai substituir meus vendedores?", a: "Não. O agente tira a repetição do dia — libera o vendedor pra vender o que é complexo." },
+                { q: "É caro pra minha operação?", a: "Custa menos que um atendente júnior — e trabalha 24/7, sem falta, sem turnover." },
+                { q: "Meu cliente vai perceber?", a: "Se a experiência for boa, não importa. Ele quer resposta rápida, não rótulo de IA." },
+                { q: "E se a IA falar bobagem?", a: "A gente trava alucinação no treinamento. O agente só responde o que foi autorizado." },
+              ].map((o) => (
+                <div key={o.q} className="objecao-item">
+                  <div className="objecao-q">&ldquo;{o.q}&rdquo;</div>
+                  <div className="objecao-a">{o.a}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -330,7 +351,7 @@ export default function PlaybookPage() {
           </div>
 
           <h2 className="reveal d1" style={{ maxWidth: "18ch" }}>
-            Cinco eixos que <em>organizam</em> tudo.
+            Seis eixos que <em>organizam</em> tudo.
           </h2>
           <p className="reveal d1" style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.6, marginTop: 24, maxWidth: "58ch", marginBottom: 48 }}>
             Todo post se encaixa em pelo menos um pilar. Sem pilar = sem propósito = não publica.
@@ -341,8 +362,9 @@ export default function PlaybookPage() {
               { num: "01", title: "Resultado Real", desc: "Cases, números e transformações reais de clientes. A prova que vende.", examples: "Case clínica · Antes/depois · Depoimento com métrica" },
               { num: "02", title: "Bastidores", desc: "Como a IAlem funciona por dentro. Treino de agentes, integração, ajuste fino.", examples: "Como treinamos a IA · Dia de integração · Ajuste de tom" },
               { num: "03", title: "Educação sobre IA", desc: "Desmistificar, ensinar, tirar medo. Educa sem ser condescendente.", examples: "IA vs chatbot · Mitos sobre automação · O que IA não faz" },
-              { num: "04", title: "Visão de Mercado", desc: "Tendências, dados e provocações sobre o futuro do atendimento.", examples: "85% até 2028 · Dados do setor · Tendência WhatsApp" },
+              { num: "04", title: "Visão de Mercado", desc: "Tendências, dados e provocações sobre o futuro do atendimento.", examples: "Dados Gartner · Benchmarks do setor · Tendência WhatsApp" },
               { num: "05", title: "Marca & Cultura", desc: "O lado humano por trás da tecnologia. Time, valores, propósito.", examples: "Por que o dourado · Time IAlem · Nossa história" },
+              { num: "06", title: "Objeções & Contrapontos", desc: "Responde aos medos que travam a decisão. Objeção + contraponto direto, sem rodeio.", examples: "Vai substituir vendedor? · É caro? · Meu cliente percebe?" },
             ].map((p) => (
               <div key={p.num} className="pillar-cell">
                 <div className="pillar-num">{p.num}</div>
@@ -356,12 +378,54 @@ export default function PlaybookPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════
-         04 · TOM DE VOZ APLICADO
+         04 · FUNIL DE CONTEÚDO
+         ════════════════════════════════════════════════════════════ */}
+      <section id="funil">
+        <div className="wrap">
+          <div className="pb-label reveal">
+            <span className="num">04</span>
+            <span>Funil de conteúdo</span>
+            <span className="bar" />
+          </div>
+
+          <h2 className="reveal d1" style={{ maxWidth: "18ch" }}>
+            De seguidor a <em>cliente</em>. E além.
+          </h2>
+          <p className="reveal d1" style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.6, marginTop: 24, maxWidth: "58ch", marginBottom: 48 }}>
+            Cinco estágios. Cada post vive em um deles. Sem clareza de estágio = post sem função.
+          </p>
+
+          <div className="funnel-visual reveal d2" style={{ marginTop: 48 }}>
+            {[
+              { label: "Topo", name: "Atração", desc: "Educação + provocação. Conteúdo que faz parar o scroll.", content: "Pilares: Educação sobre IA, Visão de Mercado.", objective: "Seguidores · Alcance · Salvamentos" },
+              { label: "Meio", name: "Consideração", desc: "Cases + bastidores. Conteúdo que cria confiança.", content: "Pilares: Resultado Real, Bastidores.", objective: "Engajamento · DMs · Compartilhamentos" },
+              { label: "Meio-fundo", name: "Decisão", desc: "Comparações honestas, objeções desarmadas, diferenciação. Remove o último medo antes da ação.", content: "Pilares: Objeções & Contrapontos, Resultado Real.", objective: "DMs qualificadas · Cliques no link · Pedidos de demo" },
+              { label: "Fundo", name: "Conversão", desc: "CTA direto. Teste grátis, diagnóstico, agendamento.", content: "CTA: teste no WhatsApp, diagnóstico gratuito.", objective: "Mensagens · Agendamentos · Contratos" },
+              { label: "Pós-venda", name: "Advocacy", desc: "Cliente virou fã. Conteúdo que ativa indicação e mantém vínculo pós-contrato.", content: "Depoimentos em vídeo, spotlight de clientes, grupo privado de advocacy.", objective: "Indicações · Renovações · Novos cases" },
+            ].map((s) => (
+              <div key={s.label} className="funnel-stage">
+                <div>
+                  <div className="stage-label">{s.label}</div>
+                  <div className="stage-name">{s.name}</div>
+                  <div className="stage-desc">{s.desc}</div>
+                </div>
+                <div>
+                  <div className="stage-content">{s.content}</div>
+                  <div className="stage-objective">Objetivo → <span>{s.objective}</span></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════
+         05 · TOM DE VOZ APLICADO
          ════════════════════════════════════════════════════════════ */}
       <section id="voz">
         <div className="wrap">
           <div className="pb-label reveal">
-            <span className="num">04</span>
+            <span className="num">05</span>
             <span>Tom de voz no Instagram</span>
             <span className="bar" />
           </div>
@@ -470,12 +534,12 @@ export default function PlaybookPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════
-         05 · IDENTIDADE DO PERFIL INSTAGRAM
+         06 · IDENTIDADE DO PERFIL INSTAGRAM
          ════════════════════════════════════════════════════════════ */}
       <section id="perfil">
         <div className="wrap">
           <div className="pb-label reveal">
-            <span className="num">05</span>
+            <span className="num">06</span>
             <span>Identidade do perfil · @ialemautomacao</span>
             <span className="bar" />
           </div>
@@ -557,12 +621,12 @@ export default function PlaybookPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════
-         06 · FORMATOS & TEMPLATES
+         07 · FORMATOS & TEMPLATES
          ════════════════════════════════════════════════════════════ */}
       <section id="formatos">
         <div className="wrap">
           <div className="pb-label reveal">
-            <span className="num">06</span>
+            <span className="num">07</span>
             <span>Formatos & Templates</span>
             <span className="bar" />
           </div>
@@ -570,6 +634,9 @@ export default function PlaybookPage() {
           <h2 className="reveal d1" style={{ maxWidth: "16ch" }}>
             Os modelos que <em>repetem</em>.
           </h2>
+          <p className="reveal d1" style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.6, marginTop: 24, maxWidth: "58ch", marginBottom: 48 }}>
+            Oito templates que cobrem 90% do que a IAlem posta. Sem template = sem ritmo. Variedade suficiente pra não cansar o feed, repetição suficiente pra construir identidade.
+          </p>
 
           <div className="format-grid reveal d2" style={{ marginTop: 48 }}>
             {[
@@ -577,6 +644,10 @@ export default function PlaybookPage() {
               { label: "02", title: "Post de Case", desc: "Imagem com métrica grande em dourado + fundo dark. Caption conta a história do resultado.", struct: "Visual → Métrica Fraunces 72px\nCaption L1 → Gancho provocativo\nCaption L2–4 → Contexto + resultado\nCTA → 'Quer isso na sua empresa?'" },
               { label: "03", title: "Antes & Depois", desc: "Grid dividido: 'Hoje' em cinza, 'Com a IAlem' em gold. Formato dualidade do manual.", struct: "Lado esquerdo → 'Hoje' cinza\nLado direito → 'Com a IAlem' gold\nCaption → 'Qual lado é o seu?'" },
               { label: "04", title: "Quote Card", desc: "Frase de impacto em Fraunces italic + atribuição. Simples, compartilhável.", struct: "Fundo → Dark + grafismo sutil\nFrase → Fraunces 300 italic gold\nAtribuição → Nome + cargo\nRodapé → Logo 10% opacity" },
+              { label: "05", title: "Reels Demo", desc: "Gravação de tela mostrando o agente em ação. Máximo 30s. Texto em Fraunces italic dourado sobre o vídeo, sem voz off.", struct: "Take 1 → Tela do WhatsApp\nTake 2 → Mensagem do cliente\nTake 3 → Resposta do agente\nCaption → 'Isso tá rodando agora'" },
+              { label: "06", title: "Post de Números", desc: "Infográfico com dado de mercado. Número gigante em Fraunces, fonte no rodapé. Formato altamente compartilhável.", struct: "Visual → Número 120px gold\nLinha 2 → Contexto curto\nFonte → Inter Tight 12px cinza\nCTA → 'Dá pra mudar isso'" },
+              { label: "07", title: "Story Bastidor", desc: "Série semanal de 3–5 stories sequenciais com o mesmo template. Constrói familiaridade com o time e o processo.", struct: "Story 1 → Título do tema\nStories 2–4 → Bastidor real\nStory 5 → Pergunta ou enquete\nLink → Caixinha de perguntas" },
+              { label: "08", title: "Post Comentário", desc: "Reação a notícia ou evento do setor. Posiciona a marca como voz, não como vendedor. Usar só quando tiver opinião real.", struct: "Print da notícia → 20% do espaço\nComentário IAlem → 60%\nImplicação pro leitor → 20%\nCTA → debate nos comentários" },
             ].map((f) => (
               <div key={f.label} className="format-card">
                 <div className="format-label">Formato {f.label}</div>
@@ -595,12 +666,12 @@ export default function PlaybookPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════
-         07 · AS 12 POSTAGENS INICIAIS
+         08 · AS 12 POSTAGENS INICIAIS
          ════════════════════════════════════════════════════════════ */}
       <section id="12posts">
         <div className="wrap">
           <div className="pb-label reveal">
-            <span className="num">07</span>
+            <span className="num">08</span>
             <span>As 12 postagens inaugurais</span>
             <span className="bar" />
           </div>
@@ -641,8 +712,8 @@ export default function PlaybookPage() {
               {
                 sem: "Semana 2", num: "05", pilar: "Educação sobre IA", formato: "Reels (30s)",
                 titulo: "Seu cliente mandou mensagem. Quanto tempo pra responder?",
-                arte: "Gravação de tela: timer contando no canto. Simulação de lead mandando mensagem no WhatsApp. Mostra demora de empresa comum (2h) vs. resposta do agente IAlem (12seg). Texto na tela em Fraunces italic. Fecha com 'E se responder rápido fosse o padrão?' + CTA.",
-                legenda: "A maioria das empresas demora 2 horas pra responder um lead.\n\nO agente IAlem responde em 12 segundos.\n\nE não responde qualquer coisa — responde com contexto, nome e próximo passo.\n\nIsso não é automação. É atendimento.\n\n→ Teste na prática. Link na bio.",
+                arte: "Gravação de tela: timer contando no canto. Simulação de lead mandando mensagem no WhatsApp. Mostra demora de empresa comum (mais de 2h) vs. resposta do agente IAlem (em menos de 1 minuto). Texto na tela em Fraunces italic. Fecha com 'E se responder rápido fosse o padrão?' + CTA.",
+                legenda: "A maioria das empresas demora mais de 2 horas pra responder um lead.\n\nO agente IAlem responde em menos de 1 minuto — com contexto, nome e próximo passo.\n\nNão é automação. É atendimento que não dorme.\n\n→ Teste na prática. Link na bio.",
               },
               {
                 sem: "Semana 2", num: "06", pilar: "Bastidores", formato: "Carrossel",
@@ -658,9 +729,9 @@ export default function PlaybookPage() {
               },
               {
                 sem: "Semana 3", num: "08", pilar: "Educação sobre IA", formato: "Carrossel",
-                titulo: "5 sinais de que sua empresa precisa de um agente de IA.",
-                arte: "Slide 1: '5 sinais' em Fraunces grande. Slides 2–6: um sinal por slide com ícone minimalista. Slide 7: 'Marcou 3 ou mais? Tá na hora.' Slide 8: CTA gold.",
-                legenda: "1. Seu time repete as mesmas respostas todo dia\n2. Leads chegam à noite e ninguém responde\n3. Agendamento é feito na mão pelo WhatsApp\n4. Atendimento demora mais de 1 hora\n5. Você já tentou chatbot e não funcionou\n\nSe marcou 3 ou mais: não é questão de se, é de quando.\n\nE o 'quando' pode ser agora — sem custo pra testar.\n\n→ Link na bio.",
+                titulo: "Teste rápido: sua empresa tá pronta pra automatizar?",
+                arte: "Slide 1: 'Teste rápido' em Fraunces grande + subtítulo 'Responde sim ou não às 5 perguntas'. Slides 2–6: uma pergunta por slide em Fraunces, com dois botões visuais 'SIM / NÃO' em gold e cinza. Slide 7: 'Marcou 3 ou mais SIM? Tá na hora.' Slide 8: CTA gold com link de diagnóstico.",
+                legenda: "Responde rápido — sim ou não:\n\n1. Seu time repete as mesmas respostas todo dia?\n2. Leads chegam à noite e ninguém responde?\n3. Confirmação de agendamento é feita na mão?\n4. Cliente espera mais de 1 hora pra ser atendido?\n5. Você já tentou chatbot e não funcionou?\n\n3 ou mais SIM = automação deixa de ser opção e vira prioridade.\n\n→ Diagnóstico gratuito no link da bio.",
               },
               {
                 sem: "Semana 3", num: "09", pilar: "Visão de Mercado", formato: "Quote Card",
@@ -678,7 +749,7 @@ export default function PlaybookPage() {
                 sem: "Semana 4", num: "11", pilar: "Educação sobre IA", formato: "Reels (30s)",
                 titulo: "O que um agente de IA NÃO faz.",
                 arte: "Vídeo com texto na tela em estilo lista. 'Um agente de IA não substitui seu time. Não inventa respostas. Não funciona sem treinamento. Não é chatbot de farmácia.' Pausa. 'O que ele faz? Responde rápido, qualifica com contexto e nunca tira férias.' CTA final.",
-                legenda: "Plot twist: IA não resolve tudo.\n\nUm agente de IA não substitui seu time.\nNão inventa informação.\nNão funciona sem treinamento.\n\nMas ele responde em 12 segundos.\nQualifica com contexto.\nE nunca tira férias.\n\nÉ ferramenta, não milagre. E a ferramenta certa faz diferença.\n\n→ Quer ver como? Link na bio.",
+                legenda: "Plot twist: IA não resolve tudo.\n\nUm agente de IA não substitui seu time.\nNão inventa informação.\nNão funciona sem treinamento.\n\nMas ele responde em menos de 1 minuto.\nQualifica com contexto.\nE nunca tira férias.\n\nÉ ferramenta, não milagre. E a ferramenta certa faz diferença.\n\n→ Quer ver como? Link na bio.",
               },
               {
                 sem: "Semana 4", num: "12", pilar: "Marca & Cultura", formato: "Carrossel",
@@ -687,7 +758,7 @@ export default function PlaybookPage() {
                 legenda: "Quando escolhemos o nome, queríamos algo que dissesse o que fazemos sem explicar demais.\n\nAlém do chatbot genérico.\nAlém do horário comercial.\nAlém da resposta padrão.\n\nAlém da tecnologia — o que importa é resultado.\n\nSe seu atendimento tá aquém, a gente leva além.\n\nÉ simples assim.\n\n→ ialem.digital",
               },
             ].map((post) => (
-              <div key={post.num} className="post-card reveal">
+              <div key={post.num} className="post-card">
                 <div className="post-header">
                   <div className="post-num">{post.num}</div>
                   <div className="post-meta">
@@ -712,41 +783,6 @@ export default function PlaybookPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════
-         08 · FUNIL DE CONTEÚDO
-         ════════════════════════════════════════════════════════════ */}
-      <section id="funil">
-        <div className="wrap">
-          <div className="pb-label reveal">
-            <span className="num">08</span>
-            <span>Funil de conteúdo</span>
-            <span className="bar" />
-          </div>
-
-          <h2 className="reveal d1" style={{ maxWidth: "16ch" }}>De seguidor a <em>cliente</em>.</h2>
-
-          <div className="funnel-visual reveal d2" style={{ marginTop: 48 }}>
-            {[
-              { label: "Topo", name: "Atração", desc: "Educação + provocação. Conteúdo que faz parar o scroll.", content: "Pilares: Educação sobre IA, Visão de Mercado.", objective: "Seguidores · Alcance · Salvamentos" },
-              { label: "Meio", name: "Consideração", desc: "Cases + bastidores. Conteúdo que cria confiança.", content: "Pilares: Resultado Real, Bastidores.", objective: "Engajamento · DMs · Compartilhamentos" },
-              { label: "Fundo", name: "Conversão", desc: "CTA direto. Teste grátis, diagnóstico, agendamento.", content: "CTA: teste no WhatsApp, diagnóstico gratuito.", objective: "Mensagens · Agendamentos · Contratos" },
-            ].map((s) => (
-              <div key={s.label} className="funnel-stage">
-                <div>
-                  <div className="stage-label">{s.label}</div>
-                  <div className="stage-name">{s.name}</div>
-                  <div className="stage-desc">{s.desc}</div>
-                </div>
-                <div>
-                  <div className="stage-content">{s.content}</div>
-                  <div className="stage-objective">Objetivo → <span>{s.objective}</span></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ════════════════════════════════════════════════════════════
          09 · TRÁFEGO PAGO
          ════════════════════════════════════════════════════════════ */}
       <section id="trafego">
@@ -763,6 +799,33 @@ export default function PlaybookPage() {
           <p className="reveal d1" style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.6, marginTop: 24, maxWidth: "58ch", marginBottom: 48 }}>
             A estratégia é consolidar as 12 postagens orgânicas, identificar quais performaram melhor, e escalar essas com tráfego pago. Nunca criar conteúdo do zero para anúncio — escalar o que já provou que funciona.
           </p>
+
+          {/* Orçamento faseado */}
+          <div className="traffic-section reveal d2" style={{ marginBottom: 32 }}>
+            <div className="info-card">
+              <div className="info-eyebrow">Orçamento faseado · 90 dias</div>
+              <h3>Investimento que <em>cresce com a prova</em>.</h3>
+              <p>
+                Queimar verba em criativo não validado é o erro mais comum. Aqui o orçamento acompanha o que o orgânico já testou — escala o que tá funcionando, não o que a agência acha bonito.
+              </p>
+              <div className="budget-grid">
+                {[
+                  { label: "Fase 01 · Mês 1", value: "R$ 0", desc: "Só orgânico. Publica os 12 posts e observa quais performam acima da média em alcance, salvamentos e comentários." },
+                  { label: "Fase 02 · Mês 2", value: "R$ 1.500", desc: "Impulsiona os 3 melhores posts em Meta Ads. Uma campanha de awareness, uma de leads. Aprende com dado real." },
+                  { label: "Fase 03 · Mês 3+", value: "R$ 2.500+", desc: "Meta continua ativo + Google Ads entra com palavras-chave de demanda ativa. Retargeting em 3 camadas." },
+                ].map((b) => (
+                  <div key={b.label} className="budget-phase">
+                    <div className="budget-phase-label">{b.label}</div>
+                    <div className="budget-phase-value">{b.value}</div>
+                    <div className="budget-phase-desc">{b.desc}</div>
+                  </div>
+                ))}
+              </div>
+              <p style={{ fontSize: 13.5, marginTop: 24, fontStyle: "italic", color: "var(--text-muted)", maxWidth: "62ch" }}>
+                Critério pra escalar verba: CPL ≤ R$ 30 e ≥ 40% dos leads chegando qualificados. Abaixo disso, otimiza criativo antes de dobrar o investimento.
+              </p>
+            </div>
+          </div>
 
           {/* Meta Ads */}
           <div className="traffic-section reveal d2">
@@ -877,9 +940,11 @@ export default function PlaybookPage() {
               { name: "Seguidores", value: "Meta: +15%/mês nos 3 primeiros meses" },
               { name: "Engajamento", value: "Taxa por post — meta: >3%" },
               { name: "Salvamentos", value: "Indicador de conteúdo útil — meta: >2% dos alcances" },
+              { name: "Tempo de resposta DM", value: "Meta: <5 min. É o primeiro teste que o prospect faz — coerência da marca depende disso" },
               { name: "Leads", value: "Mensagens via link — meta: 20/mês" },
+              { name: "Qualidade do lead", value: "% de leads que viram agendamento — meta: >40%" },
               { name: "CPL", value: "Custo por lead via tráfego pago" },
-              { name: "Agendamentos", value: "Diagnósticos agendados — meta: 8-12/mês" },
+              { name: "Agendamentos", value: "Diagnósticos agendados — meta: 8–12/mês" },
               { name: "Conversão", value: "Lead → diagnóstico → cliente" },
               { name: "CAC", value: "Custo total por cliente fechado" },
             ].map((m) => (
@@ -931,27 +996,24 @@ export default function PlaybookPage() {
         </div>
       </section>
 
+      {/* ── OPERAÇÃO ── */}
+      <section style={{ padding: "40px 0 60px" }}>
+        <div className="wrap">
+          <div className="operacao-note">
+            <div className="operacao-label">Operação</div>
+            <div className="operacao-text">
+              Bravo Marketing <em>produz</em> · IAlem <em>aprova</em> · <strong>3 posts por semana, 4 semanas por bloco</strong>.
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FOOTER ── */}
       <footer className="pb-footer">
         <div className="footer-logos">
           <img src="/brand/ialem-logo-gold.svg" alt="IAlem" className="logo-ialem" />
           <div className="logo-sep" />
-          <svg className="logo-bravo" viewBox="0 0 843.47 143.16" style={{ height: 16, opacity: 0.6 }}>
-            <g fill="var(--text-dim)">
-              <path d="M262.57,68c14.56-1.83,25.47-12.38,25.47-26.35,0-15.45-16.51-26.35-27.08-26.35h-80.26v3.63l10.91,3.63v94.52l-10.91,3.63v3.63h85.51c18.2,0,30.93-7.38,30.93-28.18,0-24.53-20.01-28.17-34.58-28.17h.02ZM222.55,22.59s21.74-.02,25.47-.02c7.28,0,14.63,7.37,14.63,19.08s-3.71,22.72-14.63,22.72h-25.47V22.59h0ZM251.67,117.09h-43.67v-3.63l14.56-3.63v-38.17h29.11c10.91,0,18.19,9.1,18.19,23.63s-7.28,21.8-18.19,21.8h.01-.01Z" />
-              <path d="M648.23,124.35l49.03-101.79,12.66-3.63v-3.63h-28.16v3.63l7.42,3.63-32.44,67.37-38.69-67.37,8.82-3.63v-3.63h-57.51v3.63l12.99,3.63,58.46,101.79h7.42Z" />
-              <path d="M416.46,88h-29.74l-6.64-5.46h22.65c14.56,0,35.57-10.9,35.57-33.62s-21.02-33.62-35.57-33.62h-80.87v3.63l10.91,3.63v94.52l-10.91,3.63v3.63h52.77v-3.63l-10.91-3.63v-34.53h1.83l50.94,41.8h36.38v-6.5l-36.38-29.88h0v.02ZM363.7,75.27V22.57h27.3c14.52,0,20.01,16.36,20.01,26.35s-5.46,26.35-20.01,26.35h-27.3Z" />
-              <path d="M584.04,117.09l-58.45-101.79h-44.49v3.63l12.99,3.63,11.2,19.5-36.13,75.01-12.66,3.63v3.63h28.17v-3.63l-7.42-3.63,12.69-26.35h43.31l15.13,26.35-8.82,3.63v3.63h57.51v-3.63l-13.02-3.63v.02ZM492.99,84.37l16.68-34.66,19.89,34.66h-36.57,0Z" />
-              <path d="M782.69,15.33h-12c-36.38,0-60.78,23.59-60.78,54.44s24.38,54.46,60.78,54.46h12c36.38,0,60.78-23.59,60.78-54.46s-24.38-54.44-60.78-54.44ZM806.35,87.91c0,18.17-9.1,29.12-23.65,29.12h-11.99c-14.57,0-23.65-10.95-23.65-29.12v-36.25c0-18.17,9.1-29.12,23.65-29.12h11.99c14.56,0,23.65,10.95,23.65,29.12v36.25Z" />
-            </g>
-            <g fill="var(--danger)" opacity="0.9">
-              <path d="M52.11,132.36c-.56-.45-1.13-.92-1.71-1.4-3.89-3.26-7.71-6.83-11.38-10.63h29.13l-16.05,12.04h0Z" />
-              <path d="M68.16,120.34h29.13c-3.65,3.81-7.47,7.39-11.38,10.63-.56.48-1.13.94-1.71,1.4l-16.05-12.04h0Z" />
-              <path d="M136.34.01l-6.04,6.04.02,24.56-6.03,5.49h-36.1l-4,4h-8.02v-4l5.35-5.35h37.43l5.35,5.35V8.02l6.01-6.01L128.3.01h8.05-.01Z" />
-              <path d="M132.31,64.18l-8.01,8.01h-60.16l-4.01-4.01,4.01-4h44.12l4,4v-14.03l4.01-4.01h-6.02v-10.5s-4.86,6.47-17.95,6.47c-12.35,0-20.14-5.64-20.14-11.02,0-6.48,9.67-11.03,20.14-11.03s15.95,3.82,15.95,3.82l8.02-7.82v-8.02l-2.01-2.01,6.02-6.02V.01H48.11l-4,4v8.02l-4.01,4V4l-4.01-4H0v28.07l16.04,16.05H0l8.02,8.01h8.02l-11.08,11.08c.68,2.27,1.44,4.53,2.27,6.78,4.37,11.99,10.63,23.59,18.59,34.53,1.93,2.64,3.95,5.24,6.05,7.76h6.23v-8.02l8.02,8.02,10.02.04-8.01-8.05v-8.01l-8.02-8.02h12.04l8.01,8.02v8.01l8.01,8.02h8.02v-8.02l8.02,8.05,16.05-.04-8.02-8.02v-8.01l-8.01-8.02h12.04l8.01,8.02v16.3c2.19-2.6,4.27-5.29,6.26-8.01,2.04-2.79,3.96-5.65,5.77-8.51v-7.79h8.01v-4l8.02-8.01v-12.04h-.04ZM56.13,14.04v-6.01h20.05l-6.02,6.01h-6.01v-4l-4.01,4h-4.01Z" />
-              <path d="M84.2,132.36c-5.41,4.36-10.85,8.01-16.05,10.79-5.19-2.78-10.63-6.44-16.06-10.79h32.11Z" />
-            </g>
-          </svg>
+          <img src="/brand/bravo-logo.svg" alt="Bravo" className="logo-bravo" />
         </div>
         <div className="foot-line">Playbook de Conteúdo & Presença Digital</div>
         <div className="foot-line">IAlem Automação Inteligente LTDA · Abril 2026</div>
