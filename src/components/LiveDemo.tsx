@@ -248,7 +248,7 @@ export default function LiveDemo() {
             <div className="phone">
               <div className="phone-head">
                 <div className="phone-head-l">
-                  <span className="av"><IAlemIcon size={20} fill="#0E0E0F" /></span>
+                  <span className="av"><IAlemIcon size={20} fill="#C9A46B" /></span>
                   <div>
                     <div className="ph-name">{SCENARIOS[activeIdx].name}</div>
                     <div className="ph-sub">

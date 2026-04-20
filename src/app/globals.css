@@ -308,7 +308,8 @@ nav.top ul a:hover { color: var(--text); }
 .phone-head-l { display: flex; align-items: center; gap: 10px; }
 .av {
   width: 34px; height: 34px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  background: var(--surface-2);
+  border: 1px solid rgba(201, 164, 107, .35);
   display: inline-flex; align-items: center; justify-content: center;
   padding: 8px 4px;
   box-shadow: 0 0 20px -4px var(--gold-glow);
