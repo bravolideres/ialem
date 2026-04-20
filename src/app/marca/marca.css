@@ -169,7 +169,7 @@ nav.brand-nav .links a:hover { color: var(--text); }
   justify-content: center;
   text-align: center;
   position: relative;
-  padding: 120px 40px 60px;
+  padding: 120px 40px 100px;
   overflow: hidden;
 }
 .brand-hero::before {
@@ -209,17 +209,17 @@ nav.brand-nav .links a:hover { color: var(--text); }
 }
 
 .hero-logo {
-  width: min(620px, 78vw);
+  width: min(400px, 58vw);
   height: auto;
   display: block;
-  margin: 0 auto 72px;
+  margin: 0 auto 80px;
   filter: drop-shadow(0 0 60px rgba(201,164,107,.15));
 }
 
 .brand-hero h1 {
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(40px, 7vw, 96px);
+  font-size: clamp(32px, 5vw, 64px);
   line-height: .98;
   letter-spacing: -.035em;
   color: var(--text);
@@ -233,7 +233,7 @@ nav.brand-nav .links a:hover { color: var(--text); }
 }
 
 .brand-hero .attribution {
-  margin-top: 72px;
+  margin-top: 80px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: .2em;
@@ -246,6 +246,12 @@ nav.brand-nav .links a:hover { color: var(--text); }
 }
 .brand-hero .attribution span.sep {
   width: 1px; height: 10px; background: var(--line);
+}
+
+.brand-hero .attribution img {
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .brand-hero .scroll-hint {
@@ -1591,7 +1597,7 @@ nav.brand-nav .links a:hover { color: var(--text); }
   margin-top: 80px;
   text-align: center;
 }
-.brand-footer .logo-mini { height: 18px; opacity: .7; margin: 0 auto 18px; }
+.brand-footer .logo-mini { height: 22px; opacity: .8; }
 .brand-footer .foot-line {
   font-family: var(--font-mono);
   font-size: 10.5px;

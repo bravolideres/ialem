@@ -106,9 +106,8 @@ export default function MarcaPage() {
             Leve seu atendimento <em>além</em>.
           </h1>
           <div className="attribution reveal d3">
-            <span>Para Junior &amp; Ana</span>
-            <span className="sep" />
-            <span>Sócios · IAlem</span>
+            <span>Produzido por</span>
+            <img src="/brand/bravo-logo-white.svg" alt="Bravo Marketing" style={{ height: 16, display: 'inline-block', verticalAlign: 'middle', marginLeft: 8 }} />
           </div>
         </div>
         <div className="scroll-hint">Role para ver</div>
@@ -2479,16 +2478,25 @@ export default function MarcaPage() {
 
       {/* ── FOOTER ── */}
       <footer className="brand-footer">
-        <img
-          src="/brand/ialem-logo-gold.svg"
-          alt="IAlem"
-          className="logo-mini"
-        />
-        <div className="foot-line">
-          IAlem Automação Inteligente LTDA
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 28, marginBottom: 24 }}>
+          <img
+            src="/brand/ialem-logo-gold.svg"
+            alt="IAlem"
+            className="logo-mini"
+            style={{ marginBottom: 0 }}
+          />
+          <div style={{ width: 1, height: 22, background: 'var(--line)' }} />
+          <img
+            src="/brand/bravo-logo-white.svg"
+            alt="Bravo Marketing"
+            style={{ height: 22 }}
+          />
         </div>
         <div className="foot-line">
-          CNPJ 66.012.830/0001-4 · Abril 2026
+          Manual da Marca · IAlem Automação Inteligente LTDA
+        </div>
+        <div className="foot-line">
+          Abril 2026 · Produzido por Bravo Marketing
         </div>
       </footer>
     </>

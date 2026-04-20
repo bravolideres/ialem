@@ -67,10 +67,9 @@ export default function PlaybookPage() {
           <div className="hero-sub reveal d3">
             Como a IAlem se apresenta, conversa e conquista espaço no Instagram — do primeiro post à campanha paga.
           </div>
-          <div className="attribution reveal d4">
-            <span>Para Junior &amp; Ana</span>
-            <span className="sep" />
-            <span>Sócios · IAlem</span>
+          <div className="attribution-by reveal d4">
+            <span>Produzido por</span>
+            <img src="/brand/bravo-logo-white.svg" alt="Bravo Marketing" className="attr-bravo-logo" />
           </div>
         </div>
         <div className="scroll-hint">Role para ver</div>
@@ -153,6 +152,7 @@ export default function PlaybookPage() {
                   <img
                     src="/images/persona-carlos.png"
                     alt="Carlos — dono de concessionária"
+                    style={{ objectPosition: "70% center" }}
                   />
                 </div>
                 <div className="persona-content">
@@ -389,7 +389,7 @@ export default function PlaybookPage() {
           </div>
 
           <h2 className="reveal d1" style={{ maxWidth: "18ch" }}>
-            De seguidor a <em>cliente</em>. E além.
+            De seguidor a <em>cliente</em>.<br />E <em>além</em>.
           </h2>
           <p className="reveal d1" style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.6, marginTop: 24, maxWidth: "58ch", marginBottom: 48 }}>
             Cinco estágios. Cada post vive em um deles. Sem clareza de estágio = post sem função.
@@ -397,21 +397,28 @@ export default function PlaybookPage() {
 
           <div className="funnel-visual reveal d2" style={{ marginTop: 48 }}>
             {[
-              { label: "Topo", name: "Atração", desc: "Educação + provocação. Conteúdo que faz parar o scroll.", content: "Pilares: Educação sobre IA, Visão de Mercado.", objective: "Seguidores · Alcance · Salvamentos" },
-              { label: "Meio", name: "Consideração", desc: "Cases + bastidores. Conteúdo que cria confiança.", content: "Pilares: Resultado Real, Bastidores.", objective: "Engajamento · DMs · Compartilhamentos" },
-              { label: "Meio-fundo", name: "Decisão", desc: "Comparações honestas, objeções desarmadas, diferenciação. Remove o último medo antes da ação.", content: "Pilares: Objeções & Contrapontos, Resultado Real.", objective: "DMs qualificadas · Cliques no link · Pedidos de demo" },
-              { label: "Fundo", name: "Conversão", desc: "CTA direto. Teste grátis, diagnóstico, agendamento.", content: "CTA: teste no WhatsApp, diagnóstico gratuito.", objective: "Mensagens · Agendamentos · Contratos" },
-              { label: "Pós-venda", name: "Advocacy", desc: "Cliente virou fã. Conteúdo que ativa indicação e mantém vínculo pós-contrato.", content: "Depoimentos em vídeo, spotlight de clientes, grupo privado de advocacy.", objective: "Indicações · Renovações · Novos cases" },
-            ].map((s) => (
-              <div key={s.label} className="funnel-stage">
-                <div>
-                  <div className="stage-label">{s.label}</div>
-                  <div className="stage-name">{s.name}</div>
-                  <div className="stage-desc">{s.desc}</div>
+              { label: "Topo", name: "Atração", desc: "Educação + provocação. Conteúdo que faz parar o scroll.", content: "Pilares: Educação sobre IA, Visão de Mercado.", objective: "Seguidores · Alcance · Salvamentos", width: 100 },
+              { label: "Meio", name: "Consideração", desc: "Cases + bastidores. Conteúdo que cria confiança.", content: "Pilares: Resultado Real, Bastidores.", objective: "Engajamento · DMs · Compartilhamentos", width: 82 },
+              { label: "Meio-fundo", name: "Decisão", desc: "Comparações honestas, objeções desarmadas, diferenciação.", content: "Pilares: Objeções & Contrapontos, Resultado Real.", objective: "DMs qualificadas · Cliques no link · Pedidos de demo", width: 64 },
+              { label: "Fundo", name: "Conversão", desc: "CTA direto. Teste grátis, diagnóstico, agendamento.", content: "CTA: teste no WhatsApp, diagnóstico gratuito.", objective: "Mensagens · Agendamentos · Contratos", width: 48 },
+              { label: "Pós-venda", name: "Advocacy", desc: "Cliente virou fã. Ativa indicação e mantém vínculo.", content: "Depoimentos em vídeo, spotlight de clientes.", objective: "Indicações · Renovações · Novos cases", width: 34 },
+            ].map((s, i) => (
+              <div key={s.label} className="funnel-stage" style={{ width: `${s.width}%`, marginLeft: 'auto', marginRight: 'auto' }}>
+                <div className="funnel-stage-indicator">
+                  <div className="funnel-stage-num">{String(i + 1).padStart(2, '0')}</div>
+                  <div className="funnel-stage-dot" />
+                  {i < 4 && <div className="funnel-stage-line" />}
                 </div>
-                <div>
-                  <div className="stage-content">{s.content}</div>
-                  <div className="stage-objective">Objetivo → <span>{s.objective}</span></div>
+                <div className="funnel-stage-body">
+                  <div className="funnel-stage-left">
+                    <div className="stage-label">{s.label}</div>
+                    <div className="stage-name">{s.name}</div>
+                    <div className="stage-desc">{s.desc}</div>
+                  </div>
+                  <div className="funnel-stage-right">
+                    <div className="stage-content">{s.content}</div>
+                    <div className="stage-objective">Objetivo → <span>{s.objective}</span></div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -997,12 +1004,46 @@ export default function PlaybookPage() {
       </section>
 
       {/* ── OPERAÇÃO ── */}
-      <section style={{ padding: "40px 0 60px" }}>
+      <section style={{ padding: "80px 0 60px" }}>
         <div className="wrap">
-          <div className="operacao-note">
-            <div className="operacao-label">Operação</div>
+          <div className="pb-label reveal">
+            <span className="num">12</span>
+            <span>Fluxo de operação</span>
+            <span className="bar" />
+          </div>
+
+          <h2 className="reveal d1" style={{ maxWidth: "16ch", textAlign: "center", margin: "0 auto" }}>
+            Do briefing ao <em>post</em>.
+          </h2>
+          <p className="reveal d1" style={{ color: "var(--text-dim)", fontSize: 17, lineHeight: 1.6, marginTop: 24, maxWidth: "58ch", textAlign: "center", margin: "24px auto 48px" }}>
+            Ciclo semanal claro: quem faz o quê, quando entrega, quem aprova.
+          </p>
+
+          <div className="op-flow reveal d2">
+            {[
+              { step: "01", title: "Briefing", who: "Bravo", desc: "Define pauta da semana com base no calendário e pilares de conteúdo." },
+              { step: "02", title: "Produção", who: "Bravo", desc: "Arte + legenda + CTA produzidos seguindo identidade visual e tom do manual." },
+              { step: "03", title: "Revisão interna", who: "Bravo", desc: "QA interno: checa tom, ortografia, alinhamento com pilares e checklist." },
+              { step: "04", title: "Aprovação", who: "Junior & Ana", desc: "Conteúdo final enviado para aprovação. Só vai ao ar com ok dos sócios." },
+              { step: "05", title: "Publicação", who: "Bravo", desc: "Post sobe no horário definido. Hashtags no 1º comentário. Alt text preenchido." },
+              { step: "06", title: "Monitoramento", who: "Ambos", desc: "Relatório mensal com métricas, insights e próximos passos." },
+            ].map((s, i) => (
+              <div key={s.step} className="op-step">
+                <div className="op-step-num">{s.step}</div>
+                <div className="op-step-content">
+                  <div className="op-step-title">{s.title}</div>
+                  <div className="op-step-who">{s.who}</div>
+                  <div className="op-step-desc">{s.desc}</div>
+                </div>
+                {i < 5 && <div className="op-step-arrow">→</div>}
+              </div>
+            ))}
+          </div>
+
+          <div className="operacao-note reveal d3" style={{ marginTop: 32 }}>
+            <div className="operacao-label">Cadência</div>
             <div className="operacao-text">
-              Bravo Marketing <em>produz</em> · IAlem <em>aprova</em> · <strong>3 posts por semana, 4 semanas por bloco</strong>.
+              <strong>3 posts por semana</strong> · <strong>4 semanas por bloco</strong> · Bravo <em>produz</em>, IAlem <em>aprova</em>.
             </div>
           </div>
         </div>
@@ -1013,7 +1054,7 @@ export default function PlaybookPage() {
         <div className="footer-logos">
           <img src="/brand/ialem-logo-gold.svg" alt="IAlem" className="logo-ialem" />
           <div className="logo-sep" />
-          <img src="/brand/bravo-logo.svg" alt="Bravo" className="logo-bravo" />
+          <img src="/brand/bravo-logo-white.svg" alt="Bravo" className="logo-bravo" />
         </div>
         <div className="foot-line">Playbook de Conteúdo & Presença Digital</div>
         <div className="foot-line">IAlem Automação Inteligente LTDA · Abril 2026</div>
