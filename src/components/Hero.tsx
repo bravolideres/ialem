@@ -9,18 +9,19 @@ export default function Hero() {
       <div className="wrap">
         <HeroReveal>
           <HeroChild>
-            <span className="eyebrow hero-eyebrow">Leve seu atendimento além.</span>
+            <span className="eyebrow hero-eyebrow">Agência de Automação Inteligente</span>
           </HeroChild>
           <HeroChild>
             <h1>
-              Atenda <em>mais</em>.<br />Sem perder o <em>jeito humano</em>.
+              IA no seu <em>negócio</em>.<br />Sem perder o <em>jeito humano</em>.
             </h1>
           </HeroChild>
           <HeroChild>
             <p>
-              A IAlem cria agentes de IA sob medida para sua operação. Desenhamos, treinamos e
-              operamos a inteligência que atende, qualifica e converte — seja no atendimento ao
-              cliente ou na comunicação da sua equipe interna.
+              Do atendimento à operação — vendas, cobrança, lembrete, agendamento,
+              lançamento, organização. A IAlem desenha, treina e opera agentes de IA sob
+              medida pra cada gargalo do seu negócio. Você contrata um <em>time consultivo</em>,
+              com um ponto de contato do diagnóstico à operação — não uma ferramenta de prateleira.
             </p>
           </HeroChild>
           <HeroChild>

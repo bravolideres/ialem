@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoStrip from "@/components/LogoStrip";
+import Agency from "@/components/Agency";
 import Solution from "@/components/Solution";
 import LiveDemo from "@/components/LiveDemo";
 import HowItWorks from "@/components/HowItWorks";
@@ -19,7 +20,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Reveal><LogoStrip /></Reveal>
-      
+      <Reveal><Agency /></Reveal>
+
       <Reveal><Solution /></Reveal>
       <Reveal><UseCases /></Reveal>
       <LiveDemo />

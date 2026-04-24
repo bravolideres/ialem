@@ -111,7 +111,7 @@ export default function PlaybookPage() {
               <div style={{ marginTop: 32, display: "flex", gap: 16, flexWrap: "wrap" }}>
                 {[
                   { label: "Instagram", tag: "@ialemautomacao" },
-                  { label: "Site", tag: "ialem.digital" },
+                  { label: "Site", tag: "ialem.ai" },
                   { label: "Foco inicial", tag: "12 posts + tráfego pago" },
                 ].map((c) => (
                   <div key={c.label} className="channel-chip">
@@ -303,7 +303,7 @@ export default function PlaybookPage() {
               fontSize: "clamp(32px, 5vw, 56px)", lineHeight: 1.05,
               letterSpacing: "-.03em", maxWidth: "18ch", margin: "0 auto",
             }}>
-              Atenda <em style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>mais</em>.<br />
+              IA no seu <em style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>negócio</em>.<br />
               Sem perder o <em style={{ fontStyle: "italic", color: "var(--gold)", fontWeight: 300 }}>jeito humano</em>.
             </div>
           </div>
@@ -326,8 +326,8 @@ export default function PlaybookPage() {
             </div>
             <div className="msg-card">
               <div className="msg-eyebrow">Diferenciação</div>
-              <div className="msg-quote">Não é bot. É agente que entende contexto e fala como <em>sua marca</em>.</div>
-              <div className="msg-context">Separação da concorrência. Quando o lead compara com chatbots genéricos.</div>
+              <div className="msg-quote">Não é ferramenta. É <em>agência</em> que constrói, treina e opera com você.</div>
+              <div className="msg-context">Separação da concorrência — tanto da tecnologia (bots genéricos) quanto do modelo (SaaS de prateleira). Quando o lead compara preço com licença mensal barata.</div>
             </div>
           </div>
 
@@ -560,10 +560,23 @@ export default function PlaybookPage() {
             <span className="bar" />
           </div>
 
+          <div className="revisar-banner reveal d1" style={{ marginBottom: 28 }}>
+            <div className="revisar-banner-icon">🔄</div>
+            <div className="revisar-banner-body">
+              <div className="revisar-banner-label">Revisão · Abril 2026</div>
+              <div className="revisar-banner-text">
+                O mock do feed atual exibe o <strong>nome antigo &ldquo;IAlem | Agentes de IA&rdquo;</strong> e a <strong>bio antiga</strong>. Atualizar o perfil do Instagram (e o mock) com os textos abaixo.
+              </div>
+            </div>
+          </div>
+
           <div className="profile-detail-grid reveal d1">
             {/* Main profile card */}
-            <div className="profile-detail-card">
-              <div className="info-eyebrow">Configuração do Perfil</div>
+            <div className="profile-detail-card revisar-card">
+              <div className="info-eyebrow" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <span>Configuração do Perfil</span>
+                <span className="revisar-badge">🔄 Atualizar no IG</span>
+              </div>
               <div className="profile-detail-body">
                 <div>
                   <div className="profile-field-label">Foto de perfil</div>
@@ -571,19 +584,19 @@ export default function PlaybookPage() {
                 </div>
                 <div>
                   <div className="profile-field-label">Nome do perfil</div>
-                  <div className="profile-field-value"><strong>IAlem | Agentes de IA</strong></div>
+                  <div className="profile-field-value"><strong>IAlem | Automação Inteligente</strong></div>
                 </div>
                 <div>
                   <div className="profile-field-label">Bio</div>
                   <div className="profile-field-value" style={{ fontFamily: "var(--font-sans)", lineHeight: 1.8 }}>
-                    Agentes de IA sob medida para sua operação<br />
-                    Atendimento · Qualificação · Conversão<br />
-                    🔗 Teste na prática ↓
+                    Agência de Automação Inteligente<br />
+                    Agentes de IA sob medida para o seu negócio<br />
+                    🔗 Leve seu negócio além ↓
                   </div>
                 </div>
                 <div>
                   <div className="profile-field-label">Link na bio</div>
-                  <div className="profile-field-value">ialem.digital ou link direto pro WhatsApp com mensagem pré-preenchida</div>
+                  <div className="profile-field-value">ialem.ai ou link direto pro WhatsApp com mensagem pré-preenchida</div>
                 </div>
                 <div>
                   <div className="profile-field-label">Categoria</div>
@@ -616,7 +629,7 @@ export default function PlaybookPage() {
               <div className="profile-detail-card">
                 <div className="info-eyebrow">Google Meu Negócio</div>
                 <p style={{ color: "var(--text-dim)", fontSize: 14.5, lineHeight: 1.6, marginTop: 4 }}>
-                  Criar ficha como <strong>IAlem — Automação Inteligente</strong>. Categoria: &ldquo;Serviço de tecnologia da informação&rdquo;. Descrição: versão resumida do hero do site. Adicionar fotos do time, logo, e manter posts semanais espelhando o Instagram. Link direto para ialem.digital.
+                  Criar ficha como <strong>IAlem — Automação Inteligente</strong>. Categoria: &ldquo;Serviço de tecnologia da informação&rdquo;. Descrição: versão resumida do hero do site. Adicionar fotos do time, logo, e manter posts semanais espelhando o Instagram. Link direto para ialem.ai.
                 </p>
               </div>
             </div>
@@ -628,7 +641,7 @@ export default function PlaybookPage() {
               Hashtags oficiais
             </div>
             <div className="hashtag-grid">
-              {["#IAlem", "#LeveAlem", "#AgenteDeIA", "#IAlemNaPrática", "#AutomaçãoInteligente", "#AtendimentoIA", "#IASobMedida", "#AtendaAlém"].map((h) => (
+              {["#IAlem", "#LeveAlem", "#AgenteDeIA", "#IAlemNaPrática", "#AutomaçãoInteligente", "#AtendimentoIA", "#OperaçãoIA", "#IASobMedida", "#AtendaAlém"].map((h) => (
                 <span key={h} className="hashtag">{h}</span>
               ))}
             </div>
@@ -699,13 +712,28 @@ export default function PlaybookPage() {
             12 posts estratégicos para inaugurar o perfil com consistência. Cada um com arte, legenda e CTA definidos. 3 posts por semana, 4 semanas.
           </p>
 
+          <div className="revisar-banner reveal d1">
+            <div className="revisar-banner-icon">🔄</div>
+            <div className="revisar-banner-body">
+              <div className="revisar-banner-label">Revisão · Abril 2026</div>
+              <div className="revisar-banner-text">
+                O conceito da IAlem evoluiu para <strong>Agência de Automação Inteligente</strong> com proposta <strong>&ldquo;IA no seu negócio. Sem perder o jeito humano.&rdquo;</strong> e tagline <strong>&ldquo;Leve seu negócio além.&rdquo;</strong> Cards marcados abaixo precisam ser refeitos. Regra geral: em qualquer arte onde apareça <strong>&ldquo;LEVE SEU ATENDIMENTO ALÉM&rdquo;</strong>, trocar por <strong>&ldquo;LEVE SEU NEGÓCIO ALÉM&rdquo;</strong>.
+              </div>
+            </div>
+          </div>
+
           <div className="posts-grid reveal d2">
             {[
               {
                 sem: "Semana 1", num: "01", pilar: "Marca & Cultura", formato: "Carrossel",
                 titulo: "Prazer, IAlem.",
-                arte: "Slide 1: Logo IAlem em dourado, fundo dark. Slide 2: 'Criamos agentes de IA sob medida'. Slide 3: 'Eles atendem, qualificam e convertem — na voz da sua marca'. Slide 4: Ícone agent + texto 'Não é bot. É agente.' Slide 5: CTA 'Teste na prática → link na bio'",
-                legenda: "A IAlem nasceu de uma frustração simples: empresas perdem clientes por demora no atendimento.\n\nSó que contratar mais gente nem sempre é a resposta. E chatbot genérico espanta mais do que resolve.\n\nEntão criamos algo diferente: agentes de IA que aprendem o tom da sua marca, entendem contexto e atendem como se fossem da equipe.\n\nNa prática. No WhatsApp. 24/7.\n\n→ Link na bio pra testar no seu número.",
+                revisar: [
+                  "**Capa (card 1):** adicionar a saudação **\"Prazer,\"** em Fraunces italic dourado pequeno, acima do wordmark IAlem. Sem isso o slide fica sem contexto de apresentação.",
+                  "**Trocar tagline** em qualquer card onde apareça \"LEVE SEU ATENDIMENTO ALÉM\" → **\"LEVE SEU NEGÓCIO ALÉM\"**.",
+                  "Reforçar no slide 4 que a IAlem é **agência**, não ferramenta — ex.: adicionar um slide antes/depois de \"Não é bot. É agente\" com \"Não é ferramenta. É agência.\"",
+                ],
+                arte: "Slide 1: 'Prazer,' em Fraunces italic dourado pequeno + Logo IAlem wordmark grande em dourado, fundo dark. Slide 2: 'Criamos agentes de IA sob medida'. Slide 3: 'Eles atendem, qualificam e convertem — na voz da sua marca'. Slide 4: Ícone agent + texto 'Não é bot. É agente.' Slide 5: CTA 'Teste na prática → link na bio'",
+                legenda: "A IAlem nasceu de uma frustração simples: empresas perdem clientes por demora no atendimento.\n\nSó que contratar mais gente nem sempre é a resposta. E chatbot genérico espanta mais do que resolve. E ferramenta de prateleira de R$ 500/mês também não — porque ninguém automatiza um negócio com template pronto.\n\nPor isso a IAlem é uma agência de automação inteligente: a gente mergulha na sua operação, desenha o agente sob medida, integra aos seus sistemas e opera junto. Você fala com um ponto de contato do diagnóstico à operação — não com suporte por ticket.\n\nNa prática. No WhatsApp. 24/7.\n\n→ Link na bio pra testar no seu número.",
               },
               {
                 sem: "Semana 1", num: "02", pilar: "Educação sobre IA", formato: "Carrossel",
@@ -735,13 +763,13 @@ export default function PlaybookPage() {
                 sem: "Semana 2", num: "06", pilar: "Bastidores", formato: "Carrossel",
                 titulo: "Como treinamos um agente de IA pra falar como sua marca.",
                 arte: "Slide 1: 'Como treinamos um agente de IA' em Fraunces. Slide 2: 'Passo 1 — Entendemos seu tom de voz'. Slide 3: 'Passo 2 — Alimentamos com contexto real'. Slide 4: 'Passo 3 — Testamos com conversas simuladas'. Slide 5: 'Passo 4 — Ajustamos até parecer da equipe'. Slide 6: CTA",
-                legenda: "Não jogamos sua empresa dentro de um prompt genérico.\n\nO processo de treinamento do agente IAlem envolve:\n\n1. Imersão no tom de voz da sua marca\n2. Mapeamento de perguntas frequentes reais\n3. Simulações com cenários do seu setor\n4. Ajuste fino até o agente parecer da equipe\n\nO resultado? Um agente que seu cliente não percebe que é IA.\n\nE se ele perceber, vai gostar da experiência mesmo assim.\n\n→ Quer ver o processo na prática? Link na bio.",
+                legenda: "Não jogamos sua empresa dentro de um prompt genérico. Não entregamos uma licença pra você virar programador.\n\nA IAlem é agência: a gente senta junto, entende a operação e constrói o agente sob medida. O processo de treinamento envolve:\n\n1. Imersão no tom de voz da sua marca\n2. Mapeamento de perguntas frequentes reais\n3. Simulações com cenários do seu setor\n4. Ajuste fino até o agente parecer da equipe\n\nVocê acompanha tudo pelo mesmo ponto de contato — do diagnóstico à operação.\n\nO resultado? Um agente que seu cliente não percebe que é IA. E se perceber, vai gostar da experiência mesmo assim.\n\n→ Quer ver o processo na prática? Link na bio.",
               },
               {
                 sem: "Semana 3", num: "07", pilar: "Resultado Real", formato: "Antes & Depois",
                 titulo: "Antes da IAlem vs. Depois da IAlem.",
                 arte: "Grid dividido ao meio. Lado esquerdo (cinza): 'Antes — Leads esperando 2h · Recepção sobrecarregada · Clientes ligando pra confirmar · Oportunidades perdidas à noite'. Lado direito (gold): 'Com a IAlem — Resposta em 12 segundos · Time focado no que importa · Confirmação automática · Atendimento 24/7'.",
-                legenda: "Coluna da esquerda: a rotina da maioria das empresas.\nColuna da direita: a rotina de quem automatizou com a IAlem.\n\nNão precisa trocar de sistema.\nNão precisa contratar.\nNão precisa ser expert em IA.\n\nQual coluna é a sua?\n\n→ Descubra em 2 minutos. Link na bio.",
+                legenda: "Coluna da esquerda: a rotina da maioria das empresas.\nColuna da direita: a rotina de quem automatizou com a IAlem.\n\nAqui o exemplo é atendimento — mas a mesma lógica vale pra cobrança, lembrete, agendamento, organização. Do atendimento à operação.\n\nNão precisa trocar de sistema.\nNão precisa contratar.\nNão precisa ser expert em IA.\n\nQual coluna é a sua?\n\n→ Descubra em 2 minutos. Link na bio.",
               },
               {
                 sem: "Semana 3", num: "08", pilar: "Educação sobre IA", formato: "Carrossel",
@@ -770,30 +798,54 @@ export default function PlaybookPage() {
               {
                 sem: "Semana 4", num: "12", pilar: "Marca & Cultura", formato: "Carrossel",
                 titulo: "Por que 'além'.",
-                arte: "Slide 1: 'Por que além.' em Fraunces italic. Slide 2: 'Além do chatbot.' Slide 3: 'Além do horário comercial.' Slide 4: 'Além da resposta padrão.' Slide 5: 'Além da tecnologia — resultado.' Slide 6: Logo IAlem + tagline 'Leve Além.' + CTA.",
-                legenda: "Quando escolhemos o nome, queríamos algo que dissesse o que fazemos sem explicar demais.\n\nAlém do chatbot genérico.\nAlém do horário comercial.\nAlém da resposta padrão.\n\nAlém da tecnologia — o que importa é resultado.\n\nSe seu atendimento tá aquém, a gente leva além.\n\nÉ simples assim.\n\n→ ialem.digital",
+                revisar: [
+                  "**Card 1 (capa) e Card 6 (fechamento):** trocar tagline \"LEVE SEU ATENDIMENTO ALÉM\" → **\"LEVE SEU NEGÓCIO ALÉM\"**.",
+                  "**Slide 5:** trocar \"Além da tecnologia — resultado\" por **\"Além do que consome seu time.\"** — nomeia a dor interna do empresário (tempo do time em coisa que devia rodar sozinha).",
+                ],
+                arte: "Slide 1: 'Por que além.' em Fraunces italic. Slide 2: 'Além do chatbot.' Slide 3: 'Além do horário comercial.' Slide 4: 'Além da resposta padrão.' Slide 5: 'Além do que consome seu time.' Slide 6: Logo IAlem + tagline 'Leve seu negócio além.' + CTA.",
+                legenda: "Quando escolhemos o nome, queríamos algo que dissesse o que fazemos sem explicar demais.\n\nAlém do chatbot genérico.\nAlém do horário comercial.\nAlém da resposta padrão.\nAlém do que consome seu time.\n\nSe o seu negócio tá aquém, a gente leva além.\n\nÉ simples assim.\n\n→ ialem.ai",
               },
-            ].map((post) => (
-              <div key={post.num} className="post-card">
-                <div className="post-header">
-                  <div className="post-num">{post.num}</div>
-                  <div className="post-meta">
-                    <div className="post-sem">{post.sem}</div>
-                    <div className="post-pilar-tag">{post.pilar}</div>
+            ].map((post) => {
+              const p = post as typeof post & { revisar?: string[] };
+              const needsRevision = Array.isArray(p.revisar) && p.revisar.length > 0;
+              return (
+                <div key={post.num} className={`post-card${needsRevision ? " revisar-card" : ""}`}>
+                  <div className="post-header">
+                    <div className="post-num">{post.num}</div>
+                    <div className="post-meta">
+                      <div className="post-sem">{post.sem}</div>
+                      <div className="post-pilar-tag">{post.pilar}</div>
+                    </div>
+                    {needsRevision ? (
+                      <span className="revisar-badge">🔄 Revisar</span>
+                    ) : (
+                      <div className="post-formato-tag">{post.formato}</div>
+                    )}
                   </div>
-                  <div className="post-formato-tag">{post.formato}</div>
+                  <h3 className="post-titulo">{post.titulo}</h3>
+                  {needsRevision && (
+                    <div className="revisar-nota">
+                      <div className="revisar-nota-label">
+                        <span>🔄 Ajustes pedidos à designer</span>
+                      </div>
+                      <ul>
+                        {p.revisar!.map((n, i) => (
+                          <li key={i} dangerouslySetInnerHTML={{ __html: n.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>") }} />
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="post-section">
+                    <div className="post-section-label">Direção de arte</div>
+                    <p className="post-content">{post.arte}</p>
+                  </div>
+                  <div className="post-section">
+                    <div className="post-section-label">Legenda</div>
+                    <p className="post-content post-legenda">{post.legenda}</p>
+                  </div>
                 </div>
-                <h3 className="post-titulo">{post.titulo}</h3>
-                <div className="post-section">
-                  <div className="post-section-label">Direção de arte</div>
-                  <p className="post-content">{post.arte}</p>
-                </div>
-                <div className="post-section">
-                  <div className="post-section-label">Legenda</div>
-                  <p className="post-content post-legenda">{post.legenda}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -5,17 +5,17 @@ export default function HowItWorks() {
     {
       num: "01",
       title: "Diagnóstico",
-      desc: "Entendemos seu fluxo, CRM, canais e onde está o gargalo real. Sem template, sem questionário genérico.",
+      desc: "Um gerente de conta mergulha no seu fluxo, CRM, canais e entende onde está o gargalo real. Sem template, sem questionário genérico.",
     },
     {
       num: "02",
       title: "Construção",
-      desc: "Desenhamos o agente, treinamos na voz da sua marca e integramos aos seus sistemas.",
+      desc: "Desenhamos o agente, treinamos na voz da sua marca e integramos aos seus sistemas. Você acompanha cada etapa pelo mesmo ponto de contato — sem virar cliente de suporte.",
     },
     {
       num: "03",
       title: "Operação",
-      desc: "Acompanhamento contínuo, ajustes baseados em dados reais e evolução mês a mês.",
+      desc: "O time continua com você: ajustes baseados em dados reais, evolução mês a mês e um canal direto para pedir o próximo fluxo.",
     },
   ];
 
@@ -27,7 +27,7 @@ export default function HowItWorks() {
           <h2>
             Do diagnóstico ao agente em <em>produção</em>.
           </h2>
-          <p>Três passos, um time dedicado, acompanhamento contínuo.</p>
+          <p>Três passos, um ponto de contato, acompanhamento contínuo.</p>
         </div>
         <div className="steps">
           {steps.map((s, i) => (

@@ -12,11 +12,11 @@ const getBaseUrl = () => {
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
   title: {
-    default: "IAlem — Atenda mais, sem perder o jeito humano",
+    default: "IAlem — IA no seu negócio, sem perder o jeito humano",
     template: "%s | IAlem",
   },
   description:
-    "Agentes de IA sob medida para sua operação — atendem, qualificam e vendem 24/7, na voz da sua marca, integrados ao seu CRM.",
+    "Agência de Automação Inteligente. Colocamos IA no seu negócio — do atendimento à operação — com agentes sob medida, time consultivo e um ponto de contato do diagnóstico à operação.",
   keywords: [
     "inteligência artificial",
     "agentes de IA",
@@ -49,23 +49,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "IAlem",
-    title: "IAlem — Atenda mais, sem perder o jeito humano",
+    title: "IAlem — IA no seu negócio, sem perder o jeito humano",
     description:
-      "Criamos agentes de IA sob medida que atendem seus clientes como um funcionário dedicado — qualificando leads, agendando e vendendo 24/7.",
+      "Agência de Automação Inteligente. Colocamos IA no seu negócio — do atendimento à operação — com agentes sob medida, time consultivo e um ponto de contato do diagnóstico à operação.",
     images: [
       {
         url: "/images/ialem-og3.webp",
         width: 1200,
         height: 630,
-        alt: "IAlem — Atenda mais, sem perder o jeito humano",
+        alt: "IAlem — IA no seu negócio, sem perder o jeito humano",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IAlem — Atenda mais, sem perder o jeito humano",
+    title: "IAlem — IA no seu negócio, sem perder o jeito humano",
     description:
-      "Seu próximo cliente não vai esperar. Agentes de IA que atendem 24/7, na voz da sua marca.",
+      "IA no seu negócio — do atendimento à operação. Agência que desenha, treina e opera agentes sob medida.",
     images: ["/images/ialem-og3.webp"],
   },
   alternates: {

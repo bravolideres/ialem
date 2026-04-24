@@ -5,6 +5,10 @@ import { RevealItem } from "@/components/Reveal";
 
 const faqs = [
   {
+    q: "Qual a diferença entre a IAlem e uma ferramenta de chatbot pronta?",
+    a: "Ferramenta pronta você assina, configura sozinho e adapta o seu negócio ao que ela faz. A IAlem é uma agência: a gente entende a sua operação, desenha o agente sob medida, integra aos seus sistemas e opera junto. Você fala com um gerente de conta — não com um suporte por ticket. Por isso não é R$ 500/mês: é um projeto com implantação personalizada.",
+  },
+  {
     q: "O agente vai saber responder sobre a minha empresa?",
     a: "Sim. Treinamos o agente com todas as informações da sua empresa — produtos, serviços, preços, políticas e tom de voz. Ele atua como um funcionário capacitado que conhece o negócio de ponta a ponta, fala como a sua marca e funciona dia e noite.",
   },

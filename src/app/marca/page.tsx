@@ -110,8 +110,22 @@ export default function MarcaPage() {
             alt="IAlem"
             className="hero-logo reveal d1"
           />
+          <div
+            className="reveal d1"
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: 12,
+              letterSpacing: ".28em",
+              textTransform: "uppercase",
+              color: "var(--gold)",
+              marginTop: 20,
+              marginBottom: 36,
+            }}
+          >
+            Agência de Automação Inteligente
+          </div>
           <h1 className="reveal d2">
-            Leve seu atendimento <em>além</em>.
+            Leve seu <em>negócio</em> além.
           </h1>
           <div className="attribution reveal d3">
             <span>Produzido por</span>
@@ -344,8 +358,8 @@ export default function MarcaPage() {
                   maxWidth: "48ch",
                 }}
               >
-                A IAlem é parceria de quem já tem operação rodando — e
-                quer que ela vá{" "}
+                A IAlem é uma <strong style={{ color: "var(--text)" }}>agência de automação inteligente</strong> —
+                parceria de quem já tem operação rodando e quer que ela vá{" "}
                 <em
                   style={{
                     fontStyle: "italic",
@@ -367,10 +381,10 @@ export default function MarcaPage() {
                   maxWidth: "48ch",
                 }}
               >
-                A gente não é ferramenta de demo. É estrutura de rotina:
-                atendimento, cobrança, lembrete, agendamento, lançamento,
-                organização — tudo o que toma o tempo do time e pode virar
-                processo.
+                A gente não é ferramenta de prateleira nem licença que você
+                configura sozinho. É um time consultivo que desenha, constrói
+                e opera a automação com você — atendimento, vendas, cobrança,
+                lembrete, agendamento, lançamento, organização.
               </p>
             </div>
 
@@ -498,9 +512,9 @@ export default function MarcaPage() {
             >
               {[
                 {
-                  n: "01 · Atendimento",
+                  n: "01 · Atendimento & Vendas",
                   h: "Conversas que entendem contexto — na voz da sua empresa.",
-                  p: "Primeiro contato, dúvidas recorrentes, triagem. Humano entra só onde o humano importa.",
+                  p: "Primeiro contato, qualificação, fechamento. O agente atende, dá preço, responde objeção e encaminha pro humano quando importa.",
                 },
                 {
                   n: "02 · Cobrança",
@@ -1904,7 +1918,7 @@ export default function MarcaPage() {
             <div className="scale-row s-h1">
               <div className="scale-label">H1 · 88px</div>
               <div className="sample">
-                Atenda <em>mais</em>.
+                IA no seu <em>negócio</em>.
               </div>
             </div>
             <div className="scale-row s-h2">
@@ -1974,7 +1988,7 @@ export default function MarcaPage() {
                 Com <em>italic</em> estratégico.
               </h3>
               <div className="quote">
-                Atenda <em>mais</em>. Sem perder o <em>jeito humano</em>.
+                IA no seu <em>negócio</em>. Sem perder o <em>jeito humano</em>.
               </div>
               <p className="footnote">
                 Uma ou duas palavras em Fraunces italic dourado por

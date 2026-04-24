@@ -9,7 +9,7 @@ export default function Footer() {
             <IAlemLogo height={22} />
           </div>
           <p className="footer-tag">
-            Leve seu atendimento além.
+            Leve seu negócio além.
           </p>
         </div>
         <div>
@@ -31,7 +31,7 @@ export default function Footer() {
         <div>
           <h4>Contato</h4>
           <ul>
-            <li><a href="mailto:contato@ialem.com.br">contato@ialem.com.br</a></li>
+            <li><a href="mailto:contato@ialem.ai">contato@ialem.ai</a></li>
             <li><a href="#">WhatsApp</a></li>
             <li><a href="#">LinkedIn</a></li>
           </ul>
