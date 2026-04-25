@@ -9,15 +9,16 @@ interface PostGalleryProps {
 }
 
 export default function PostGallery({ images, postNum, postTitle }: PostGalleryProps) {
+  const [currentIdx, setCurrentIdx] = useState(0);
   const [modalIdx, setModalIdx] = useState<number | null>(null);
   const isCarrossel = images.length > 1;
 
-  const close = useCallback(() => setModalIdx(null), []);
-  const next = useCallback(
+  const closeModal = useCallback(() => setModalIdx(null), []);
+  const nextModal = useCallback(
     () => setModalIdx((i) => (i === null ? null : (i + 1) % images.length)),
     [images.length]
   );
-  const prev = useCallback(
+  const prevModal = useCallback(
     () =>
       setModalIdx((i) =>
         i === null ? null : (i - 1 + images.length) % images.length
@@ -25,17 +26,26 @@ export default function PostGallery({ images, postNum, postTitle }: PostGalleryP
     [images.length]
   );
 
-  // Keyboard navigation
+  const nextInline = useCallback(
+    () => setCurrentIdx((i) => (i + 1) % images.length),
+    [images.length]
+  );
+  const prevInline = useCallback(
+    () => setCurrentIdx((i) => (i - 1 + images.length) % images.length),
+    [images.length]
+  );
+
+  // Keyboard navigation when modal open
   useEffect(() => {
     if (modalIdx === null) return;
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-      else if (e.key === "ArrowRight") next();
-      else if (e.key === "ArrowLeft") prev();
+      if (e.key === "Escape") closeModal();
+      else if (e.key === "ArrowRight") nextModal();
+      else if (e.key === "ArrowLeft") prevModal();
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [modalIdx, close, next, prev]);
+  }, [modalIdx, closeModal, nextModal, prevModal]);
 
   // Lock body scroll while modal open
   useEffect(() => {
@@ -52,32 +62,81 @@ export default function PostGallery({ images, postNum, postTitle }: PostGalleryP
   return (
     <>
       <div className={`post-gallery${isCarrossel ? " is-carrossel" : ""}`}>
-        {isCarrossel ? (
-          <div className="post-gallery-strip" role="list">
+        {/* Main image — click opens modal */}
+        <div className="post-gallery-main-wrap">
+          <button
+            type="button"
+            className="post-gallery-main"
+            onClick={() => setModalIdx(currentIdx)}
+            aria-label={
+              isCarrossel
+                ? `Abrir card ${currentIdx + 1} de ${images.length} em tela cheia · ${postTitle}`
+                : `Ampliar arte · ${postTitle}`
+            }
+          >
+            <img
+              src={images[currentIdx]}
+              alt={
+                isCarrossel
+                  ? `${postTitle} — card ${currentIdx + 1}`
+                  : postTitle
+              }
+              loading="lazy"
+            />
+            <span className="post-gallery-zoom">↗ Ampliar</span>
+            {isCarrossel && (
+              <span className="post-gallery-counter">
+                {currentIdx + 1} / {images.length}
+              </span>
+            )}
+          </button>
+
+          {isCarrossel && (
+            <>
+              <button
+                type="button"
+                className="post-gallery-inline-nav prev"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prevInline();
+                }}
+                aria-label="Card anterior"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                className="post-gallery-inline-nav next"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nextInline();
+                }}
+                aria-label="Próximo card"
+              >
+                ›
+              </button>
+            </>
+          )}
+        </div>
+
+        {/* Thumbs strip — only for carrossel */}
+        {isCarrossel && (
+          <div className="post-gallery-thumbs" role="tablist">
             {images.map((src, i) => (
               <button
                 key={src}
                 type="button"
-                className="post-gallery-thumb"
-                onClick={() => setModalIdx(i)}
-                aria-label={`Abrir card ${i + 1} de ${images.length} · ${postTitle}`}
-                role="listitem"
+                className={`post-gallery-thumb${i === currentIdx ? " active" : ""}`}
+                onClick={() => setCurrentIdx(i)}
+                aria-label={`Ir para card ${i + 1}`}
+                aria-selected={i === currentIdx}
+                role="tab"
               >
-                <img src={src} alt={`${postTitle} — card ${i + 1}`} loading="lazy" />
+                <img src={src} alt="" loading="lazy" />
                 <span className="post-gallery-thumb-num">{i + 1}</span>
               </button>
             ))}
           </div>
-        ) : (
-          <button
-            type="button"
-            className="post-gallery-single"
-            onClick={() => setModalIdx(0)}
-            aria-label={`Abrir arte · ${postTitle}`}
-          >
-            <img src={images[0]} alt={postTitle} loading="lazy" />
-            <span className="post-gallery-zoom">↗ Ampliar</span>
-          </button>
         )}
       </div>
 
@@ -87,12 +146,12 @@ export default function PostGallery({ images, postNum, postTitle }: PostGalleryP
           role="dialog"
           aria-modal="true"
           aria-label={`Arte do post ${postNum}`}
-          onClick={close}
+          onClick={closeModal}
         >
           <button
             type="button"
             className="post-gallery-modal-close"
-            onClick={close}
+            onClick={closeModal}
             aria-label="Fechar"
           >
             ✕
@@ -104,7 +163,7 @@ export default function PostGallery({ images, postNum, postTitle }: PostGalleryP
                 className="post-gallery-modal-nav prev"
                 onClick={(e) => {
                   e.stopPropagation();
-                  prev();
+                  prevModal();
                 }}
                 aria-label="Card anterior"
               >
@@ -115,7 +174,7 @@ export default function PostGallery({ images, postNum, postTitle }: PostGalleryP
                 className="post-gallery-modal-nav next"
                 onClick={(e) => {
                   e.stopPropagation();
-                  next();
+                  nextModal();
                 }}
                 aria-label="Próximo card"
               >
