@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
+import PostGallery from "@/components/PostGallery";
+import PerfilImagens from "@/components/PerfilImagens";
 
 export default function PlaybookPage() {
   useEffect(() => {
@@ -636,6 +638,17 @@ export default function PlaybookPage() {
             </div>
           </div>
 
+          {/* Comparativo do feed: antigo · novo · lado a lado */}
+          <div className="reveal d2" style={{ marginTop: 40 }}>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--gold)", marginBottom: 8 }}>
+              Comparativo do feed
+            </div>
+            <p style={{ color: "var(--text-dim)", fontSize: 14.5, lineHeight: 1.6, marginBottom: 20, maxWidth: "62ch" }}>
+              Como o perfil estava antes, como ele fica com o novo conceito, e o lado a lado pra dimensionar o salto. Clique para ampliar.
+            </p>
+            <PerfilImagens />
+          </div>
+
           {/* Hashtags */}
           <div className="reveal d2" style={{ marginTop: 40 }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--gold)", marginBottom: 8 }}>
@@ -728,6 +741,7 @@ export default function PlaybookPage() {
               {
                 sem: "Semana 1", num: "01", pilar: "Marca & Cultura", formato: "Carrossel",
                 titulo: "Prazer, IAlem.",
+                cards: ["/playbook/posts/01-card-1.png", "/playbook/posts/01-card-2.png", "/playbook/posts/01-card-3.png", "/playbook/posts/01-card-4.png", "/playbook/posts/01-card-5.png"],
                 revisar: [
                   "**Capa (card 1):** adicionar a saudação **\"Prazer,\"** em Fraunces italic dourado pequeno, acima do wordmark IAlem. Sem isso o slide fica sem contexto de apresentação.",
                   "**Trocar tagline** em qualquer card onde apareça \"LEVE SEU ATENDIMENTO ALÉM\" → **\"LEVE SEU NEGÓCIO ALÉM\"**.",
@@ -739,18 +753,21 @@ export default function PlaybookPage() {
               {
                 sem: "Semana 1", num: "02", pilar: "Educação sobre IA", formato: "Carrossel",
                 titulo: "IA vs Chatbot: qual a diferença real?",
+                cards: ["/playbook/posts/02-card-1.png", "/playbook/posts/02-card-2.png", "/playbook/posts/02-card-3.png", "/playbook/posts/02-card-4.png", "/playbook/posts/02-card-5.png"],
                 arte: "Slide 1: 'IA vs Chatbot' em Fraunces grande. Slide 2: 'Chatbot segue roteiro fixo'. Slide 3: 'Agente de IA entende contexto'. Slide 4: Exemplo de conversa chatbot (robótica) vs agente (natural). Slide 5: 'Qual deles seu cliente prefere?' Slide 6: CTA IAlem",
                 legenda: "Chatbot: 'Para falar com vendas, digite 2.'\nAgente de IA: 'Vi que você tava olhando o apartamento do Setor Marista. Quer agendar uma visita?'\n\nEssa é a diferença.\n\nUm segue script. O outro entende contexto, histórico e intenção.\n\nQual dos dois seu cliente quer conversar?\n\n→ Salva esse post pra consultar depois.",
               },
               {
                 sem: "Semana 1", num: "03", pilar: "Visão de Mercado", formato: "Imagem + caption",
                 titulo: "85% das empresas terão agente de IA até 2028.",
+                cards: ["/playbook/posts/03.png"],
                 arte: "Fundo dark. Número '85%' em Fraunces 120px dourado centralizado. Abaixo, em Inter Tight: 'das empresas terão agentes de IA até 2028 — Gartner'. Logo IAlem pequeno no canto inferior.",
                 legenda: "85% das interações com clientes serão gerenciadas por IA até 2028.\n\nIsso não é previsão de filme de ficção científica. É dado do Gartner.\n\nA pergunta não é se, é quando.\n\nE quem automatiza primeiro, atende melhor. Quem atende melhor, vende mais.\n\nSua empresa tá em qual dos 85%... ou dos 15%?\n\n→ Quer saber como se preparar? Link na bio.",
               },
               {
                 sem: "Semana 2", num: "04", pilar: "Resultado Real", formato: "Post de Case",
                 titulo: "Uma clínica reduziu 60% de no-show em 3 semanas.",
+                cards: ["/playbook/posts/04.png"],
                 arte: "Fundo dark. '−60%' em Fraunces 96px dourado. Subtítulo: 'de no-show em 3 semanas'. Detalhe visual: gráfico minimalista descendo. Logo IAlem.",
                 legenda: "Uma clínica multidisciplinar com 8 profissionais e 200 agendamentos por semana tinha um problema: 28% de no-show.\n\nCada paciente que faltava era vaga perdida, receita desperdiçada e furo na agenda.\n\nA recepção gastava 3 horas por dia mandando confirmação no WhatsApp. Manualmente. Uma por uma.\n\nEm 3 semanas com o agente IAlem:\n→ Confirmação automática com tom humanizado\n→ Reagendamento instantâneo\n→ No-show caiu de 28% para 11%\n\nSem contratar. Sem mudar sistema.\n\nQuer saber quanto no-show custa pra sua operação?\n→ Diagnóstico gratuito no link da bio.",
               },
@@ -763,30 +780,35 @@ export default function PlaybookPage() {
               {
                 sem: "Semana 2", num: "06", pilar: "Bastidores", formato: "Carrossel",
                 titulo: "Como treinamos um agente de IA pra falar como sua marca.",
+                cards: ["/playbook/posts/06-card-1.png", "/playbook/posts/06-card-2.png", "/playbook/posts/06-card-3.png", "/playbook/posts/06-card-4.png", "/playbook/posts/06-card-5.png", "/playbook/posts/06-card-6.png"],
                 arte: "Slide 1: 'Como treinamos um agente de IA' em Fraunces. Slide 2: 'Passo 1 — Entendemos seu tom de voz'. Slide 3: 'Passo 2 — Alimentamos com contexto real'. Slide 4: 'Passo 3 — Testamos com conversas simuladas'. Slide 5: 'Passo 4 — Ajustamos até parecer da equipe'. Slide 6: CTA",
                 legenda: "Não jogamos sua empresa dentro de um prompt genérico. Não entregamos uma licença pra você virar programador.\n\nA IAlem é agência: a gente senta junto, entende a operação e constrói o agente sob medida. O processo de treinamento envolve:\n\n1. Imersão no tom de voz da sua marca\n2. Mapeamento de perguntas frequentes reais\n3. Simulações com cenários do seu setor\n4. Ajuste fino até o agente parecer da equipe\n\nVocê acompanha tudo pelo mesmo ponto de contato — do diagnóstico à operação.\n\nO resultado? Um agente que seu cliente não percebe que é IA. E se perceber, vai gostar da experiência mesmo assim.\n\n→ Quer ver o processo na prática? Link na bio.",
               },
               {
                 sem: "Semana 3", num: "07", pilar: "Resultado Real", formato: "Antes & Depois",
                 titulo: "Antes da IAlem vs. Depois da IAlem.",
+                cards: ["/playbook/posts/07.png"],
                 arte: "Grid dividido ao meio. Lado esquerdo (cinza): 'Antes — Leads esperando 2h · Recepção sobrecarregada · Clientes ligando pra confirmar · Oportunidades perdidas à noite'. Lado direito (gold): 'Com a IAlem — Resposta em 12 segundos · Time focado no que importa · Confirmação automática · Atendimento 24/7'.",
                 legenda: "Coluna da esquerda: a rotina da maioria das empresas.\nColuna da direita: a rotina de quem automatizou com a IAlem.\n\nAqui o exemplo é atendimento — mas a mesma lógica vale pra cobrança, lembrete, agendamento, organização. Do atendimento à operação.\n\nNão precisa trocar de sistema.\nNão precisa contratar.\nNão precisa ser expert em IA.\n\nQual coluna é a sua?\n\n→ Descubra em 2 minutos. Link na bio.",
               },
               {
                 sem: "Semana 3", num: "08", pilar: "Educação sobre IA", formato: "Carrossel",
                 titulo: "Teste rápido: sua empresa tá pronta pra automatizar?",
+                cards: ["/playbook/posts/08-card-1.png", "/playbook/posts/08-card-2.png", "/playbook/posts/08-card-3.png", "/playbook/posts/08-card-4.png", "/playbook/posts/08-card-5.png", "/playbook/posts/08-card-6.png", "/playbook/posts/08-card-7.png", "/playbook/posts/08-card-8.png"],
                 arte: "Slide 1: 'Teste rápido' em Fraunces grande + subtítulo 'Responde sim ou não às 5 perguntas'. Slides 2–6: uma pergunta por slide em Fraunces, com dois botões visuais 'SIM / NÃO' em gold e cinza. Slide 7: 'Marcou 3 ou mais SIM? Tá na hora.' Slide 8: CTA gold com link de diagnóstico.",
                 legenda: "Responde rápido — sim ou não:\n\n1. Seu time repete as mesmas respostas todo dia?\n2. Leads chegam à noite e ninguém responde?\n3. Confirmação de agendamento é feita na mão?\n4. Cliente espera mais de 1 hora pra ser atendido?\n5. Você já tentou chatbot e não funcionou?\n\n3 ou mais SIM = automação deixa de ser opção e vira prioridade.\n\n→ Diagnóstico gratuito no link da bio.",
               },
               {
                 sem: "Semana 3", num: "09", pilar: "Visão de Mercado", formato: "Quote Card",
                 titulo: "Quem responde primeiro, vende mais.",
+                cards: ["/playbook/posts/09.png"],
                 arte: "Fundo dark com grafismo sutil do ícone IAlem. Frase 'Quem responde primeiro, vende mais.' em Fraunces 300 italic dourado. Abaixo: 'Harvard Business Review' em mono. Logo IAlem 10% no canto.",
                 legenda: "Empresas que respondem em até 5 minutos têm 21× mais chance de qualificar um lead. — Harvard Business Review\n\n21 vezes.\n\nA maioria das empresas brasileiras? Mais de 1 hora.\n\nUm agente de IA não precisa de café pra responder às 23h.\n\n→ Teste a velocidade na prática. Link na bio.",
               },
               {
                 sem: "Semana 4", num: "10", pilar: "Resultado Real", formato: "Post de Case",
                 titulo: "+40% de leads atendidos em uma rede de concessionárias.",
+                cards: ["/playbook/posts/10.png"],
                 arte: "Fundo dark. '+40%' em Fraunces 96px dourado. Subtítulo: 'de leads atendidos — rede com 3 lojas'. Logo IAlem.",
                 legenda: "Uma rede de concessionárias com 3 lojas e 42 vendedores recebia 300+ leads por mês entre Instagram, portais e tráfego pago.\n\nO problema: só 60% eram respondidos no mesmo dia. O restante esperava — e ia pra concorrência.\n\nCom o agente IAlem:\n→ 100% dos leads respondidos em até 1 minuto\n→ Qualificação automática antes de chegar no vendedor\n→ +40% de atendimentos sem nenhum custo de contratação\n\nO vendedor parou de gastar tempo com curioso. E começou a fechar mais.\n\n→ Diagnóstico gratuito no link da bio.",
               },
@@ -799,6 +821,7 @@ export default function PlaybookPage() {
               {
                 sem: "Semana 4", num: "12", pilar: "Marca & Cultura", formato: "Carrossel",
                 titulo: "Por que 'além'.",
+                cards: ["/playbook/posts/12-card-1.png", "/playbook/posts/12-card-2.png", "/playbook/posts/12-card-3.png", "/playbook/posts/12-card-4.png", "/playbook/posts/12-card-5.png", "/playbook/posts/12-card-6.png"],
                 revisar: [
                   "**Card 1 (capa) e Card 6 (fechamento):** trocar tagline \"LEVE SEU ATENDIMENTO ALÉM\" → **\"LEVE SEU NEGÓCIO ALÉM\"**.",
                   "**Slide 5:** trocar \"Além da tecnologia — resultado\" por **\"Além do que consome seu time.\"** — nomeia a dor interna do empresário (tempo do time em coisa que devia rodar sozinha).",
@@ -807,8 +830,9 @@ export default function PlaybookPage() {
                 legenda: "Quando escolhemos o nome, queríamos algo que dissesse o que fazemos sem explicar demais.\n\nAlém do chatbot genérico.\nAlém do horário comercial.\nAlém da resposta padrão.\nAlém do que consome seu time.\n\nSe o seu negócio tá aquém, a gente leva além.\n\nÉ simples assim.\n\n→ ialem.ai",
               },
             ].map((post) => {
-              const p = post as typeof post & { revisar?: string[] };
+              const p = post as typeof post & { revisar?: string[]; cards?: string[] };
               const needsRevision = Array.isArray(p.revisar) && p.revisar.length > 0;
+              const hasCards = Array.isArray(p.cards) && p.cards.length > 0;
               return (
                 <div key={post.num} className={`post-card${needsRevision ? " revisar-card" : ""}`}>
                   <div className="post-header">
@@ -836,10 +860,23 @@ export default function PlaybookPage() {
                       </ul>
                     </div>
                   )}
-                  <div className="post-section">
-                    <div className="post-section-label">Direção de arte</div>
-                    <p className="post-content">{post.arte}</p>
-                  </div>
+                  {hasCards ? (
+                    <div className="post-section">
+                      <div className="post-section-label">
+                        {p.cards!.length > 1 ? `Arte · ${p.cards!.length} cards` : "Arte"}
+                      </div>
+                      <PostGallery
+                        images={p.cards!}
+                        postNum={post.num}
+                        postTitle={post.titulo}
+                      />
+                    </div>
+                  ) : (
+                    <div className="post-section">
+                      <div className="post-section-label">Direção de arte</div>
+                      <p className="post-content">{post.arte}</p>
+                    </div>
+                  )}
                   <div className="post-section">
                     <div className="post-section-label">Legenda</div>
                     <p className="post-content post-legenda">{post.legenda}</p>
