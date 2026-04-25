@@ -51,6 +51,7 @@ export default function PlaybookPage() {
           >
             <option value="/playbook">Playbook</option>
             <option value="/marca">Marca</option>
+            <option value="/apresentacao">Apresentação</option>
           </select>
         </div>
       </nav>
