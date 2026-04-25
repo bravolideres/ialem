@@ -598,23 +598,10 @@ export default function PlaybookPage() {
             <span className="bar" />
           </div>
 
-          <div className="revisar-banner reveal d1" style={{ marginBottom: 28 }}>
-            <div className="revisar-banner-icon">🔄</div>
-            <div className="revisar-banner-body">
-              <div className="revisar-banner-label">Revisão · Abril 2026</div>
-              <div className="revisar-banner-text">
-                O mock do feed atual exibe o <strong>nome antigo &ldquo;IAlem | Agentes de IA&rdquo;</strong> e a <strong>bio antiga</strong>. Atualizar o perfil do Instagram (e o mock) com os textos abaixo.
-              </div>
-            </div>
-          </div>
-
           <div className="profile-detail-grid reveal d1">
             {/* Main profile card */}
-            <div className="profile-detail-card revisar-card">
-              <div className="info-eyebrow" style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <span>Configuração do Perfil</span>
-                <span className="revisar-badge">🔄 Atualizar no IG</span>
-              </div>
+            <div className="profile-detail-card">
+              <div className="info-eyebrow">Configuração do Perfil</div>
               <div className="profile-detail-body">
                 <div>
                   <div className="profile-field-label">Foto de perfil</div>
@@ -761,27 +748,12 @@ export default function PlaybookPage() {
             12 posts estratégicos para inaugurar o perfil com consistência. Cada um com arte, legenda e CTA definidos. 3 posts por semana, 4 semanas.
           </p>
 
-          <div className="revisar-banner reveal d1">
-            <div className="revisar-banner-icon">🔄</div>
-            <div className="revisar-banner-body">
-              <div className="revisar-banner-label">Revisão · Abril 2026</div>
-              <div className="revisar-banner-text">
-                O conceito da IAlem evoluiu para <strong>Agência de Automação Inteligente</strong> com proposta <strong>&ldquo;IA no seu negócio. Sem perder o jeito humano.&rdquo;</strong> e tagline <strong>&ldquo;Leve seu negócio além.&rdquo;</strong> Cards marcados abaixo precisam ser refeitos. Regra geral: em qualquer arte onde apareça <strong>&ldquo;LEVE SEU ATENDIMENTO ALÉM&rdquo;</strong>, trocar por <strong>&ldquo;LEVE SEU NEGÓCIO ALÉM&rdquo;</strong>.
-              </div>
-            </div>
-          </div>
-
           <div className="posts-grid reveal d2">
             {[
               {
                 sem: "Semana 1", num: "01", pilar: "Marca & Cultura", formato: "Carrossel",
                 titulo: "Prazer, IAlem.",
                 cards: ["/playbook/posts/01-card-1.png", "/playbook/posts/01-card-2.png", "/playbook/posts/01-card-3.png", "/playbook/posts/01-card-4.png", "/playbook/posts/01-card-5.png"],
-                revisar: [
-                  "**Capa (card 1):** adicionar a saudação **\"Prazer,\"** em Fraunces italic dourado pequeno, acima do wordmark IAlem. Sem isso o slide fica sem contexto de apresentação.",
-                  "**Trocar tagline** em qualquer card onde apareça \"LEVE SEU ATENDIMENTO ALÉM\" → **\"LEVE SEU NEGÓCIO ALÉM\"**.",
-                  "Reforçar no slide 4 que a IAlem é **agência**, não ferramenta — ex.: adicionar um slide antes/depois de \"Não é bot. É agente\" com \"Não é ferramenta. É agência.\"",
-                ],
                 legenda: "A IAlem nasceu de uma frustração simples: empresas perdem clientes por demora no atendimento.\n\nSó que contratar mais gente nem sempre é a resposta. E chatbot genérico espanta mais do que resolve. E ferramenta de prateleira de R$ 500/mês também não — porque ninguém automatiza um negócio com template pronto.\n\nPor isso a IAlem é uma agência de automação inteligente: a gente mergulha na sua operação, desenha o agente sob medida, integra aos seus sistemas e opera junto. Você fala com um ponto de contato do diagnóstico à operação — não com suporte por ticket.\n\nNa prática. No WhatsApp. 24/7.\n\n→ Link na bio pra testar no seu número.",
               },
               {
@@ -848,43 +820,22 @@ export default function PlaybookPage() {
                 sem: "Semana 4", num: "12", pilar: "Marca & Cultura", formato: "Carrossel",
                 titulo: "Por que 'além'.",
                 cards: ["/playbook/posts/12-card-1.png", "/playbook/posts/12-card-2.png", "/playbook/posts/12-card-3.png", "/playbook/posts/12-card-4.png", "/playbook/posts/12-card-5.png", "/playbook/posts/12-card-6.png"],
-                revisar: [
-                  "**Card 1 (capa) e Card 6 (fechamento):** trocar tagline \"LEVE SEU ATENDIMENTO ALÉM\" → **\"LEVE SEU NEGÓCIO ALÉM\"**.",
-                  "**Slide 5:** trocar \"Além da tecnologia — resultado\" por **\"Além do que consome seu time.\"** — nomeia a dor interna do empresário (tempo do time em coisa que devia rodar sozinha).",
-                ],
                 legenda: "Quando escolhemos o nome, queríamos algo que dissesse o que fazemos sem explicar demais.\n\nAlém do chatbot genérico.\nAlém do horário comercial.\nAlém da resposta padrão.\nAlém do que consome seu time.\n\nSe o seu negócio tá aquém, a gente leva além.\n\nÉ simples assim.\n\n→ ialem.ai",
               },
             ].map((post) => {
-              const p = post as typeof post & { revisar?: string[]; cards?: string[] };
-              const needsRevision = Array.isArray(p.revisar) && p.revisar.length > 0;
+              const p = post as typeof post & { cards?: string[]; arte?: string };
               const hasCards = Array.isArray(p.cards) && p.cards.length > 0;
               return (
-                <div key={post.num} className={`post-card${needsRevision ? " revisar-card" : ""}`}>
+                <div key={post.num} className="post-card">
                   <div className="post-header">
                     <div className="post-num">{post.num}</div>
                     <div className="post-meta">
                       <div className="post-sem">{post.sem}</div>
                       <div className="post-pilar-tag">{post.pilar}</div>
                     </div>
-                    {needsRevision ? (
-                      <span className="revisar-badge">🔄 Revisar</span>
-                    ) : (
-                      <div className="post-formato-tag">{post.formato}</div>
-                    )}
+                    <div className="post-formato-tag">{post.formato}</div>
                   </div>
                   <h3 className="post-titulo">{post.titulo}</h3>
-                  {needsRevision && (
-                    <div className="revisar-nota">
-                      <div className="revisar-nota-label">
-                        <span>🔄 Ajustes pedidos à designer</span>
-                      </div>
-                      <ul>
-                        {p.revisar!.map((n, i) => (
-                          <li key={i} dangerouslySetInnerHTML={{ __html: n.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>") }} />
-                        ))}
-                      </ul>
-                    </div>
-                  )}
                   {hasCards ? (
                     <div className="post-section">
                       <div className="post-section-label">
@@ -899,7 +850,7 @@ export default function PlaybookPage() {
                   ) : (
                     <div className="post-section">
                       <div className="post-section-label">Direção de arte</div>
-                      <p className="post-content">{post.arte}</p>
+                      <p className="post-content">{p.arte}</p>
                     </div>
                   )}
                   <div className="post-section">
