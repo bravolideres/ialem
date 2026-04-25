@@ -61,9 +61,43 @@ export default function MarcaPage() {
     );
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
+    /* Active section highlight in nav */
+    const navLinks = Array.from(
+      document.querySelectorAll<HTMLAnchorElement>("nav.brand-nav .links a")
+    );
+    const sectionIds = navLinks
+      .map((l) => l.getAttribute("href")?.slice(1))
+      .filter((id): id is string => Boolean(id));
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    const activeObs = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort(
+            (a, b) =>
+              Math.abs(a.boundingClientRect.top) -
+              Math.abs(b.boundingClientRect.top)
+          );
+        if (visible.length === 0) return;
+        const activeId = visible[0].target.id;
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${activeId}`
+          );
+        });
+      },
+      { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach((s) => activeObs.observe(s));
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       io.disconnect();
+      activeObs.disconnect();
     };
   }, []);
 

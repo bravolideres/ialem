@@ -125,10 +125,24 @@ nav.pb-nav .links {
   text-transform: uppercase;
 }
 nav.pb-nav .links a {
+  position: relative;
   color: var(--text-muted);
+  padding-bottom: 4px;
   transition: color var(--dur-1) var(--ease);
 }
+nav.pb-nav .links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--dur-2) var(--ease);
+}
 nav.pb-nav .links a:hover { color: var(--text); }
+nav.pb-nav .links a.active { color: var(--gold); }
+nav.pb-nav .links a.active::after { transform: scaleX(1); }
 
 nav.pb-nav .doc-switcher {
   font-family: var(--font-mono);

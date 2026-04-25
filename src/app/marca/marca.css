@@ -149,11 +149,25 @@ nav.brand-nav .links {
   text-transform: uppercase;
 }
 nav.brand-nav .links a {
+  position: relative;
   color: var(--text-muted);
   text-decoration: none;
+  padding-bottom: 4px;
   transition: color var(--dur-1) var(--ease);
 }
+nav.brand-nav .links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--dur-2) var(--ease);
+}
 nav.brand-nav .links a:hover { color: var(--text); }
+nav.brand-nav .links a.active { color: var(--gold); }
+nav.brand-nav .links a.active::after { transform: scaleX(1); }
 
 nav.brand-nav .doc-switcher {
   font-family: var(--font-mono);
