@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import AppMockup from "@/components/AppMockup";
 
 /* ── inline SVG path (icon symbol) ── */
 const ICON_D =
@@ -2315,131 +2316,109 @@ export default function MarcaPage() {
           <p className="apps-intro reveal d1">
             A identidade não existe no vácuo. Aqui estão as formas
             canônicas de como a IAlem aparece nos pontos de contato reais
-            — do cartão ao post, da proposta ao banner.
+            — do cartão à proposta, do dashboard à conferência. Clique em
+            qualquer aplicação para ampliar.
           </p>
 
+          {/* ───── Bloco 1 · Peças impressas / personal touch ───── */}
           <div className="apps-grid">
-            {/* ── Cartão de Visita — Junior ── */}
-            <div className="app-mockup reveal d1">
-              <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/brand/images/cartao-junior.jpeg"
-                  alt="Cartão de visita IAlem — D'ávila Júnior"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                />
-              </div>
-              <div className="app-meta">
-                <div className="app-label">Cartão de visita · Frente e verso</div>
-                <div className="app-desc">
-                  Fundo dark com hot stamping dourado. Logo gold no topo, símbolo
-                  como grafismo sutil no canto. Informação mínima — o cartão é
-                  convite, não currículo.
-                </div>
-              </div>
-            </div>
+            {/* 01 · Cartão Junior */}
+            <AppMockup
+              reveal="reveal d1"
+              src="/brand/images/cartao-junior.jpeg"
+              alt="Cartão de visita IAlem — D'ávila Júnior"
+              label="Cartão de visita · Frente e verso"
+              desc="Fundo dark com hot stamping dourado. Logo gold no topo, símbolo como grafismo sutil no canto. Informação mínima — o cartão é convite, não currículo."
+            />
 
-            {/* ── Cartão de Visita — Ana ── */}
-            <div className="app-mockup reveal d2">
-              <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/brand/images/cartao-ana.jpeg"
-                  alt="Cartão de visita IAlem — Ana Flávia"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                />
-              </div>
-              <div className="app-meta">
-                <div className="app-label">Cartão de visita · Variação</div>
-                <div className="app-desc">
-                  Mesmo sistema visual aplicado a diferentes sócios. A
-                  consistência do layout reforça a marca — o nome muda, a
-                  identidade permanece.
-                </div>
-              </div>
-            </div>
+            {/* 02 · Cartão Ana */}
+            <AppMockup
+              reveal="reveal d2"
+              src="/brand/images/cartao-ana.jpeg"
+              alt="Cartão de visita IAlem — Ana Flávia"
+              label="Cartão de visita · Variação"
+              desc="Mesmo sistema visual aplicado a diferentes sócios. A consistência do layout reforça a marca — o nome muda, a identidade permanece."
+            />
 
-            {/* ── Papelaria — Desk ── */}
-            <div className="app-mockup reveal d3">
-              <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/brand/images/desk-stationery.jpeg"
-                  alt="Papelaria IAlem — caderno, celular, caneta e cartões"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                />
-              </div>
-              <div className="app-meta">
-                <div className="app-label">Papelaria · Desk set</div>
-                <div className="app-desc">
-                  Caderno com símbolo em relevo, caneta com detalhe dourado,
-                  porta-cartões e celular com ícone. Cada peça é dark premium —
-                  nenhuma destoa.
-                </div>
-              </div>
-            </div>
+            {/* 03 · Papelaria desk */}
+            <AppMockup
+              reveal="reveal d3"
+              src="/brand/images/desk-stationery.jpeg"
+              alt="Papelaria IAlem — caderno, celular, caneta e cartões"
+              label="Papelaria · Desk set"
+              desc="Caderno com símbolo em relevo, caneta com detalhe dourado, porta-cartões e celular com ícone. Cada peça é dark premium — nenhuma destoa."
+            />
 
-            {/* ── Fachada do Escritório ── */}
-            <div className="app-mockup reveal d4">
-              <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/brand/images/fachada-escritorio.jpeg"
-                  alt="Fachada IAlem — letreiro retroiluminado em escritório"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                />
-              </div>
-              <div className="app-meta">
-                <div className="app-label">Fachada · Sinalização</div>
-                <div className="app-desc">
-                  Letreiro em metal dourado com retroiluminação âmbar sobre
-                  painel ripado escuro. A presença física traduz o mesmo tom
-                  de sofisticação do digital.
-                </div>
-              </div>
-            </div>
+            {/* 04 · Proposta comercial (NOVO) */}
+            <AppMockup
+              reveal="reveal d4"
+              src="/brand/images/proposta-comercial.jpeg"
+              alt="Proposta comercial IAlem — capa preta com logo em hot stamping dourado, contrato e cartão"
+              label="Proposta comercial · Capa & contrato"
+              desc="Capa preta com hot stamping gold, contrato sobre papel branco com cabeçalho da marca, e o cartão da co-fundadora ao lado. A proposta já chega vendendo o nível antes de ser lida."
+            />
           </div>
 
-          {/* ── Full width: Camiseta ── */}
-          <div className="app-mockup reveal d4" style={{ marginTop: 24 }}>
-            <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/brand/images/camiseta-marca.jpeg"
-                alt="Camiseta IAlem — logo gold em camiseta preta"
-                style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}
-              />
-            </div>
-            <div className="app-meta">
-              <div className="app-label">Vestuário · Camiseta</div>
-              <div className="app-desc">
-                Preta com logo gold no peito e ícone bordado na manga.
-                Uniforme de time que funciona como peça de marca — casual,
-                premium e reconhecível.
-              </div>
-            </div>
+          {/* ───── Bloco 2 · Digital + ambientes ───── */}
+          <div className="apps-grid" style={{ marginTop: 24 }}>
+            {/* 05 · Dashboard laptop (NOVO) */}
+            <AppMockup
+              reveal="reveal d1"
+              src="/brand/images/dashboard-laptop.jpeg"
+              alt="Dashboard IAlem em laptop — gráficos de processos automatizados, taxa de sucesso e tempo economizado"
+              label="Produto digital · Dashboard"
+              desc="Painel de Automação Inteligente em escala dark + gold. Gráficos editoriais, KPIs de operação e linguagem visual coerente com o site. O cliente vê resultado no mesmo tom em que conheceu a marca."
+            />
+
+            {/* 06 · Fachada */}
+            <AppMockup
+              reveal="reveal d2"
+              src="/brand/images/fachada-escritorio.jpeg"
+              alt="Fachada IAlem — letreiro retroiluminado em escritório"
+              label="Fachada · Sinalização"
+              desc="Letreiro em metal dourado com retroiluminação âmbar sobre painel ripado escuro. A presença física traduz o mesmo tom de sofisticação do digital."
+            />
+
+            {/* 07 · Sala de reuniões (NOVO) */}
+            <AppMockup
+              reveal="reveal d3"
+              src="/brand/images/sala-reunioes.jpeg"
+              alt="Sala de reuniões executiva IAlem — letreiro dourado retroiluminado, mesa com laptops e vista da cidade ao pôr do sol"
+              label="Ambiente interno · Sala executiva"
+              desc="Letreiro dourado em backlight, mesa de reuniões com laptops e tablet rodando o painel da IAlem, vista panorâmica. O ambiente onde se fecha negócio é coerente com a marca de ponta a ponta."
+            />
+
+            {/* 08 · Camiseta */}
+            <AppMockup
+              reveal="reveal d4"
+              src="/brand/images/camiseta-marca.jpeg"
+              alt="Camiseta IAlem — logo gold em camiseta preta"
+              label="Vestuário · Camiseta"
+              desc="Preta com logo gold no peito e ícone bordado na manga. Uniforme de time que funciona como peça de marca — casual, premium e reconhecível."
+            />
           </div>
 
-          {/* ── Full width: Painel Aeroporto ── */}
-          <div className="app-mockup reveal d4" style={{ marginTop: 24 }}>
-            <div className="app-stage" style={{ padding: 0, overflow: "hidden", borderRadius: "var(--r-card)" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/brand/images/painel-aeroporto.jpeg"
-                alt="Painel IAlem em sala de embarque de aeroporto"
-                style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}
-              />
-            </div>
-            <div className="app-meta">
-              <div className="app-label">Mídia externa · Painel de aeroporto</div>
-              <div className="app-desc">
-                A marca em grande formato — dark premium em escala. Headline
-                editorial com depoimento e números reais. O painel prova que
-                o sistema visual funciona do digital ao físico sem perder
-                identidade.
-              </div>
-            </div>
-          </div>
+          {/* ───── Bloco 3 · Mídia em escala massiva ───── */}
+          <AppMockup
+            fullWidth
+            reveal="reveal d4"
+            style={{ marginTop: 24 }}
+            src="/brand/images/painel-aeroporto.jpeg"
+            alt="Painel IAlem em sala de embarque de aeroporto"
+            label="Mídia externa · Painel de aeroporto"
+            desc="A marca em grande formato — dark premium em escala. Headline editorial com depoimento e números reais. O painel prova que o sistema visual funciona do digital ao físico sem perder identidade."
+          />
+
+          {/* 10 · Conferência IA SP (NOVO) */}
+          <AppMockup
+            fullWidth
+            reveal="reveal d4"
+            style={{ marginTop: 24 }}
+            src="/brand/images/conferencia-sp.jpeg"
+            alt="Conferência de IA São Paulo — palco com palestrante e telão exibindo a marca IAlem em escala massiva"
+            label="Evento · Conferência IA São Paulo"
+            desc="A IAlem como plataforma de pensamento — palco principal, totens de marca, audiência executiva, telão em hero size. Quando a marca vira evento, o sistema visual sustenta a escala sem perder a sobriedade."
+          />
         </div>
       </section>
 
