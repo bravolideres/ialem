@@ -2040,6 +2040,7 @@ nav.pb-nav .doc-switcher option {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin-top: 24px;
+  align-items: start; /* não esticar os cards — preservar proporção natural */
 }
 .perfil-img-card {
   position: relative;
@@ -2056,9 +2057,6 @@ nav.pb-nav .doc-switcher option {
   border-color: rgba(201,164,107,.6);
   transform: translateY(-2px);
 }
-.perfil-img-card.feed {
-  aspect-ratio: 1080 / 1700;
-}
 .perfil-img-card.compare {
   grid-column: 1 / -1;
   aspect-ratio: 16 / 9;
@@ -2066,10 +2064,13 @@ nav.pb-nav .doc-switcher option {
 .perfil-img-card img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* mesma largura, altura proporcional */
 }
-.perfil-img-card.compare img { object-fit: contain; background: #000; }
+.perfil-img-card.compare img {
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
 .perfil-img-label {
   position: absolute;
   top: 12px;
