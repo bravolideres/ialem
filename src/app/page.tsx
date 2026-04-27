@@ -13,6 +13,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import FloatingChat from "@/components/FloatingChat";
 import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
@@ -33,8 +34,9 @@ export default function Home() {
       <Reveal><Integrations /></Reveal>
       <Reveal><FAQ /></Reveal>
       <Reveal><CTA /></Reveal>
-      
+
       <Footer />
+      <FloatingChat />
     </>
   );
 }
