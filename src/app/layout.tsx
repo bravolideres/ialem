@@ -12,11 +12,11 @@ const getBaseUrl = () => {
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
   title: {
-    default: "IAlem — IA no seu negócio, sem perder o jeito humano",
+    default: "IAlem — Leve seu negócio além com IA, sem perder o jeito humano",
     template: "%s | IAlem",
   },
   description:
-    "Agência de Automação Inteligente. Colocamos IA no seu negócio — do atendimento à operação — com agentes sob medida, time consultivo e um ponto de contato do diagnóstico à operação.",
+    "Agência de Automação Inteligente. Levamos seu negócio além com agentes de IA sob medida — do atendimento à operação — com time consultivo e um ponto de contato do diagnóstico à operação. Sem perder o jeito humano.",
   keywords: [
     "inteligência artificial",
     "agentes de IA",
@@ -49,23 +49,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "IAlem",
-    title: "IAlem — IA no seu negócio, sem perder o jeito humano",
+    title: "IAlem — Leve seu negócio além com IA, sem perder o jeito humano",
     description:
-      "Agência de Automação Inteligente. Colocamos IA no seu negócio — do atendimento à operação — com agentes sob medida, time consultivo e um ponto de contato do diagnóstico à operação.",
+      "Agência de Automação Inteligente. Levamos seu negócio além com agentes de IA sob medida — do atendimento à operação — com time consultivo e um ponto de contato do diagnóstico à operação. Sem perder o jeito humano.",
     images: [
       {
         url: "/images/ialem-og3.webp",
         width: 1200,
         height: 630,
-        alt: "IAlem — IA no seu negócio, sem perder o jeito humano",
+        alt: "IAlem — Leve seu negócio além com IA, sem perder o jeito humano",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IAlem — IA no seu negócio, sem perder o jeito humano",
+    title: "IAlem — Leve seu negócio além com IA, sem perder o jeito humano",
     description:
-      "IA no seu negócio — do atendimento à operação. Agência que desenha, treina e opera agentes sob medida.",
+      "Leve seu negócio além com IA — do atendimento à operação. Agência que desenha, treina e opera agentes sob medida.",
     images: ["/images/ialem-og3.webp"],
   },
   alternates: {
