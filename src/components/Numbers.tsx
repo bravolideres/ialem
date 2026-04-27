@@ -28,10 +28,6 @@ export default function Numbers() {
               alt="Dashboard de Automação Inteligente da IAlem em laptop — gráficos de processos automatizados, taxa de sucesso e tempo economizado"
               loading="lazy"
             />
-            <div className="numbers-image-tag">
-              <span className="dot" />
-              <span>Dashboard em produção · agentes ativos</span>
-            </div>
           </RevealItem>
 
           <div className="numbers numbers-stack">
