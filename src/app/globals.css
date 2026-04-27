@@ -427,6 +427,21 @@ nav.top ul a:hover { color: var(--text); }
   font-family: 'Fraunces', serif; font-size: 72px; line-height: 1; color: var(--gold);
   font-weight: 300; font-style: italic; opacity: .9; margin-bottom: 20px;
 }
+.step-ic {
+  width: 56px; height: 56px; border-radius: 14px;
+  border: 1px solid rgba(201, 164, 107, .22);
+  background: linear-gradient(135deg, rgba(201, 164, 107, .10), rgba(201, 164, 107, .03));
+  color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 22px;
+  transition: border-color .25s, background .25s, transform .25s, box-shadow .25s;
+}
+.step:hover .step-ic {
+  border-color: rgba(201, 164, 107, .45);
+  background: linear-gradient(135deg, rgba(201, 164, 107, .18), rgba(201, 164, 107, .06));
+  box-shadow: 0 0 24px -8px rgba(201, 164, 107, .35);
+  transform: translateY(-1px);
+}
 .step h3 {
   font-family: 'Fraunces', serif; font-weight: 400; font-size: 26px;
   letter-spacing: -.01em; margin-bottom: 12px;
