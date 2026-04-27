@@ -249,6 +249,35 @@ nav.top ul a:hover { color: var(--text); }
 .sec-head h2 em { font-style: italic; color: var(--gold); font-weight: 300; }
 .sec-head p { color: var(--text-dim); font-size: 17px; max-width: 52ch; margin: 0 auto; }
 
+/* ====== SOLUCAO: monograma único como marca d'água ====== */
+#solucao { overflow: hidden; isolation: isolate; }
+#solucao::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -32%;
+  width: 95%;
+  min-width: 720px;
+  height: 180%;
+  transform: translateY(-50%);
+  background-image: url("/brand/ialem-icon-gold.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: .07;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(to left, #000 30%, transparent 95%);
+          mask-image: linear-gradient(to left, #000 30%, transparent 95%);
+}
+#solucao > .wrap { position: relative; z-index: 1; }
+@media (max-width: 1100px) {
+  #solucao::before { right: -42%; width: 130%; min-width: 0; }
+}
+@media (max-width: 760px) {
+  #solucao::before { right: -55%; width: 180%; opacity: .06; }
+}
+
 /* ====== PAIRS: trava/destrava ====== */
 .pairs { display: flex; flex-direction: column; gap: 20px; max-width: 980px; margin: 0 auto; }
 .pair {
