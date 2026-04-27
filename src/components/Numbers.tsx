@@ -19,16 +19,32 @@ export default function Numbers() {
             — falamos disso no diagnóstico.
           </p>
         </div>
-        <div className="numbers">
-          {stats.map((s, i) => (
-            <RevealItem key={i} delay={i * 0.12} className="num-cell">
-              <div className="num-big">
-                {s.value}
-                <em>{s.unit}</em>
-              </div>
-              <div className="num-label">{s.label}</div>
-            </RevealItem>
-          ))}
+
+        <div className="numbers-block">
+          <RevealItem delay={0} className="numbers-image">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/images/dashboard-laptop.jpeg"
+              alt="Dashboard de Automação Inteligente da IAlem em laptop — gráficos de processos automatizados, taxa de sucesso e tempo economizado"
+              loading="lazy"
+            />
+            <div className="numbers-image-tag">
+              <span className="dot" />
+              <span>Dashboard em produção · agentes ativos</span>
+            </div>
+          </RevealItem>
+
+          <div className="numbers numbers-stack">
+            {stats.map((s, i) => (
+              <RevealItem key={i} delay={0.15 + i * 0.1} className="num-cell">
+                <div className="num-big">
+                  {s.value}
+                  <em>{s.unit}</em>
+                </div>
+                <div className="num-label">{s.label}</div>
+              </RevealItem>
+            ))}
+          </div>
         </div>
       </div>
     </section>
