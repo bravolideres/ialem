@@ -1024,7 +1024,7 @@ export default function MarcaPage() {
                   maxWidth: "18ch",
                 }}
               >
-                Duas letras que se{" "}
+                Duas letras inclinadas{" "}
                 <em
                   style={{
                     fontStyle: "italic",
@@ -1032,9 +1032,17 @@ export default function MarcaPage() {
                     fontWeight: 300,
                   }}
                 >
-                  tocam
+                  pra frente
                 </em>
-                , não que se explicam.
+                . Uma direção: <em
+                  style={{
+                    fontStyle: "italic",
+                    color: "var(--gold)",
+                    fontWeight: 300,
+                  }}
+                >
+                  além
+                </em>.
               </h3>
               <p
                 style={{
@@ -1045,11 +1053,31 @@ export default function MarcaPage() {
                   maxWidth: "52ch",
                 }}
               >
-                O &quot;I&quot; e o &quot;A&quot; não são justapostos —
-                eles se encontram. O traço do A entra no espaço do I,
-                cria um gesto de interação, não de ícone fechado. É a
-                forma mais curta de desenhar &quot;diálogo entre duas
-                partes&quot;: a IA e quem fala com ela.
+                O &quot;I&quot; e o &quot;A&quot; não se encostam — caminham
+                juntos. Compartilham a mesma inclinação, o mesmo gesto
+                de avanço. Lado a lado, sem se confundir: o humano e a
+                IA têm o mesmo destino, mas papéis distintos.
+              </p>
+              <p
+                style={{
+                  color: "var(--text-dim)",
+                  fontSize: 15.5,
+                  lineHeight: 1.65,
+                  marginTop: 14,
+                  maxWidth: "52ch",
+                }}
+              >
+                O &quot;A&quot; é o coração do símbolo. Sua diagonal
+                ascendente desenha uma escalada — uma montanha, uma
+                seta pra cima, o vetor do <em
+                  style={{
+                    fontStyle: "italic",
+                    color: "var(--gold)",
+                    fontWeight: 400,
+                  }}
+                >além</em>{" "}
+                que a marca carrega no nome. É o salto traçado em uma
+                única letra.
               </p>
               <p
                 style={{
@@ -1076,7 +1104,7 @@ export default function MarcaPage() {
                   color: "var(--text-muted)",
                 }}
               >
-                Gesto · Interação · Silêncio
+                Inclinação · Ascensão · Além
               </div>
             </div>
           </div>

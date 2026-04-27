@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import LogoStrip from "@/components/LogoStrip";
 import Agency from "@/components/Agency";
 import Solution from "@/components/Solution";
@@ -19,6 +20,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <Reveal><About /></Reveal>
       <Reveal><LogoStrip /></Reveal>
       <Reveal><Agency /></Reveal>
 

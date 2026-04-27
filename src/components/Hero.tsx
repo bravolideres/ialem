@@ -13,15 +13,13 @@ export default function Hero() {
           </HeroChild>
           <HeroChild>
             <h1>
-              Leve seu negócio <em>além</em> com IA.<br />Sem perder o <em>jeito humano</em>.
+              Leve sua empresa <em>além</em> com Inteligência Artificial!
             </h1>
           </HeroChild>
           <HeroChild>
             <p>
-              Do atendimento à operação — vendas, cobrança, lembrete, agendamento,
-              lançamento, organização. A IAlem desenha, treina e opera agentes de IA sob
-              medida pra cada gargalo do seu negócio. Você contrata um <em>time consultivo</em>,
-              com um ponto de contato do diagnóstico à operação — não uma ferramenta de prateleira.
+              Impulsione o seu negócio — da operação ao atendimento.<br />
+              Sem perder o <em>jeito humano</em>.
             </p>
           </HeroChild>
           <HeroChild>

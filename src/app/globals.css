@@ -12,7 +12,7 @@
   --text-muted: #6E6C68;
   --gold: #C9A46B;
   --gold-soft: #A78655;
-  --gold-glow: rgba(201, 164, 107, .15);
+  --gold-glow: rgba(201, 164, 107, .22);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -112,22 +112,23 @@ nav.top ul a:hover { color: var(--text); }
 .hero-eyebrow { margin-bottom: 22px; justify-content: center; }
 .hero h1 {
   font-family: 'Fraunces', serif; font-weight: 300;
-  font-size: clamp(36px, 6vw, 76px); line-height: 1.04; letter-spacing: -.03em;
-  max-width: 20ch; margin: 0 auto 22px;
+  font-size: clamp(44px, 6.4vw, 84px); line-height: 1.04; letter-spacing: -.035em;
+  max-width: 22ch; margin: 0 auto 26px;
 }
 .hero h1 em { font-style: italic; font-weight: 300; color: var(--gold); }
 .hero p {
-  font-size: 17.5px; color: var(--text-dim); max-width: 56ch; margin: 0 auto 32px; line-height: 1.6;
+  font-size: 19.5px; color: var(--text-dim); max-width: 52ch; margin: 0 auto 40px; line-height: 1.55;
 }
+.hero p em { font-style: italic; color: var(--gold); font-weight: 400; }
 .hero-cta { display: flex; justify-content: center; gap: 14px; margin-bottom: 64px; }
 
 /* Hero Visual */
 .hero-visual {
-  max-width: 780px; margin: 40px auto 0; position: relative;
-  border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
+  max-width: 920px; margin: 56px auto 0; position: relative;
+  border: 1px solid var(--line); border-radius: 22px; overflow: hidden;
   background: var(--surface);
-  box-shadow: 0 40px 100px -30px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.02) inset;
-  max-height: 480px;
+  box-shadow: 0 50px 120px -30px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.02) inset;
+  max-height: 560px;
 }
 .hero-visual img { 
   width: 100%; height: 100%; display: block; object-fit: cover; 
@@ -145,8 +146,8 @@ nav.top ul a:hover { color: var(--text); }
   position: absolute; left: 32px; top: 50%; transform: translateY(-50%); z-index: 3;
 }
 .hero-visual-headline {
-  font-family: 'Fraunces', serif; font-weight: 400; font-size: 46px;
-  line-height: 1.1; color: var(--text); letter-spacing: -.03em;
+  font-family: 'Fraunces', serif; font-weight: 400; font-size: 52px;
+  line-height: 1.08; color: var(--text); letter-spacing: -.03em;
 }
 .hero-visual-headline em {
   font-style: italic; color: var(--gold); font-weight: 300;
@@ -183,6 +184,37 @@ nav.top ul a:hover { color: var(--text); }
   box-shadow: 0 0 12px var(--gold); animation: pulse 2s infinite;
 }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+
+/* ====== ABOUT ====== */
+.about {
+  padding: 100px 0 80px;
+  background: var(--bg);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) 1fr;
+  gap: 64px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.about-eyebrow-col { padding-top: 14px; }
+.about-h2 {
+  font-family: 'Fraunces', serif; font-weight: 300;
+  font-size: clamp(32px, 4.2vw, 52px); line-height: 1.1; letter-spacing: -.025em;
+  color: var(--text);
+  margin-bottom: 28px; max-width: 22ch;
+}
+.about-h2 em { font-style: italic; font-weight: 300; color: var(--gold); }
+.about-lede {
+  font-size: 19px; color: var(--text); opacity: .92;
+  line-height: 1.6; max-width: 60ch; margin-bottom: 18px;
+}
+.about-lede em { font-style: normal; color: var(--gold); font-weight: 500; }
+.about-sub {
+  font-size: 15.5px; color: var(--text-dim);
+  line-height: 1.6; max-width: 58ch;
+}
 
 /* ====== LOGO STRIP ====== */
 .social {
@@ -758,13 +790,20 @@ footer { padding: 80px 0 40px; border-top: 1px solid var(--line); background: va
   section { padding: 80px 0; }
 
   .hero { padding: 120px 0 56px; }
-  .hero h1 { max-width: 100%; }
-  .hero p { font-size: 16px; }
+  .hero h1 { max-width: 100%; font-size: clamp(40px, 11vw, 64px); }
+  .hero p { font-size: 17px; }
   .hero-cta { flex-direction: column; align-items: center; }
-  .hero-visual { margin: 20px auto 0; border-radius: 14px; max-height: 360px; }
+  .hero-visual { margin: 28px auto 0; border-radius: 14px; max-height: 440px; }
   .hero-visual-overlay { left: 18px; }
-  .hero-visual-headline { font-size: 22px; }
+  .hero-visual-headline { font-size: 24px; }
   .hero-visual-badge { font-size: 9px; padding: 6px 14px; bottom: 14px; }
+
+  .about { padding: 64px 0 56px; }
+  .about-grid { grid-template-columns: 1fr; gap: 24px; }
+  .about-eyebrow-col { padding-top: 0; }
+  .about-h2 { font-size: 30px; margin-bottom: 20px; }
+  .about-lede { font-size: 16.5px; }
+  .about-sub { font-size: 14.5px; }
 
   .sec-head h2 { font-size: 36px; }
   .sec-head p { font-size: 15px; }
