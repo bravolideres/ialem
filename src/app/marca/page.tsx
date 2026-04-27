@@ -2472,81 +2472,68 @@ export default function MarcaPage() {
             <span className="bar" />
           </div>
           <div className="kit-wrap reveal d1">
-            <span className="eyebrow-top">O pacote completo</span>
+            <span className="eyebrow-top">O essencial, pra fora deste site</span>
             <h2>
-              Tudo que vocês precisam pra <em>aplicar</em> a marca.
+              Pra <em>aplicar</em> a marca onde ela ainda não está.
             </h2>
             <p className="sub">
-              Manual escrito, assets vetoriais em todas as variações,
-              tokens CSS prontos pra codebase e templates iniciais. É a
-              fundação — a marca vive daqui pra frente.
+              Esta página inteira é o manual vivo da marca. Aqui ficam só
+              as três coisas que de fato precisam viajar pra fora — assets
+              pra designers parceiros, o deck comercial pra prospect e o
+              playbook de redes pra quem opera o Instagram.
             </p>
             <div className="kit-list">
               {[
                 {
                   slot: "01",
-                  name: "Manual da marca",
-                  desc: "Este documento em versão editável — princípios, regras e exemplos.",
-                  fmt: ".md · .pdf",
+                  name: "Logos & assets vetoriais",
+                  desc: "Wordmark e símbolo nas três variações cromáticas — gold, white e dark. Pacote zip com 6 SVGs prontos pra qualquer aplicação.",
+                  fmt: ".svg · .zip",
+                  href: "/brand/ialem-logos.zip",
+                  cta: "Baixar pacote",
+                  external: false,
+                  download: true,
                 },
                 {
                   slot: "02",
-                  name: "Logos em todas as variações",
-                  desc: "Wordmark, símbolo e monocromático — cada um em gold, white e dark.",
-                  fmt: ".svg · .png",
+                  name: "Apresentação comercial",
+                  desc: "Deck de 13 slides com posicionamento, escopo, cases e proposta. Versão online sempre atualizada — abre direto no navegador.",
+                  fmt: "Online",
+                  href: "/apresentacao",
+                  cta: "Acessar deck",
+                  external: false,
+                  download: false,
                 },
                 {
                   slot: "03",
-                  name: "Tokens CSS",
-                  desc: "Cores, tipografia, espaçamento e sombras como variáveis prontas pra importar.",
-                  fmt: ".css",
-                },
-                {
-                  slot: "04",
-                  name: "Fontes",
-                  desc: "Fraunces, Inter Tight e JetBrains Mono — arquivos variáveis oficiais.",
-                  fmt: ".ttf",
-                },
-                {
-                  slot: "05",
-                  name: "Templates iniciais",
-                  desc: "Site institucional (Next.js), template de proposta, cover de LinkedIn.",
-                  fmt: ".tsx · .pdf",
+                  name: "Playbook de Instagram",
+                  desc: "12 posts canônicos, comparativo de feed, bio otimizada e hashtags oficiais. Manual operacional pra quem produz conteúdo pra IAlem.",
+                  fmt: "Online",
+                  href: "/playbook",
+                  cta: "Abrir playbook",
+                  external: false,
+                  download: false,
                 },
               ].map((k) => (
-                <div className="kit-item" key={k.slot}>
+                <a
+                  key={k.slot}
+                  href={k.href}
+                  className="kit-item"
+                  {...(k.download ? { download: "" } : {})}
+                  {...(k.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
                   <span className="slot">{k.slot}</span>
                   <div className="kit-name">
                     {k.name}
                     <span className="kit-desc">{k.desc}</span>
                   </div>
                   <span className="format">{k.fmt}</span>
-                </div>
+                  <span className="kit-cta" aria-hidden>
+                    {k.cta} <span className="kit-arrow">→</span>
+                  </span>
+                </a>
               ))}
             </div>
-            <button
-              className="btn-primary"
-              disabled
-              style={{
-                opacity: 0.5,
-                cursor: "not-allowed",
-                filter: "grayscale(0.3)",
-              }}
-            >
-              Baixar manual completo{" "}
-              <span
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: 9,
-                  letterSpacing: ".2em",
-                  textTransform: "uppercase",
-                  opacity: 0.7,
-                  marginLeft: 4,
-                }}
-              >
-                · Disponível em breve
-              </span>
-            </button>
           </div>
         </div>
       </section>

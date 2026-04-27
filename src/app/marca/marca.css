@@ -1714,28 +1714,44 @@ button.app-mockup .app-stage,
 }
 
 .kit-list {
-  margin: 56px auto;
-  max-width: 620px;
+  margin: 56px auto 8px;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   text-align: left;
 }
+a.kit-item,
 .kit-item {
   display: grid;
-  grid-template-columns: 48px 1fr auto;
+  grid-template-columns: 48px 1fr auto auto;
   gap: 20px;
   align-items: center;
-  padding: 20px 24px;
+  padding: 22px 26px;
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--r-card);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--dur-2) var(--ease), transform var(--dur-2) var(--ease), background var(--dur-2) var(--ease);
+}
+a.kit-item:hover {
+  border-color: rgba(201,164,107,.55);
+  background: rgba(201,164,107,.04);
+  transform: translateY(-2px);
+}
+a.kit-item:hover .kit-arrow { transform: translateX(4px); }
+a.kit-item:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 .kit-item .slot {
   font-family: var(--font-mono);
   font-size: 10.5px;
   letter-spacing: .2em;
   color: var(--gold);
+  align-self: start;
+  padding-top: 2px;
 }
 .kit-item .kit-name {
   font-family: var(--font-sans);
@@ -1749,6 +1765,7 @@ button.app-mockup .app-stage,
   color: var(--text-dim);
   font-size: 14.5px;
   margin-top: 4px;
+  line-height: 1.55;
 }
 .kit-item .format {
   font-family: var(--font-mono);
@@ -1756,6 +1773,38 @@ button.app-mockup .app-stage,
   letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--text-muted);
+  align-self: start;
+  padding-top: 2px;
+}
+.kit-item .kit-cta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.kit-item .kit-arrow {
+  display: inline-block;
+  transition: transform var(--dur-2) var(--ease);
+}
+@media (max-width: 720px) {
+  a.kit-item,
+  .kit-item {
+    grid-template-columns: 48px 1fr;
+    grid-template-areas:
+      "slot name"
+      "format format"
+      "cta cta";
+    gap: 12px 20px;
+  }
+  .kit-item .slot { grid-area: slot; }
+  .kit-item .kit-name { grid-area: name; }
+  .kit-item .format { grid-area: format; }
+  .kit-item .kit-cta { grid-area: cta; justify-self: end; }
 }
 
 .btn-primary {
