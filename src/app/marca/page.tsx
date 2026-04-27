@@ -117,6 +117,7 @@ export default function MarcaPage() {
             <a href="#paleta">Paleta</a>
             <a href="#tipografia">Tipografia</a>
             <a href="#voz">Voz</a>
+            <a href="#movimento">Movimento</a>
             <a href="#aplicacoes">Aplicações</a>
             <a href="#kit">Kit</a>
           </div>
@@ -2301,12 +2302,50 @@ export default function MarcaPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════
-         10. APLICAÇÕES
+         10. MOVIMENTO · vinheta da marca em loop
+         ════════════════════════════════════════════════════════════ */}
+      <section id="movimento">
+        <div className="wrap">
+          <div className="section-label reveal">
+            <span className="num">10</span>
+            <span>Movimento</span>
+            <span className="bar" />
+          </div>
+          <h2 className="reveal d1">
+            A marca em <em>movimento</em>.
+          </h2>
+          <p className="apps-intro reveal d1">
+            Identidade não é só o que se vê parado. A vinheta abaixo é a
+            forma canônica de abrir uma comunicação da IAlem — em vídeos,
+            apresentações comerciais, abertura de redes sociais e
+            cabeçalhos de e-mail. 8 segundos em loop, no tom da marca.
+          </p>
+
+          <div className="vinheta-frame reveal d2">
+            <video
+              className="vinheta-video"
+              src="/videos/hero-vinheta.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              aria-label="Vinheta da marca IAlem — pessoa usando a IA com naturalidade"
+            />
+            <div className="vinheta-overlay">
+              <span className="vinheta-tag">Vinheta · 8s · Loop</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════
+         11. APLICAÇÕES
          ════════════════════════════════════════════════════════════ */}
       <section id="aplicacoes">
         <div className="wrap">
           <div className="section-label reveal">
-            <span className="num">10</span>
+            <span className="num">11</span>
             <span>Aplicações</span>
             <span className="bar" />
           </div>
@@ -2428,7 +2467,7 @@ export default function MarcaPage() {
       <section id="kit">
         <div className="wrap">
           <div className="section-label reveal">
-            <span className="num">11</span>
+            <span className="num">12</span>
             <span>Kit da marca</span>
             <span className="bar" />
           </div>
