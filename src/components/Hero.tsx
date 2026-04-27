@@ -13,7 +13,7 @@ export default function Hero() {
           </HeroChild>
           <HeroChild>
             <h1>
-              Leve sua empresa <em>além</em> com Inteligência Artificial sem perder o <em>jeito humano</em>!
+              Leve sua empresa <em>além</em> com Inteligência Artificial, sem perder o <em>jeito humano</em>!
             </h1>
           </HeroChild>
           <HeroChild>
