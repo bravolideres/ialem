@@ -32,6 +32,25 @@ const testimonials = [
   },
 ];
 
+function Stars() {
+  return (
+    <div className="testimonial-stars" aria-label="Avaliação 5 de 5 estrelas">
+      {[0, 1, 2, 3, 4].map((i) => (
+        <svg
+          key={i}
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden
+        >
+          <path d="M12 2.6l2.95 5.98 6.6.96-4.78 4.66 1.13 6.58L12 17.7l-5.9 3.08 1.13-6.58L2.45 9.54l6.6-.96L12 2.6z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 export default function Testimonials() {
   return (
     <section id="depoimentos">
@@ -45,26 +64,27 @@ export default function Testimonials() {
         <div className="testimonials-grid">
           {testimonials.map((t, i) => (
             <RevealItem key={i} delay={i * 0.12} className="testimonial-card">
-              <div>
-                <div className="testimonial-metric">{t.metric}</div>
+              <div className="testimonial-top">
+                <div className="testimonial-author">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={t.photo}
+                    alt={t.name}
+                    className="testimonial-photo"
+                  />
+                  <div className="testimonial-author-meta">
+                    <div className="testimonial-name">{t.name}</div>
+                    <div className="testimonial-role">
+                      {t.role} · {t.company}
+                    </div>
+                    <Stars />
+                  </div>
+                </div>
                 <blockquote>
                   <p>&ldquo;{t.quote}&rdquo;</p>
                 </blockquote>
               </div>
-              <div className="testimonial-author">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={t.photo}
-                  alt={t.name}
-                  className="testimonial-photo"
-                />
-                <div>
-                  <div className="testimonial-name">{t.name}</div>
-                  <div className="testimonial-role">
-                    {t.role} · {t.company}
-                  </div>
-                </div>
-              </div>
+              <div className="testimonial-metric">{t.metric}</div>
             </RevealItem>
           ))}
         </div>

@@ -9,6 +9,7 @@ import Numbers from "@/components/Numbers";
 import Integrations from "@/components/Integrations";
 import UseCases from "@/components/UseCases";
 import Testimonials from "@/components/Testimonials";
+import Bastidor from "@/components/Bastidor";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -28,6 +29,7 @@ export default function Home() {
       <Reveal><Numbers /></Reveal>
       <Reveal><Testimonials /></Reveal>
       <Reveal><HowItWorks /></Reveal>
+      <Reveal><Bastidor /></Reveal>
       <Reveal><Integrations /></Reveal>
       <Reveal><FAQ /></Reveal>
       <Reveal><CTA /></Reveal>
