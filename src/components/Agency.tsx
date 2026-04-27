@@ -28,9 +28,9 @@ export default function Agency() {
             Você contrata um <em>time</em>.<br />Não uma ferramenta.
           </h2>
           <p>
-            A IAlem não vende uma licença de R$ 500/mês que você configura sozinho.
-            A gente entra junto, entende a operação e constrói o que a sua empresa precisa —
-            para depois operar junto com você.
+            A IAlem não é ferramenta de prateleira que você assina e configura
+            sozinho. A gente entra junto, entende a operação e constrói o que a
+            sua empresa precisa — para depois operar junto com você.
           </p>
         </div>
         <div className="steps">
