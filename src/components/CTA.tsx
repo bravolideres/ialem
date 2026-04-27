@@ -10,7 +10,7 @@ export default function CTA() {
               src="/images/cta-partnership.png"
               alt="Parceria de negócios"
               fill
-              style={{ objectFit: "cover", objectPosition: "center 20%" }}
+              style={{ objectFit: "cover", objectPosition: "center 55%" }}
             />
           </div>
           <div className="cta-content">
