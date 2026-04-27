@@ -918,6 +918,54 @@ export default function MarcaPage() {
             </div>
           </div>
 
+          {/* ── Lockup com tagline · variante institucional ── */}
+          <div className="lockup-block reveal d4">
+            <div className="lockup-meta">
+              <span className="lockup-eyebrow">Variante institucional</span>
+              <h3 className="lockup-title">
+                Lockup com <em>tagline</em>.
+              </h3>
+              <p className="lockup-desc">
+                IAlem é um nome novo. Onde a marca se apresenta pela
+                primeira vez — cartão de visita, capa de proposta,
+                fachada, slide de abertura, cover de LinkedIn — o lockup
+                com <strong>&ldquo;Automação Inteligente&rdquo;</strong>{" "}
+                ancora o nome no que ele faz, antes que ele vire só
+                marca.
+              </p>
+              <p className="lockup-rule">
+                <span className="lockup-rule-tag">Regra</span>
+                Use o wordmark limpo em ambientes recorrentes — site,
+                rodapé, app, posts. Use o lockup nos pontos de primeiro
+                contato, onde explicar a categoria importa mais que
+                economizar pixel.
+              </p>
+            </div>
+            <div className="lockup-stages">
+              <div className="lockup-stage dark">
+                <img
+                  src="/brand/ialem-lockup-gold.svg"
+                  alt="Lockup IAlem com tagline Automação Inteligente em dourado"
+                />
+                <span className="lockup-stage-label">Gold · sobre dark</span>
+              </div>
+              <div className="lockup-stage darker">
+                <img
+                  src="/brand/ialem-lockup-white.svg"
+                  alt="Lockup IAlem com tagline Automação Inteligente em branco"
+                />
+                <span className="lockup-stage-label">White · sobre dark</span>
+              </div>
+              <div className="lockup-stage light">
+                <img
+                  src="/brand/ialem-lockup-dark.svg"
+                  alt="Lockup IAlem com tagline Automação Inteligente em escuro"
+                />
+                <span className="lockup-stage-label">Dark · sobre light</span>
+              </div>
+            </div>
+          </div>
+
           {/* A forma do símbolo */}
           <div
             className="symbol-read reveal d4"
@@ -2486,8 +2534,8 @@ export default function MarcaPage() {
               {[
                 {
                   slot: "01",
-                  name: "Logos & assets vetoriais",
-                  desc: "Wordmark e símbolo nas três variações cromáticas — gold, white e dark. Pacote zip com 6 SVGs prontos pra qualquer aplicação.",
+                  name: "Logos & lockups vetoriais",
+                  desc: "Wordmark, símbolo e lockup com tagline — cada um em gold, white e dark. 9 SVGs prontos pra qualquer aplicação, do cartão à fachada.",
                   fmt: ".svg · .zip",
                   href: "/brand/ialem-logos.zip",
                   cta: "Baixar pacote",
@@ -2506,8 +2554,8 @@ export default function MarcaPage() {
                 },
                 {
                   slot: "03",
-                  name: "Playbook de Instagram",
-                  desc: "12 posts canônicos, comparativo de feed, bio otimizada e hashtags oficiais. Manual operacional pra quem produz conteúdo pra IAlem.",
+                  name: "Playbook de conteúdo",
+                  desc: "Personas, formatos, 12 posts canônicos, comparativo de feed, hashtags e estratégia de tráfego pago (Meta Ads + Google Ads). Manual operacional pra Instagram e mídia paga.",
                   fmt: "Online",
                   href: "/playbook",
                   cta: "Abrir playbook",
