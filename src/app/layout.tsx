@@ -52,21 +52,12 @@ export const metadata: Metadata = {
     title: "IAlem — Leve seu negócio além com IA, sem perder o jeito humano",
     description:
       "Agência de Automação Inteligente. Levamos seu negócio além com agentes de IA sob medida — do atendimento à operação — com time consultivo e um ponto de contato do diagnóstico à operação. Sem perder o jeito humano.",
-    images: [
-      {
-        url: "/images/ialem-og3.webp",
-        width: 1200,
-        height: 630,
-        alt: "IAlem — Leve seu negócio além com IA, sem perder o jeito humano",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "IAlem — Leve seu negócio além com IA, sem perder o jeito humano",
     description:
       "Leve seu negócio além com IA — do atendimento à operação. Agência que desenha, treina e opera agentes sob medida.",
-    images: ["/images/ialem-og3.webp"],
   },
   alternates: {
     canonical: "/",
