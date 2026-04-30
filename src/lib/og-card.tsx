@@ -23,11 +23,14 @@ async function loadGoogleFont(family: string, weight: number, italic = false) {
 }
 
 export async function renderOgCard({ eyebrow, title, subtitle }: OgCardProps) {
-  const [iconSvg, fraunces, interTight] = await Promise.all([
-    readFile(join(process.cwd(), "public/brand/ialem-icon-gold.svg"), "utf-8"),
-    loadGoogleFont("Fraunces", 500),
-    loadGoogleFont("Inter Tight", 400),
-  ]);
+  const [iconSvg, frauncesLight, frauncesMedium, interTight, jetBrainsMono] =
+    await Promise.all([
+      readFile(join(process.cwd(), "public/brand/ialem-icon-gold.svg"), "utf-8"),
+      loadGoogleFont("Fraunces", 300),   // title — matches .hero h1
+      loadGoogleFont("Fraunces", 500),   // wordmark — matches .logo
+      loadGoogleFont("Inter Tight", 400), // subtitle
+      loadGoogleFont("JetBrains Mono", 500), // eyebrow — matches .eyebrow
+    ]);
 
   const iconDataUrl = `data:image/svg+xml;base64,${Buffer.from(iconSvg).toString("base64")}`;
 
@@ -59,8 +62,8 @@ export async function renderOgCard({ eyebrow, title, subtitle }: OgCardProps) {
             style={{
               fontFamily: "Fraunces",
               fontSize: 36,
-              fontWeight: 500,
-              letterSpacing: "-0.02em",
+              fontWeight: 500,    // wordmark uses 500 — same as nav .logo
+              letterSpacing: "-0.01em",
             }}
           >
             IAlem
@@ -70,11 +73,12 @@ export async function renderOgCard({ eyebrow, title, subtitle }: OgCardProps) {
         <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
           <span
             style={{
+              fontFamily: "JetBrains Mono",   // matches .eyebrow
               fontSize: 18,
               color: "#C9A46B",
-              letterSpacing: "0.24em",
+              letterSpacing: "0.20em",         // matches .eyebrow letter-spacing: .2em
               textTransform: "uppercase",
-              fontWeight: 400,
+              fontWeight: 500,
               display: "flex",
               alignItems: "center",
               gap: 16,
@@ -94,9 +98,9 @@ export async function renderOgCard({ eyebrow, title, subtitle }: OgCardProps) {
             style={{
               fontFamily: "Fraunces",
               fontSize: 84,
-              lineHeight: 1.02,
-              letterSpacing: "-0.03em",
-              fontWeight: 500,
+              lineHeight: 1.04,            // matches .hero h1
+              letterSpacing: "-0.035em",   // matches .hero h1
+              fontWeight: 300,             // matches .hero h1 — light, not medium
               maxWidth: 1000,
               display: "flex",
             }}
@@ -125,7 +129,9 @@ export async function renderOgCard({ eyebrow, title, subtitle }: OgCardProps) {
       ...ogSize,
       fonts: [
         { name: "Inter Tight", data: interTight, style: "normal", weight: 400 },
-        { name: "Fraunces", data: fraunces, style: "normal", weight: 500 },
+        { name: "JetBrains Mono", data: jetBrainsMono, style: "normal", weight: 500 },
+        { name: "Fraunces", data: frauncesLight, style: "normal", weight: 300 },
+        { name: "Fraunces", data: frauncesMedium, style: "normal", weight: 500 },
       ],
     },
   );
