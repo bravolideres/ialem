@@ -2,10 +2,23 @@ import type { Metadata } from "next";
 import "./apresentacao.css";
 
 export const metadata: Metadata = {
-  title: "IAlem — Apresentação Comercial",
+  title: "Apresentação Comercial",
   description:
-    "Estrutura base da apresentação comercial da IAlem. Referência para a designer adaptar no Canva.",
+    "Conheça como a IAlem leva empresas além com agentes de IA sob medida — do diagnóstico à operação, com um único ponto de contato e sem perder o jeito humano.",
   robots: "noindex, nofollow",
+  openGraph: {
+    title: "IAlem — Apresentação Comercial",
+    description:
+      "Conheça como a IAlem leva empresas além com agentes de IA sob medida — do diagnóstico à operação, com um único ponto de contato e sem perder o jeito humano.",
+  },
+  twitter: {
+    title: "IAlem — Apresentação Comercial",
+    description:
+      "Conheça como a IAlem leva empresas além com agentes de IA sob medida — do diagnóstico à operação, com um único ponto de contato e sem perder o jeito humano.",
+  },
+  alternates: {
+    canonical: "/apresentacao",
+  },
 };
 
 export default function ApresentacaoLayout({

@@ -2,10 +2,23 @@ import type { Metadata } from "next";
 import "./marca.css";
 
 export const metadata: Metadata = {
-  title: "IAlem — Identidade Visual",
+  title: "Identidade Visual",
   description:
-    "Manual da marca IAlem: conceito, logo, paleta, tipografia, voz e kit completo.",
+    "Manual completo da marca IAlem: conceito, logo, paleta de cores, tipografia, voz e tom, e kit de assets para download.",
   robots: "noindex, nofollow",
+  openGraph: {
+    title: "IAlem — Identidade Visual",
+    description:
+      "Manual completo da marca IAlem: conceito, logo, paleta de cores, tipografia, voz e tom, e kit de assets para download.",
+  },
+  twitter: {
+    title: "IAlem — Identidade Visual",
+    description:
+      "Manual completo da marca IAlem: conceito, logo, paleta de cores, tipografia, voz e tom, e kit de assets para download.",
+  },
+  alternates: {
+    canonical: "/marca",
+  },
 };
 
 export default function MarcaLayout({
