@@ -54,7 +54,7 @@ export default function FloatingChat() {
     const text = "Oi! Vim pelo site e quero fazer um teste da IAlem na prática";
     const encodedText = encodeURIComponent(text);
     window.open(
-      `https://wa.me/5500000000000?text=${encodedText}`,
+      `https://wa.me/556992074081?text=${encodedText}`,
       "_blank"
     );
   };
