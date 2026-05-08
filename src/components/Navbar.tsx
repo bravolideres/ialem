@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import IAlemLogo from "./IAlemLogo";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,7 +41,7 @@ export default function Navbar() {
       >
         {mobileOpen ? "✕" : "☰"}
       </button>
-      <a href="https://wa.me/556992074081?text=Oi!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20teste%20da%20IAlem%20na%20prática" target="_blank" className="btn btn-primary btn-sm">
+      <a href={`${WHATSAPP_LINK}?text=Oi!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20teste%20da%20IAlem%20na%20prática`} target="_blank" className="btn btn-primary btn-sm">
         Testar na Prática
       </a>
 

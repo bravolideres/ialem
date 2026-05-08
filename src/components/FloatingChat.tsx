@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 export default function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +55,7 @@ export default function FloatingChat() {
     const text = "Oi! Vim pelo site e quero fazer um teste da IAlem na prática";
     const encodedText = encodeURIComponent(text);
     window.open(
-      `https://wa.me/556992074081?text=${encodedText}`,
+      `${WHATSAPP_LINK}?text=${encodedText}`,
       "_blank"
     );
   };

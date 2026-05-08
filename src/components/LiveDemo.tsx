@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import IAlemIcon from "./IAlemIcon";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 interface Turn {
   who: "ai" | "user";
@@ -297,7 +298,7 @@ export default function LiveDemo() {
         </div>
 
         <div className="section-cta">
-          <a href="https://wa.me/5500000000000?text=Oi!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20teste%20da%20IAlem%20na%20prática" target="_blank" className="btn btn-ghost btn-sm">
+          <a href={`${WHATSAPP_LINK}?text=Oi!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20teste%20da%20IAlem%20na%20prática`} target="_blank" className="btn btn-ghost btn-sm">
             Testar na Prática →
           </a>
         </div>

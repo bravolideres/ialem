@@ -1,4 +1,5 @@
 import { RevealItem } from "@/components/Reveal";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 const pairs = [
   {
@@ -57,7 +58,7 @@ export default function Solution() {
         </div>
 
         <div className="section-cta">
-          <a href="https://wa.me/556992074081?text=Oi!%20Quero%20agendar%20um%20diagnóstico%20gratuito%20para%20minha%20empresa" target="_blank" className="btn btn-ghost btn-sm">
+          <a href={`${WHATSAPP_LINK}?text=Oi!%20Quero%20agendar%20um%20diagnóstico%20gratuito%20para%20minha%20empresa`} target="_blank" className="btn btn-ghost btn-sm">
             Quero isso na minha empresa →
           </a>
         </div>
